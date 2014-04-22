@@ -1,0 +1,21 @@
+Source: sddm
+Section: kde
+Priority: extra
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+XSBC-Original-Maintainer: Michał Zając <quintasan@kubuntu.org>
+Build-Depends: cmake,
+               debhelper (>= 8.0.0),
+               libpam0g-dev,
+               libqt4-dev,
+               libxcb1-dev,
+               pkg-kde-tools
+Standards-Version: 3.9.5
+Homepage: https://github.com/sddm/sddm
+
+Package: sddm
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: modern display manager for X11
+ SDDM is a modern display manager for X11 aiming to be fast, simple 
+ and beautiful. It uses modern technologies like QtQuick to create
+ smooth, animated user interfaces.
