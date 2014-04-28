@@ -1,4 +1,5 @@
-etc/*
+etc/sddm.conf
+etc/pam.d
 usr/bin/sddm*
 usr/share/apps/sddm/faces
 usr/share/apps/sddm/flags
