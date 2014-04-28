@@ -1,6 +1,8 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
-export DH_VERBOSE=1
+#export DH_VERBOSE=1
 
 %:
 	dh $@ --with kde
+override_dh_strip:
+	dh_strip --dbg-package=sddm-dbg

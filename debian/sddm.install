@@ -1,0 +1,8 @@
+etc/*
+usr/bin/sddm*
+usr/share/apps/sddm/faces
+usr/share/apps/sddm/flags
+usr/share/apps/sddm/translations
+usr/share/apps/sddm/sddm.conf.sample
+usr/lib/*/qt4/imports/SddmComponents/
+usr/share/apps/sddm/scripts/

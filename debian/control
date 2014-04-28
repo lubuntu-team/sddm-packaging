@@ -8,14 +8,55 @@ Build-Depends: cmake,
                libpam0g-dev,
                libqt4-dev,
                libxcb1-dev,
-               pkg-kde-tools
+               pkg-kde-tools,
+               libxcb-xkb-dev
 Standards-Version: 3.9.5
 Homepage: https://github.com/sddm/sddm
 
 Package: sddm
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}
+Depends: ${misc:Depends}, ${shlibs:Depends}, adduser
+Recommends: sddm-theme
 Description: modern display manager for X11
  SDDM is a modern display manager for X11 aiming to be fast, simple 
  and beautiful. It uses modern technologies like QtQuick to create
  smooth, animated user interfaces.
+
+Package: sddm-theme-maui
+Architecture: any
+Depends: sddm, ${misc:Depends}
+Provides: sddm-theme
+Description: Default theme for SDDM X11 display manager
+ Maui theme for SDDM
+
+Package: sddm-theme-circles
+Architecture: any
+Depends: sddm, ${misc:Depends}
+Provides: sddm-theme
+Description: Theme for SDDM X11 display manager
+ Circles theme for SDDM
+
+Package: sddm-theme-elarun
+Architecture: any
+Depends: sddm, ${misc:Depends}
+Provides: sddm-theme
+Description: Theme for SDDM X11 display manager
+ Elarun theme for SDDM
+
+Package: sddm-theme-maldives
+Architecture: any
+Depends: sddm, ${misc:Depends}
+Provides: sddm-theme
+Description: Theme for SDDM X11 display manager
+ Maldives theme for SDDM
+
+Package: sddm-dbg
+Depends: sddm (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Architecture: any
+Section: debug
+Description: modern display manager for X11 -- debugging symbols
+ SDDM is a modern display manager for X11 aiming to be fast, simple
+ and beautiful. It uses modern technologies like QtQuick to create
+ smooth, animated user interfaces.
+ .
+ Debugging symbols for SDDM
