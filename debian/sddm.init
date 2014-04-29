@@ -67,11 +67,18 @@ case "$1" in
   status)
         status_of_proc -p "$PIDFILE" "$DAEMON" sddm && exit 0 || exit $?
   ;;
-  restart|force-reload)
+ force-reload)
         $0 stop
 	sleep 1
         $0 start
   ;;
+  restart)
+       pidof_sddm=`pidof sddm`
+       if [ -z $pidof_sddm ]; then
+           $0 stop
+           sleep 1
+           $0 start
+       fi
   *)
         echo "Usage: /etc/init.d/sddm {start|stop|restart|reload|force-reload|status}"
         exit 1
