@@ -1,20 +1,20 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: sddm
-Source: https://github.com/sddm/sddm
+Source: https://github.com/sddm/sddm/tree/master
 
-Files: src/*
-Copyright: 2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
-License: GPL-2.0+
-
-Files: *.qml
-Copyright: 2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
-License: MIT
-
-Files: debian/*
-Copyright: 2013 Michał Zając <quintasan@kubuntu.org>
-License: GPL-2.0+
-
-License: GPL-2.0+
+Files: *
+       data/themes/elarun
+       data/themes/maui/background.png
+Copyright: © 2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
+           © 2013-2014 Martin Bříza <mbriza@redhat.com>
+           © 2013 Nikita Mikhaylov <nslqqq@gmail.com>
+           © 2014 Pier Luigi Fiorini <pierluigi.fiorini@gmail.com>
+           © 2007 Matthias Kretz <kretz@kde.org>
+           © 2014 David Edmundson <davidedmundson@kde.org>
+           © 2008 Helio Chissini de Castro <helio@kde.org>
+           © 2010 Roman Shtylman | nuno@oxygen-icons.org, 2012 Nuno Pineheiro
+           Dacian Stanciu.
+License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
  the Free Software Foundation; either version 2 of the License, or
@@ -31,22 +31,117 @@ License: GPL-2.0+
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
+Files: src/qauth/*
+Copyright: 2013 Martin Bříza <mbriza@redhat.com>
+License: LGPL-2.1+
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * version 2.1 of the License, or (at your option) any later version.
+ *
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA
+
+Files: *.qml
+Copyright: 2013 Nikita Mikhailov <nslqqq@gmail.com>
+           2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
+           2013 Reza Fatahilah Shah <rshah0385@kireihana.com>
 License: MIT
- Permission is hereby granted, free of charge, to any person
- obtaining a copy of this software and associated documentation
- files (the "Software"), to deal in the Software without restriction,
- including without limitation the rights to use, copy, modify, merge,
- publish, distribute, sublicense, and/or sell copies of the Software,
- and to permit persons to whom the Software is furnished to do so,
- subject to the following conditions:
+ Permission is hereby granted, free of charge, to any person obtaining 
+ a copy of this software and associated documentation files (the "Software"),
+ to deal in the Software without restriction, including without limitation the
+ rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+ sell copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
  .
  The above copyright notice and this permission notice shall be included
  in all copies or substantial portions of the Software.
  .
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
  OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
- THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR
- OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
- ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE
- OR OTHER DEALINGS IN THE SOFTWARE.
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR
+ IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Files: data/themes/circles/background.png
+       data/themes/maldives/background.jpg
+Copyright: 2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
+           Dan Grady http://interfacelift.com/user/94340/dan_grady.html
+License: CC BY 3.0
+ You are free:
+ to Share — to copy, distribute and transmit the work, and
+ to Change — to adapt the work
+ Under the following conditions:
+ .
+ Attribution — You must attribute(give credit) the work in the manner asked by the author or licensor (but not in any way that suggests that they agree with what you are doing.)
+ Share Alike — If you do anything with this work, you may distribute the resulting work under the same, similar or a compatible license only.
+ As long as you know that:
+ .
+ Waiver — Any of the above conditions can be waived (ignored) if you get permission from the copyright holder.
+ Other Rights — In no way are any of the following rights affected by the license:
+ your fair dealing or fair use rights;
+ the author's moral rights; and
+ rights other persons may have either in the work itself or in how the work is used, such as publicity or privacy rights.
+ Notice — For any reuse or distribution, you must make sure that other people know that it is licenced this way. An easy way to do that is to link to http://creativecommons.org/licenses/by-sa/3.0/ .
+
+Files: data/themes/circles
+       data/themes/maldives
+Copyright: Dave Gandy - http://fortawesome.github.com/Font-Awesome
+	with Reserved Font Name chevron
+License: SIL OFL 1.1
+ The goals of the Open Font License (OFL) are to stimulate worldwide
+ development of collaborative font projects, to support the font creation
+ efforts of academic and linguistic communities, and to provide a free and
+ open framework in which fonts may be shared and improved in partnership
+ with others.
+ .
+ The OFL allows the licensed fonts to be used, studied, modified and
+ redistributed freely as long as they are not sold by themselves. The
+ fonts, including any derivative works, can be bundled, embedded, 
+ redistributed and/or sold with any software provided that any reserved
+ names are not used by derivative works. The fonts and derivatives,
+ however, cannot be released under any other type of license. The
+ requirement for fonts to remain under this license does not apply
+ to any document created using the fonts or their derivatives.
+
+Files: data/themes/elarun/images/background.png
+Copyright: Nuno Pinheiro Email=nuno@oxygen-icons.org
+License: LGPLv3
+ This image is free software: you can redistribute it and/or modify
+ it under the terms of the GNU Lesser General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
+ .
+ This image is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public License
+ along with this image.  If not, see <http://www.gnu.org/licenses/>.
+
+Files: data/themes/maldives/GeosansLight.ttf
+       data/themes/maui/GeosansLight.ttf
+Copyright: Manfred Klein, http://manfred-klein.ina-mar.com/.
+License: Simple terms of use
+ Manfred’s fonts are free for private and charity use.
+ They are even free for commercial use – but if there’s any profit,
+ pls make a donation to organizations like Doctors Without Borders.
+ .
+ These fonts can NOT be included in any compilation CDs, disks
+ or products, either commercial or shareware unless prior permission granted.
+ .
+ All typefaces were created by Manfred Klein 2001-2008.
+ 
+ Files: debian/*
+ Copyright: © 2014 Rohan Garg <rohangarg@kubuntu.org>
+            © 2014 Scarlett Clark <scarlett@scarlettgatelyclark.com>
+            © 2013 Michał Zając <quintasan@kubuntu.org>
+ License: GPL-2+
