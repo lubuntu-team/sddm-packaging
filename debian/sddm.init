@@ -79,6 +79,7 @@ case "$1" in
            sleep 1
            $0 start
        fi
+  ;;
   *)
         echo "Usage: /etc/init.d/sddm {start|stop|restart|reload|force-reload|status}"
         exit 1

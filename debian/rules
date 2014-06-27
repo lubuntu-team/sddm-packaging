@@ -3,6 +3,9 @@
 #export DH_VERBOSE=1
 
 %:
-	dh $@ --with kde
+	dh $@
 override_dh_strip:
 	dh_strip --dbg-package=sddm-dbg
+
+override_dh_auto_configure:
+	dh_auto_configure -- -DUSE_QT5=TRUE
