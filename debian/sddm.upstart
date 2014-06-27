@@ -11,7 +11,7 @@ author		"Rohan Garg <rohangarg@kubuntu.org>"
 start on ((filesystem
            and runlevel [!06]
            and started dbus
-           and plymouth-ready)
+           and stopped plymouth-stop)
           or runlevel PREVLEVEL=S)
 
 stop on runlevel [016]
