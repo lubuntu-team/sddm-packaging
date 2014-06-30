@@ -1,0 +1,40 @@
+#!/bin/sh
+set -e
+
+if [ "$1" = "purge" ] ; then
+        rm -f /etc/sddm.conf
+
+        if [ -d /var/log/sddm ]; then
+                rm -r /var/log/sddm
+        fi
+
+        if [ -d /var/cache/sddm ]; then
+                rm -r /var/cache/sddm
+        fi
+
+        if [ -d /var/run/sddm/authority ]; then
+                rm -r /var/run/sddm/authority
+        fi
+
+        if getent passwd sddm >/dev/null; then
+                if [ -x /usr/sbin/deluser ]; then
+                        deluser --system sddm
+                fi
+        fi
+
+        if getent group sddm >/dev/null; then
+                if [ -x /usr/sbin/delgroup ]; then
+                        delgroup --system sddm
+                fi
+        fi
+
+        # we cannot use the --remove-home option when we delete the user above
+        # because it will refuse to remove things in /var, so clean it up this
+        # way
+        if [ -d /var/lib/sddm ]; then
+                rm -r /var/lib/sddm
+        fi
+
+fi
+#DEBHELPER#
+exit 0
