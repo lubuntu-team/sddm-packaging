@@ -16,7 +16,8 @@ Homepage: https://github.com/sddm/sddm
 
 Package: sddm
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, adduser
+Depends: ${misc:Depends}, ${shlibs:Depends}, adduser,
+ qtdeclarative5-qtquick2-plugin
 Recommends: sddm-theme
 Description: modern display manager for X11
  SDDM is a modern display manager for X11 aiming to be fast, simple 
