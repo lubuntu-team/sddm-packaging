@@ -1,0 +1,2 @@
+version=3
+https://github.com/sddm/sddm/tags .*/archive/(\d\S*)\.tar\.gz
