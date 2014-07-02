@@ -1,7 +1,8 @@
-etc/sddm.conf
 etc/pam.d
+etc/sddm.conf
+lib/systemd/system/sddm.service
 usr/bin/sddm*
-usr/share/apps/sddm/faces
-usr/share/apps/sddm/sddm.conf.sample
 usr/lib/*/qt5/qml/SddmComponents/
+usr/share/apps/sddm/faces
 usr/share/apps/sddm/scripts/
+usr/share/apps/sddm/sddm.conf.sample

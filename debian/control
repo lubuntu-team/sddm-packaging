@@ -6,21 +6,27 @@ XSBC-Original-Maintainer: Michał Zając <quintasan@kubuntu.org>
 Build-Depends: cmake,
                debhelper (>= 8.0.0),
                dh-systemd,
-               qtdeclarative5-dev,
-               qtbase5-dev,
                libpam0g-dev,
+               libsystemd-login-dev,
+               libupower-glib-dev,
+               libxcb-xkb-dev,
                libxcb1-dev,
-               libxcb-xkb-dev
+               pkg-config,
+               qtbase5-dev,
+               qtdeclarative5-dev,
+               systemd
 Standards-Version: 3.9.5
 Homepage: https://github.com/sddm/sddm
 
 Package: sddm
 Architecture: any
-Depends: ${misc:Depends}, ${shlibs:Depends}, adduser,
- qtdeclarative5-qtquick2-plugin
+Depends: adduser,
+         qtdeclarative5-qtquick2-plugin,
+         ${misc:Depends},
+         ${shlibs:Depends}
 Recommends: sddm-theme
 Description: modern display manager for X11
- SDDM is a modern display manager for X11 aiming to be fast, simple 
+ SDDM is a modern display manager for X11 aiming to be fast, simple
  and beautiful. It uses modern technologies like QtQuick to create
  smooth, animated user interfaces.
 
