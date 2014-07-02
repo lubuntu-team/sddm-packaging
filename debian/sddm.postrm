@@ -35,6 +35,7 @@ if [ "$1" = "purge" ] ; then
                 rm -r /var/lib/sddm
         fi
 
+        update-rc.d sddm remove > /dev/null
 fi
 #DEBHELPER#
 exit 0
