@@ -4,7 +4,7 @@ Priority: extra
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 XSBC-Original-Maintainer: Michał Zając <quintasan@kubuntu.org>
 Build-Depends: cmake,
-               debhelper (>= 8.0.0),
+               debhelper (>= 9.0.0),
                dh-systemd,
                libpam0g-dev,
                libsystemd-login-dev,
