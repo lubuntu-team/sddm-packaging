@@ -1,9 +1,5 @@
-sddm (0.1.0-0ubuntu1) UNRELEASED; urgency=low
+sddm (0.1.0+git20140718-0ubuntu1) UNRELEASED; urgency=low
 
-  [ Michał Zając ]
   * Initial release (LP: #1157742)
-
-  [ Scarlett Clark ]
-  * Copyright 
 
  -- Michał Zając <quintasan@kubuntu.org>  Tue, 22 Apr 2014 16:50:04 +0100

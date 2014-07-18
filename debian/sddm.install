@@ -1,8 +1,10 @@
+etc/dbus-1/system.d/sddm_org.freedesktop.DisplayManager.conf
 etc/pam.d
-etc/sddm.conf
 lib/systemd/system/sddm.service
 usr/bin/sddm*
 usr/lib/*/qt5/qml/SddmComponents/
-usr/share/apps/sddm/faces
-usr/share/apps/sddm/scripts/
-usr/share/apps/sddm/sddm.conf.sample
+usr/lib/*/sddm/
+usr/share/sddm/faces
+usr/share/sddm/flags/
+usr/share/sddm/scripts/
+usr/share/sddm/translations/
