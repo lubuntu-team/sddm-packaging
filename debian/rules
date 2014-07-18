@@ -18,3 +18,8 @@ override_dh_systemd_start:
 
 override_dh_installinit:
 	dh_installinit --no-start
+
+override_dh_installpam:
+	dh_installpam
+	dh_installpam --name=sddm-autologin
+	dh_installpam --name=sddm-greeter
