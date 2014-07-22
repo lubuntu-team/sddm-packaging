@@ -1,4 +1,4 @@
-sddm (0.8.99-0ubuntu1) UNRELEASED; urgency=low
+sddm (0.8.99-0ubuntu1~ubuntu14.10~ppa4) utopic; urgency=low
 
   * Initial release (LP: #1157742)
 

@@ -24,10 +24,10 @@ Package: sddm
 Architecture: any
 Depends: adduser,
          qtdeclarative5-qtquick2-plugin,
+         sddm-theme | sddm-theme-maui,
          sddm-theme-maui,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: sddm-theme | sddm-theme-maui
 Description: modern display manager for X11
  SDDM is a modern display manager for X11 aiming to be fast, simple
  and beautiful. It uses modern technologies like QtQuick to create
