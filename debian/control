@@ -24,6 +24,7 @@ Package: sddm
 Architecture: any
 Depends: adduser,
          qtdeclarative5-qtquick2-plugin,
+         sddm-theme-maui,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: sddm-theme | sddm-theme-maui
