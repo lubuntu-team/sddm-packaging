@@ -12,41 +12,30 @@ Copyright: © 2013 Abdurrahman AVCI <abdurrahmanavci@gmail.com>
            © 2007 Matthias Kretz <kretz@kde.org>
            © 2014 David Edmundson <davidedmundson@kde.org>
            © 2008 Helio Chissini de Castro <helio@kde.org>
-           © 2010 Roman Shtylman | nuno@oxygen-icons.org, 2012 Nuno Pineheiro
+           © 2001-2005 Oswald Buddenhagen <ossi@kde.org>
+           © 2010 Roman Shtylman <shtylman@gmail.com>
+           © 2012 Nuno Pineheiro <nuno@oxygen-icons.org>
            Dacian Stanciu.
 License: GPL-2+
- This package is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <http://www.gnu.org/licenses/>
- .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
 
 Files: src/qauth/*
 Copyright: 2013 Martin Bříza <mbriza@redhat.com>
 License: LGPL-2.1+
- * This library is free software; you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation; either
- * version 2.1 of the License, or (at your option) any later version.
- *
- * This library is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
- * Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public
- * License along with this library; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301 USA
+ This library is free software; you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public
+ License as published by the Free Software Foundation; either
+ version 2.1 of the License, or (at your option) any later version.
+ .
+ This library is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ Lesser General Public License for more details.
+ .
+ You should have received a copy of the GNU Lesser General Public
+ License along with this library; If not, see <http://www.gnu.org/licenses/>. 
+ .
+ On Debian systems, the complete text of the GNU General
+ Public License version 2 can be found in "/usr/share/common-licenses/LGPL-2.1".
 
 Files: *.qml
 Copyright: 2013 Nikita Mikhailov <nslqqq@gmail.com>
@@ -113,7 +102,7 @@ License: SIL OFL 1.1
 
 Files: data/themes/elarun/images/background.png
 Copyright: Nuno Pinheiro Email=nuno@oxygen-icons.org
-License: LGPLv3
+License: LGPL-3
  This image is free software: you can redistribute it and/or modify
  it under the terms of the GNU Lesser General Public License as published by
  the Free Software Foundation, either version 3 of the License, or
@@ -126,6 +115,9 @@ License: LGPLv3
  .
  You should have received a copy of the GNU Lesser General Public License
  along with this image.  If not, see <http://www.gnu.org/licenses/>.
+ .
+ On Debian systems, the complete text of the GNU Lesser General
+ Public License version 3 can be found in "/usr/share/common-licenses/LGPL-3".
 
 Files: data/themes/maldives/GeosansLight.ttf
        data/themes/maui/GeosansLight.ttf
@@ -144,6 +136,7 @@ Files: debian/*
 Copyright: © 2014 Rohan Garg <rohangarg@kubuntu.org>
            © 2014 Scarlett Clark <scarlett@scarlettgatelyclark.com>
            © 2013 Michał Zając <quintasan@kubuntu.org>
+           © 2010-2014 Rosetta Contributors and Canonical Ltd
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
@@ -160,20 +153,3 @@ License: GPL-2+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
-
-Files: data/scripts/XSession
-Copyright: (C) 2001-2005 Oswald Buddenhagen <ossi@kde.org>
-License: GPL-2+ This file is extracted from kde-workspace (kdm/kfrontend/genkdmconf.c)
- This program is free software; you can redistribute it and/or modify
- it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
- .
- This program is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
- .
- You should have received a copy of the GNU General Public License
- along with this program; if not, write to the Free Software
- Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
