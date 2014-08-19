@@ -24,7 +24,7 @@ Package: sddm
 Architecture: any
 Depends: adduser,
          qtdeclarative5-qtquick2-plugin,
-         sddm-theme | sddm-theme-maui,
+         sddm-theme | sddm-theme-breeze,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: modern display manager for X11
