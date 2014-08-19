@@ -24,7 +24,7 @@ Package: sddm
 Architecture: any
 Depends: adduser,
          qtdeclarative5-qtquick2-plugin,
-         sddm-theme | sddm-theme-breeze,
+         sddm-theme-breeze | sddm-theme,
          ${misc:Depends},
          ${shlibs:Depends}
 Description: modern display manager for X11
@@ -34,30 +34,34 @@ Description: modern display manager for X11
 
 Package: sddm-theme-maui
 Architecture: any
-Depends: sddm, ${misc:Depends}
+Depends: ${misc:Depends}
+Recommends: sddm
 Provides: sddm-theme
-Description: Default theme for SDDM X11 display manager
+Description: 'Maui' theme for SDDM X11 display manager
  Maui theme for SDDM
 
 Package: sddm-theme-circles
 Architecture: any
-Depends: sddm, ${misc:Depends}
+Depends: ${misc:Depends}
+Recommends: sddm
 Provides: sddm-theme
-Description: Theme for SDDM X11 display manager
+Description: 'Circles' theme for SDDM X11 display manager
  Circles theme for SDDM
 
 Package: sddm-theme-elarun
 Architecture: any
-Depends: sddm, ${misc:Depends}
+Depends: ${misc:Depends}
+Recommends: sddm
 Provides: sddm-theme
-Description: Theme for SDDM X11 display manager
+Description: 'Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM
 
 Package: sddm-theme-maldives
 Architecture: any
-Depends: sddm, ${misc:Depends}
+Depends: ${misc:Depends}
+Recommends: sddm
 Provides: sddm-theme
-Description: Theme for SDDM X11 display manager
+Description: 'Maldives' theme for SDDM X11 display manager
  Maldives theme for SDDM
 
 Package: sddm-dbg
