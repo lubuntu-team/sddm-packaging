@@ -2,7 +2,7 @@
 # -*- makefile -*-
 #export DH_VERBOSE=1
 
-MULTIARCH=`dpkg-architecture -qDEB_HOST_MULTIARCH`
+DEB_HOST_MULTIARCH=`dpkg-architecture -qDEB_HOST_MULTIARCH`
 
 %:
 	dh $@ --with systemd --parallel
@@ -11,7 +11,7 @@ override_dh_strip:
 	dh_strip --dbg-package=sddm-dbg
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DUSE_QT5=TRUE -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/${MULTIARCH}/sddm
+	dh_auto_configure -- -DUSE_QT5=TRUE -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/${DEB_HOST_MULTIARCH}/sddm
 
 override_dh_systemd_start:
 	dh_systemd_start -psddm --no-start -r sddm.service
