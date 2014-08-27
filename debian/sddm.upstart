@@ -26,6 +26,16 @@ emits desktop-shutdown
 script
     if [ -n "$UPSTART_EVENTS" ]
     then
+        # Check kernel command-line for inhibitors, unless we are being called
+        # manually
+        for ARG in $(cat /proc/cmdline); do
+            if [ "$ARG" = "text" ]; then
+		plymouth quit || : 
+                stop
+		exit 0
+            fi
+        done
+
         [ ! -f /etc/X11/default-display-manager -o "$(cat /etc/X11/default-display-manager 2>/dev/null)" = "/usr/bin/sddm" -o "$(cat /etc/X11/default-display-manager 2>/dev/null)" = "/usr/sbin/sddm" ] || { stop; exit 0; }
         plymouth quit
         clear >/dev/tty7
