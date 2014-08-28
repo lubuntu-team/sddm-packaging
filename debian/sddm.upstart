@@ -39,8 +39,8 @@ script
         [ ! -f /etc/X11/default-display-manager -o "$(cat /etc/X11/default-display-manager 2>/dev/null)" = "/usr/bin/sddm" -o "$(cat /etc/X11/default-display-manager 2>/dev/null)" = "/usr/sbin/sddm" ] || { stop; exit 0; }
         plymouth quit
         clear >/dev/tty7
-        exec sddm
     fi
+    exec sddm
 end script
 
 post-start script
