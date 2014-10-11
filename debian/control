@@ -1,11 +1,11 @@
 Source: sddm
 Section: kde
-Priority: extra
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-XSBC-Original-Maintainer: Michał Zając <quintasan@kubuntu.org>
-Build-Depends: cmake,
-               debhelper (>= 9.0.0),
-               dh-systemd,
+Priority: optional
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Michał Zając <quintasan@kubuntu.org>
+Build-Depends: cmake (>= 2.8.8),
+               debhelper (>= 9),
+               dh-systemd [linux-any],
                libpam0g-dev,
                libsystemd-login-dev,
                libupower-glib-dev,
@@ -16,9 +16,11 @@ Build-Depends: cmake,
                qtdeclarative5-dev,
                qttools5-dev,
                qttools5-dev-tools,
-               systemd
-Standards-Version: 3.9.5
+               systemd [linux-any]
+Standards-Version: 3.9.6
 Homepage: https://github.com/sddm/sddm
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-std/sddm.git
+Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-std/sddm.git
 
 Package: sddm
 Architecture: any
@@ -33,7 +35,7 @@ Description: modern display manager for X11
  smooth, animated user interfaces.
 
 Package: sddm-theme-maui
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
@@ -41,7 +43,7 @@ Description: 'Maui' theme for SDDM X11 display manager
  Maui theme for SDDM
 
 Package: sddm-theme-circles
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
@@ -49,7 +51,7 @@ Description: 'Circles' theme for SDDM X11 display manager
  Circles theme for SDDM
 
 Package: sddm-theme-elarun
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
@@ -57,7 +59,7 @@ Description: 'Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM
 
 Package: sddm-theme-maldives
-Architecture: any
+Architecture: all
 Depends: ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
