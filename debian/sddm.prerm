@@ -10,15 +10,13 @@
 set -e
 
 THIS_PACKAGE=sddm
-DAEMON=/usr/sbin/sddm
-
 DEFAULT_DISPLAY_MANAGER_FILE=/etc/X11/default-display-manager
 
 if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
   if [ -e /usr/share/debconf/confmodule ]; then
     . /usr/share/debconf/confmodule
     # disown this question
-    db_unregister shared/default-x-display-manager
+    db_unregister shared/default-x-display-manager || true
     # does the question still exist?
     if db_get shared/default-x-display-manager; then
       db_metaget shared/default-x-display-manager owners
@@ -31,10 +29,6 @@ if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
 	    if [ "$(cat $DEFAULT_DISPLAY_MANAGER_FILE)" = "$RET" ]; then
 	      rm "$DEFAULT_DISPLAY_MANAGER_FILE"
 	    fi
-	  else
-	    if [ "$(cat $DEFAULT_DISPLAY_MANAGER_FILE)" = "$DAEMON" ]; then
-	      rm "$DEFAULT_DISPLAY_MANAGER_FILE"
-	    fi
 	  fi
         fi
         # ask the user to choose a new default
@@ -45,6 +39,7 @@ if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
         # to the new default display manager
         if [ ! -e $DEFAULT_DISPLAY_MANAGER_FILE ]; then
           db_get shared/default-x-display-manager
+          echo "Please be sure to run \"dpkg-reconfigure $RET\"."
           db_get "$RET"/daemon_name
           echo "$RET" > "$DEFAULT_DISPLAY_MANAGER_FILE"
         fi
