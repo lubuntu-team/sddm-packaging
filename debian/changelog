@@ -1,4 +1,4 @@
-sddm (0.10.0-1~) UNRELEASED; urgency=low
+sddm (0.10.0-1~) UNRELEASED; urgency=medium
 
   [ Michał Zając ]
   * Initial release (LP: #1157742)
