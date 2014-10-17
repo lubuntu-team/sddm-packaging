@@ -1,0 +1,13 @@
+
+- The current code forces the greeter to be run with the "sddm", without any
+  possibility to configure it. It would be better if this is configurable as we
+  don't want to pollute the usernames space. (it seems like it the _sddm name
+  would be more in the current best practices)
+
+- The current pam code tries to detect the prompts with regular expressions
+  instead of using the prompt as is. To do so, it forces the helper
+  environment to LANG=C. It would be better to drop that logic and just use
+  the pam prompt.
+
+- We don't need now want another Xsession script, drop the one in the package
+  and run session=foo /etc/X11/Xsession
