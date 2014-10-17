@@ -1,2 +1,4 @@
 kubuntu_use_breeze.diff
 kubuntu_dbus-config-rename.diff
+upstream_fix-xsession-for-zsh.diff
+upstream_xsession-scripts.diff

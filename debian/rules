@@ -12,7 +12,7 @@ override_dh_strip:
 	dh_strip --dbg-package=sddm-dbg
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DUSE_QT5=TRUE -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/${DEB_HOST_MULTIARCH}/sddm
+	dh_auto_configure -- -DUSE_QT5=TRUE -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/${DEB_HOST_MULTIARCH}/sddm -DNO_SYSTEMD=true
 
 override_dh_systemd_start:
 	dh_systemd_start -psddm --no-start -r sddm.service
