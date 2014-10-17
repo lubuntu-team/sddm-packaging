@@ -34,7 +34,3 @@ sddm (0.9.0-0ubuntu1~ubuntu14.10~ppa8) utopic; urgency=medium
  -- Denis Meiswinkel <denis.meiswinkel@gmail.com>  Mon, 29 Sep 2014 11:50:50 +0000
 
 sddm (0.9.0-0ubuntu1~ubuntu14.10~ppa7) utopic; urgency=low
-
-  * Initial release (LP: #1157742)
-
- -- Michał Zając <quintasan@kubuntu.org>  Tue, 22 Apr 2014 16:50:04 +0100
