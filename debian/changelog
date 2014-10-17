@@ -1,3 +1,9 @@
+sddm (0.10.0-0ubuntu1~ubuntu14.10~ppa1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 17 Oct 2014 15:39:42 +0200
+
 sddm (0.9.0-0ubuntu1~ubuntu14.10~ppa12) utopic; urgency=medium
 
   * Merge with Debian git pacakging, remaining changes:
