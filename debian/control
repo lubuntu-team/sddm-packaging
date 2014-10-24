@@ -25,7 +25,7 @@ Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-std/sddm.git
 Package: sddm
 Architecture: any
 Depends: adduser,
-         qtdeclarative5-qtquick2-plugin,
+         qml-module-qtquick2,
          sddm-theme-breeze | sddm-theme,
          ${misc:Depends},
          ${shlibs:Depends}
