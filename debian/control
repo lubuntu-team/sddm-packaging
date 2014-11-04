@@ -70,6 +70,7 @@ Package: sddm-dbg
 Depends: sddm (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Architecture: any
 Section: debug
+Priority: extra
 Description: modern display manager for X11 -- debugging symbols
  SDDM is a modern display manager for X11 aiming to be fast, simple
  and beautiful. It uses modern technologies like QtQuick to create
