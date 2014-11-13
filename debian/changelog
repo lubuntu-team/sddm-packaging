@@ -1,5 +1,8 @@
-sddm (0.10.0-0ubuntu1) vivid; urgency=medium
+sddm (0.10.0+dfsg1-0ubuntu1) vivid; urgency=medium
 
   * Initial archive upload
+  * Replace file data/themes/maldives/maldives.jpg and
+    data/themes/maldives/background.jpg background file with a free
+    image, https://github.com/sddm/sddm/issues/315
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 17 Oct 2014 15:39:42 +0200
