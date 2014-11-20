@@ -25,7 +25,7 @@ Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-std/sddm.git
 Package: sddm
 Architecture: any
 Depends: adduser,
-         qtdeclarative5-qtquick2-plugin,
+         qml-module-qtquick2,
          sddm-theme-breeze | sddm-theme,
          ${misc:Depends},
          ${shlibs:Depends}
@@ -70,6 +70,7 @@ Package: sddm-dbg
 Depends: sddm (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
 Architecture: any
 Section: debug
+Priority: extra
 Description: modern display manager for X11 -- debugging symbols
  SDDM is a modern display manager for X11 aiming to be fast, simple
  and beautiful. It uses modern technologies like QtQuick to create
