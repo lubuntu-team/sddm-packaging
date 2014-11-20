@@ -4,7 +4,8 @@
 auth    requisite       pam_nologin.so
 auth    required        pam_permit.so
 # Load environment from /etc/default/locale and ~/.pam_environment
-auth    required        pam_env.so envfile=/etc/default/locale
+session    required        pam_env.so envfile=/etc/default/locale
+session    required        pam_env.so readenv=1
 
 @include common-account
 

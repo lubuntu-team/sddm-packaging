@@ -1,7 +1,8 @@
 #%PAM-1.0
 
 # Load environment from /etc/default/locale and ~/.pam_environment
-auth    required        pam_env.so envfile=/etc/default/locale
+session    required        pam_env.so envfile=/etc/default/locale
+session    required        pam_env.so readenv=1
 auth    required        pam_permit.so
 
 @include common-account
