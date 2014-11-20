@@ -3,9 +3,6 @@
 # Block login if they are globally disabled
 auth    requisite       pam_nologin.so
 auth    required        pam_succeed_if.so user != root quiet_success
-# Load environment from /etc/default/locale and ~/.pam_environment
-session    required        pam_env.so envfile=/etc/default/locale
-session    required        pam_env.so readenv=1
 
 # auth    sufficient      pam_succeed_if.so user ingroup nopasswdlogin
 @include common-auth
@@ -31,3 +28,12 @@ session [success=ok ignore=ignore module_unknown=ignore default=bad] pam_selinux
 -session optional       pam_kwallet.so auto_start
 
 @include common-password
+
+# From the pam_env man page
+# Since setting of PAM environment variables can have side effects to other modules, this module should be the last one on the stack.
+
+# Load environment from /etc/default/locale, /etc/environment and ~/.pam_environment
+session    required        pam_env.so user_readenv=1
+
+# Load environment from /etc/default/locale and /etc/environment
+session    required        pam_env.so
