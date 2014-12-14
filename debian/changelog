@@ -1,6 +1,6 @@
 sddm (0.11.0-0ubuntu3) UNRELEASED; urgency=medium
 
-  * Re-enable systemd integration 
+  * Re-enable systemd integration and install the sddm.service again
 
  -- Philip Muškovac <yofel@kubuntu.org>  Sun, 14 Dec 2014 19:02:38 +0100
 
