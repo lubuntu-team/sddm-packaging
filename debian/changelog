@@ -1,3 +1,9 @@
+sddm (0.11.0-0ubuntu3) UNRELEASED; urgency=medium
+
+  * Re-enable systemd integration 
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 14 Dec 2014 19:02:38 +0100
+
 sddm (0.11.0-0ubuntu2) vivid; urgency=medium
 
   * Sync with packaging from kubuntu_unstable
