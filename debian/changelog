@@ -1,4 +1,4 @@
-sddm (0.11.0-0ubuntu3) UNRELEASED; urgency=medium
+sddm (0.11.0-0ubuntu3) vivid; urgency=medium
 
   * Re-enable systemd integration and install the sddm.service again
 
