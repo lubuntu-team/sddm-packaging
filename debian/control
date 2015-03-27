@@ -2,7 +2,8 @@ Source: sddm
 Section: kde
 Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Michał Zając <quintasan@kubuntu.org>
+Uploaders: Michał Zając <quintasan@kubuntu.org>,
+           Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.8),
                debhelper (>= 9),
                dh-systemd [linux-any],
