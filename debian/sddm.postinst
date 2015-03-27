@@ -60,11 +60,8 @@ if [ "$1" = configure ] && [ -d /etc/systemd/system/ ]; then
         elif [ -e "$SERVICE" ]; then
             ln -sf "$SERVICE" "$DEFAULT_SERVICE"
         else
-            echo "WARNING: $SERVICE is the selected default display manager but does not exist" >&2
-            rm -f "$DEFAULT_SERVICE"
+            echo "ERROR: $SERVICE is the selected default display manager but does not exist" >&2
         fi
-    else
-        rm -f "$DEFAULT_SERVICE"
     fi
 fi
 

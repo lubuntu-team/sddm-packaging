@@ -1,0 +1,12 @@
+[Unit]
+Description=Simple Desktop Display Manager
+Documentation=man:sddm(1) man:sddm.conf(5)
+After=systemd-user-sessions.service
+
+[Service]
+# temporary safety check until all DMs are converted to correct
+# display-manager.service symlink handling
+ExecStartPre=/bin/sh -c '[ "$(cat /etc/X11/default-display-manager 2>/dev/null)" = "/usr/bin/sddm" ]'
+ExecStart=/usr/bin/sddm
+Restart=always
+BusName=org.freedesktop.DisplayManager
