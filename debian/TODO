@@ -9,5 +9,5 @@
   environment to LANG=C. It would be better to drop that logic and just use
   the pam prompt.
 
-- We don't need now want another Xsession script, drop the one in the package
+- We don't need nor want another Xsession script, drop the one in the package
   and run session=foo /etc/X11/Xsession
