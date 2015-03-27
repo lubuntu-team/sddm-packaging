@@ -8,3 +8,41 @@ sddm (0.11.0-1~) UNRELEASED; urgency=medium
   * New upstream release (0.11.0).
 
  -- Maximiliano Curia <maxy@debian.org>  Fri, 27 Mar 2015 12:46:58 +0100
+sddm (0.11.0-0ubuntu5) vivid; urgency=medium
+
+  * Add upstream_add-graphical.target.diff from upstream
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Mar 2015 18:31:32 +0100
+
+sddm (0.11.0-0ubuntu4) vivid; urgency=medium
+
+  * Add kubuntu_minimum_vt.diff to set minimum vt to 7
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 11 Mar 2015 17:02:02 +0100
+
+sddm (0.11.0-0ubuntu3) vivid; urgency=medium
+
+  * Re-enable systemd integration and install the sddm.service again
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 14 Dec 2014 19:02:38 +0100
+
+sddm (0.11.0-0ubuntu2) vivid; urgency=medium
+
+  * Sync with packaging from kubuntu_unstable
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 20 Nov 2014 17:58:48 +0100
+
+sddm (0.11.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 20 Nov 2014 17:57:57 +0100
+
+sddm (0.10.0+dfsg1-0ubuntu1) vivid; urgency=medium
+
+  * Initial archive upload
+  * Replace file data/themes/maldives/maldives.jpg and
+    data/themes/maldives/background.jpg background file with a free
+    image, https://github.com/sddm/sddm/issues/315
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 17 Oct 2014 15:39:42 +0200
