@@ -26,6 +26,7 @@ DEFAULT_DISPLAY_MANAGER_FILE=/etc/X11/default-display-manager
 
 DESC="Init script for Simple Desktop Display Manager"
 DAEMON=/usr/bin/sddm
+START_ARGS='--background --make-pidfile'
 
 #
 # Function that starts the daemon/service
