@@ -25,10 +25,9 @@ if [ "$1" = "remove" ] || [ "$1" = "deconfigure" ]; then
       # are we removing the currently selected display manager?
       if [ "$THIS_PACKAGE" = "$RET" ]; then
         if [ -e "$DEFAULT_DISPLAY_MANAGER_FILE" ]; then
-	  if db_get "$RET"/daemon_name; then
-	    if [ "$(cat $DEFAULT_DISPLAY_MANAGER_FILE)" = "$RET" ]; then
-	      rm "$DEFAULT_DISPLAY_MANAGER_FILE"
-	    fi
+	  db_get "$RET"/daemon_name
+	  if [ "$(cat $DEFAULT_DISPLAY_MANAGER_FILE)" = "$RET" ]; then
+	    rm "$DEFAULT_DISPLAY_MANAGER_FILE"
 	  fi
         fi
         # ask the user to choose a new default

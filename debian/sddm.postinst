@@ -36,7 +36,7 @@ if ! [ -e "$DEFAULT_DISPLAY_MANAGER_FILE" ]; then
         if [ "$THIS_PACKAGE" != "$RET" ]; then
             echo "Please be sure to run \"dpkg --configure $RET\"."
         fi
-        if db_get "$DEFAULT_DISPLAY_MANAGER"/daemon_name; then
+        if db_get "$RET"/daemon_name; then
             echo "$RET" > "$DEFAULT_DISPLAY_MANAGER_FILE"
         fi
     fi
@@ -49,6 +49,10 @@ fi
 
 # debconf hangs if sddm gets started below without this
 db_stop || true
+
+if [ "$1" = "configure" ]; then
+    invoke-rc.d dbus reload || true
+fi
 
 DEFAULT_SERVICE=/etc/systemd/system/display-manager.service
 # set default-display-manager systemd service link according to our config
@@ -71,10 +75,6 @@ K=01
 
 if [ -x /etc/init.d/sddm ]; then
     update-rc.d sddm defaults $S $K >/dev/null 2>&1
-fi
-
-if [ "$1" = "configure" ]; then
-    invoke-rc.d dbus reload || true
 fi
 
 touch /var/log/sddm.log
