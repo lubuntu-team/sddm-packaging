@@ -1,4 +1,4 @@
-sddm (0.11.0-1~4) UNRELEASED; urgency=medium
+sddm (0.11.0-1~5) UNRELEASED; urgency=medium
 
   [ Michał Zając ]
   * Initial release (LP: #1157742)
@@ -8,7 +8,7 @@ sddm (0.11.0-1~4) UNRELEASED; urgency=medium
   * New upstream release (0.11.0).
   * Update copyright information.
 
- -- Maximiliano Curia <maxy@debian.org>  Fri, 27 Mar 2015 16:51:23 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 27 Mar 2015 18:32:02 +0100
 
 sddm (0.11.0-0ubuntu5) vivid; urgency=medium
 
