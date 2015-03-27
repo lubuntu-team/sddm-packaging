@@ -16,8 +16,7 @@ fi
 # Author: Rohan Garg <rohangarg@kubuntu.org>
 #
 
-HEED_DEFAULT_DISPLAY_MANAGER=
-# To start lightdm even if it is not the default display manager, change
+# To start sddm even if it is not the default display manager, change
 # HEED_DEFAULT_DISPLAY_MANAGER to "false."
 # Also overridable from command line like:
 # HEED_DEFAULT_DISPLAY_MANAGER=false /etc/init.d/lightdm start
