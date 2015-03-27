@@ -1,9 +1,10 @@
-sddm (0.10.0-1~) UNRELEASED; urgency=medium
+sddm (0.11.0-1~) UNRELEASED; urgency=medium
 
   [ Michał Zając ]
   * Initial release (LP: #1157742)
 
   [ Maximiliano Curia ]
   * New upstream release (0.10.0).
+  * New upstream release (0.11.0).
 
- -- Maximiliano Curia <maxy@debian.org>  Fri, 17 Oct 2014 13:00:29 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 27 Mar 2015 12:46:58 +0100
