@@ -1,3 +1,24 @@
+sddm (0.11.0-0ubuntu8) vivid; urgency=medium
+
+  * Add upstream_fix-zsh-Xsession.patch: fix Xsession with zsh from
+    upstream. LP: #1439826
+
+ -- Dan McGregor <dan.mcgregor@usask.ca>  Thu, 02 Apr 2015 11:26:39 -0600
+
+sddm (0.11.0-0ubuntu7) vivid; urgency=medium
+
+  * Add kubuntu_nvidia-prime.diff to run nvidia-prime setup script at
+    login
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 02 Apr 2015 16:07:55 +0200
+
+sddm (0.11.0-0ubuntu6) vivid; urgency=medium
+
+  * In kubuntu_minimum_vt.diff remove conflicts on tty1 in systemd
+    sddm.service
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 31 Mar 2015 16:37:15 +0200
+
 sddm (0.11.0-0ubuntu5) vivid; urgency=medium
 
   * Add upstream_add-graphical.target.diff from upstream
