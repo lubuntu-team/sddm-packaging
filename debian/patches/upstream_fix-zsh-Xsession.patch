@@ -1,0 +1,23 @@
+## Description: Fix zsh support in Xsession
+## Origin/Author: https://github.com/sddm/sddm/commit/5ab43a6418ec68fe7ba7690a7c9cb3c1552f62dd
+## Bug: 1439826
+Index: sddm-vivid/data/scripts/Xsession
+===================================================================
+--- sddm-vivid.orig/data/scripts/Xsession
++++ sddm-vivid/data/scripts/Xsession
+@@ -22,7 +22,6 @@ case $SHELL in
+     ;;
+   */zsh)
+     [ -z "$ZSH_NAME" ] && exec $SHELL $0 "$@"
+-    emulate -R sh
+     [ -d /etc/zsh ] && zdir=/etc/zsh || zdir=/etc
+     zhome=${ZDOTDIR:-$HOME}
+     # zshenv is always sourced automatically.
+@@ -30,6 +29,7 @@ case $SHELL in
+     [ -f $zhome/.zprofile ] && . $zhome/.zprofile
+     [ -f $zdir/zlogin ] && . $zdir/zlogin
+     [ -f $zhome/.zlogin ] && . $zhome/.zlogin
++    emulate -R sh
+     ;;
+   */csh|*/tcsh)
+     # [t]cshrc is always sourced automatically.
