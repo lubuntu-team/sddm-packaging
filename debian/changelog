@@ -1,6 +1,8 @@
 sddm (0.11.0-2~) UNRELEASED; urgency=medium
 
-  * 
+  [ Maximiliano Curia ]
+  * Re-enable patches kubuntu_use_breeze.diff, kubuntu_minimum_vt.diff,
+    upstream_add-graphical.target.diff.
 
  -- Maximiliano Curia <maxy@debian.org>  Sat, 28 Mar 2015 09:40:09 +0100
 
