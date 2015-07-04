@@ -4,6 +4,15 @@ sddm (0.11.0-2~) UNRELEASED; urgency=medium
   * Re-enable patches kubuntu_use_breeze.diff, kubuntu_minimum_vt.diff,
     upstream_add-graphical.target.diff.
 
+  [ Pino Toscano ]
+  * Make sddm build on non-Linux architectures:
+    - limit the libsystemd-login-dev build dependency as linux-any
+    - properly use DEB_HOST_ARCH_OS for detecting the current target OS
+    - explicitly disable systemd and journald on non-Linux archs
+    - disable installation of the upstream lib/systemd/system/sddm.service
+      (installed only with systemd support enabled), as there is a local
+      debian/sddm.service which will be used anyway instead
+
  -- Maximiliano Curia <maxy@debian.org>  Sat, 28 Mar 2015 09:40:09 +0100
 
 sddm (0.11.0-1) experimental; urgency=medium
