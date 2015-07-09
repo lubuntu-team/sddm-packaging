@@ -7,7 +7,7 @@ auth    required        pam_succeed_if.so user != root quiet_success
 # auth    sufficient      pam_succeed_if.so user ingroup nopasswdlogin
 @include common-auth
 # gnome_keyring breaks QProcess
-# -auth   optional        pam_gnome_keyring.so
+-auth   optional        pam_gnome_keyring.so
 -auth   optional        pam_kwallet.so
 
 @include common-account
@@ -25,7 +25,7 @@ session required        pam_loginuid.so
 # in the proper default security context.  Only sessions which are intended
 # to run in the user's context should be run after this.
 session [success=ok ignore=ignore module_unknown=ignore default=bad] pam_selinux.so open
-# -session optional       pam_gnome_keyring.so auto_start
+-session optional       pam_gnome_keyring.so auto_start
 -session optional       pam_kwallet.so auto_start
 
 @include common-password
