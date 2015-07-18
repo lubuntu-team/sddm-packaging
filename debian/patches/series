@@ -3,3 +3,4 @@ kubuntu_dbus-config-rename.diff
 kubuntu_minimum_vt.diff
 upstream_add-graphical.target.diff
 libsystemd.diff
+sddm_systemctl.diff
