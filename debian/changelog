@@ -1,4 +1,4 @@
-sddm (0.11.0-3~) UNRELEASED; urgency=medium
+sddm (0.11.0-3) unstable; urgency=medium
 
   * Transition to libsystemd-dev. (Closes: #792400) Thanks to Michael
     Biebl
@@ -8,7 +8,7 @@ sddm (0.11.0-3~) UNRELEASED; urgency=medium
   * Update debian/po files. (Closes: #792085) Thanks to Christian
     Perrier
 
- -- Maximiliano Curia <maxy@debian.org>  Sat, 18 Jul 2015 20:39:32 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 18 Jul 2015 21:34:44 +0200
 
 sddm (0.11.0-2) unstable; urgency=medium
 
