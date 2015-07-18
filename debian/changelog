@@ -5,6 +5,8 @@ sddm (0.11.0-3~) UNRELEASED; urgency=medium
   * New patch: libsystemd.diff
   * Fix systemctl path. (Closes: #792401) Thanks to Michael Biebl
   * New patch: sddm_systemctl.diff
+  * Update debian/po files. (Closes: #792085) Thanks to Christian
+    Perrier
 
  -- Maximiliano Curia <maxy@debian.org>  Sat, 18 Jul 2015 20:39:32 +0200
 
