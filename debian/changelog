@@ -1,3 +1,10 @@
+sddm (0.11.0-4) UNRELEASED; urgency=medium
+
+  * Team upload.
+  * Add Provides: x-display-manager for sddm (Closes: 795006)
+
+ -- Scott Kitterman <scott@kitterman.com>  Sun, 09 Aug 2015 18:20:37 -0400
+
 sddm (0.11.0-3) unstable; urgency=medium
 
   * Transition to libsystemd-dev. (Closes: #792400) Thanks to Michael
