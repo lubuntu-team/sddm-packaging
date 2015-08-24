@@ -1,11 +1,11 @@
-sddm (0.11.0-0ubuntu11) UNRELEASED; urgency=medium
+sddm (0.11.0-0ubuntu11) wily; urgency=medium
 
   * Fix postrm to remove what was if'd for as to avoid failure.
   * Add pam_kwallet5 to the pam profile rules. It is the same version as
     pam_kwallet but for kwallet5 (kwallet4 and kwallet5 are distinct entities
     requiring separate unlocking)
 
- -- Harald Sitter <sitter@kde.org>  Mon, 24 Aug 2015 12:07:35 +0200
+ -- Harald Sitter <sitter@kde.org>  Mon, 24 Aug 2015 12:40:32 +0200
 
 sddm (0.11.0-0ubuntu10) vivid; urgency=medium
 
