@@ -75,18 +75,10 @@ License: CC-BY-SA-3.0
 Files: data/themes/circles/background.png
 Copyright: 2013, Abdurrahman AVCI <abdurrahmanavci@gmail.com>
 License: CC-BY-3.0
- This work is licensed under the Creative Commons Attribution 3.0 Unported
- License. To view a copy of this license, visit
- http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative
- Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 Files: data/themes/maldives/background.jpg
 Copyright: 2008, Nevit Dilmen, http://commons.wikimedia.org/wiki/User:Nevit
 License: CC-BY-3.0
- This work is licensed under the Creative Commons Attribution 3.0 Unported
- License. To view a copy of this license, visit
- http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative
- Commons, PO Box 1866, Mountain View, CA 94042, USA.
 
 Files: data/themes/circles/angle-down.png
        data/themes/elarun/angle-down.png
@@ -240,3 +232,9 @@ License: GPL-2+
  .
  On Debian systems, the complete text of the GNU General
  Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+
+License: CC-BY-3.0
+ This work is licensed under the Creative Commons Attribution 3.0 Unported
+ License. To view a copy of this license, visit
+ http://creativecommons.org/licenses/by/3.0/ or send a letter to Creative
+ Commons, PO Box 1866, Mountain View, CA 94042, USA.
