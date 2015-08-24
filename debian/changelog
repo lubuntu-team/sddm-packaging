@@ -1,3 +1,9 @@
+sddm (0.11.0-0ubuntu11) UNRELEASED; urgency=medium
+
+  * Fix postrm to remove what was if'd for as to avoid failure.
+
+ -- Harald Sitter <sitter@kde.org>  Mon, 24 Aug 2015 12:07:35 +0200
+
 sddm (0.11.0-0ubuntu10) vivid; urgency=medium
 
   * Add kubuntu_nvidia-prime-logout.diff from Alberto to run a script on
