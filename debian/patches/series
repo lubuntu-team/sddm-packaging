@@ -1,4 +1,5 @@
 kubuntu_use_breeze.diff
 kubuntu_minimum_vt.diff
 upstream_add-graphical.target.diff
+kubuntu_nvidia-prime-logout.diff
 kubuntu_nvidia-prime.diff

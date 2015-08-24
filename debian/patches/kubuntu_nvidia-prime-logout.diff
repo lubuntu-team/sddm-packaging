@@ -1,0 +1,108 @@
+From 6f75108173bed1597a2a3a7cdfc350723f0e6331 Mon Sep 17 00:00:00 2001
+From: Alberto Milone <alberto.milone@canonical.com>
+Date: Fri, 10 Apr 2015 17:48:45 +0200
+Subject: [PATCH 1/1] Add support for DisplayStopCommand
+
+Also make sure to free the memory allocated for DisplayCommand
+---
+ data/man/sddm.conf.rst.in        |  4 ++++
+ data/scripts/Xstop               |  2 ++
+ src/common/Configuration.h       |  2 ++
+ src/daemon/XorgDisplayServer.cpp | 28 ++++++++++++++++++++++++++++
+ 4 files changed, 36 insertions(+)
+ create mode 100755 data/scripts/Xstop
+
+Index: sddm-0.11.0/data/man/sddm.conf.rst.in
+===================================================================
+--- sddm-0.11.0.orig/data/man/sddm.conf.rst.in
++++ sddm-0.11.0/data/man/sddm.conf.rst.in
+@@ -81,6 +81,10 @@ OPTIONS
+ 	Path of script to execute when starting the display server.
+ 	Default value is "@DATA_INSTALL_DIR@/scripts/Xsetup".
+ 
++`DisplayStopCommand=`
++	Path of script to execute when stopping the display server.
++	Default value is "@DATA_INSTALL_DIR@/scripts/Xsetup".
++
+ `MinimumVT=`
+ 	Minimum virtual terminal number that will be used
+ 	by the first display. Virtual terminal number will
+Index: sddm-0.11.0/data/scripts/Xstop
+===================================================================
+--- /dev/null
++++ sddm-0.11.0/data/scripts/Xstop
+@@ -0,0 +1,2 @@
++#!/bin/sh
++# Xstop - run as root after stopping X
+Index: sddm-0.11.0/src/common/Configuration.h
+===================================================================
+--- sddm-0.11.0.orig/src/common/Configuration.h
++++ sddm-0.11.0/src/common/Configuration.h
+@@ -60,6 +60,8 @@ namespace SDDM {
+                                                                                                    "A script to execute when starting the desktop session"));
+             Entry(DisplayCommand,      QString,     _S(DATA_INSTALL_DIR "/scripts/Xsetup"),     _S("Xsetup script path\n"
+                                                                                                    "A script to execute when starting the display server"));
++            Entry(DisplayStopCommand,  QString,     _S(DATA_INSTALL_DIR "/scripts/Xstop"),      _S("Xstop script path\n"
++                                                                                                   "A script to execute when stopping the display server"));
+             Entry(MinimumVT,           int,         MINIMUM_VT,                                 _S("Minimum VT\n"
+                                                                                                    "The lowest virtual terminal number that will be used."));
+         );
+Index: sddm-0.11.0/src/daemon/XorgDisplayServer.cpp
+===================================================================
+--- sddm-0.11.0.orig/src/daemon/XorgDisplayServer.cpp
++++ sddm-0.11.0/src/daemon/XorgDisplayServer.cpp
+@@ -209,6 +209,31 @@ namespace SDDM {
+         // log message
+         qDebug() << "Display server stopped.";
+ 
++        QString displayStopCommand = mainConfig.XDisplay.DisplayStopCommand.get();
++
++        // create display setup script process
++        QProcess *displayStopScript = new QProcess();
++
++        // set process environment
++        QProcessEnvironment env;
++        env.insert("DISPLAY", m_display);
++        env.insert("HOME", "/");
++        env.insert("PATH", mainConfig.Users.DefaultPath.get());
++        env.insert("SHELL", "/bin/sh");
++        displayStopScript->setProcessEnvironment(env);
++
++        // start display setup script
++        qDebug() << "Running display stop script " << displayStopCommand;
++        displayStopScript->start(displayStopCommand);
++
++        // wait for finished
++        if (!displayStopScript->waitForFinished(5000))
++            displayStopScript->kill();
++
++        // clean up the script process
++        displayStopScript->deleteLater();
++        displayStopScript = nullptr;
++
+         // clean up
+         process->deleteLater();
+         process = nullptr;
+@@ -235,6 +260,9 @@ namespace SDDM {
+         env.insert("SHELL", "/bin/sh");
+         displayScript->setProcessEnvironment(env);
+ 
++        // delete displayScript on finish
++        connect(displayScript, SIGNAL(finished(int,QProcess::ExitStatus)), displayScript, SLOT(deleteLater()));
++
+         // start display setup script
+         qDebug() << "Running display setup script " << displayCommand;
+         displayScript->start(displayCommand);
+Index: sddm-0.11.0/data/CMakeLists.txt
+===================================================================
+--- sddm-0.11.0.orig/data/CMakeLists.txt
++++ sddm-0.11.0/data/CMakeLists.txt
+@@ -3,7 +3,7 @@ install(DIRECTORY   "flags"
+ 
+ install(FILES "org.freedesktop.DisplayManager.conf"       DESTINATION "${DBUS_CONFIG_DIR}" RENAME sddm_org.freedesktop.DisplayManager.conf)
+ 
+-install(FILES "scripts/Xsession" "scripts/Xsetup" DESTINATION "${DATA_INSTALL_DIR}/scripts"
++install(FILES "scripts/Xsession" "scripts/Xsetup" "scripts/Xstop" DESTINATION "${DATA_INSTALL_DIR}/scripts"
+         PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
+         GROUP_READ GROUP_EXECUTE
+         WORLD_READ WORLD_EXECUTE)
