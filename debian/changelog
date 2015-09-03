@@ -1,9 +1,12 @@
-sddm (0.11.0-4) UNRELEASED; urgency=medium
+sddm (0.11.0-4~) UNRELEASED; urgency=medium
 
+  [ Scott Kitterman ]
   * Team upload.
   * Add Provides: x-display-manager for sddm (Closes: 795006)
 
- -- Scott Kitterman <scott@kitterman.com>  Sun, 09 Aug 2015 18:20:37 -0400
+  [ Maximiliano Curia ]
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 03 Sep 2015 14:39:13 +0200
 
 sddm (0.11.0-3) unstable; urgency=medium
 
