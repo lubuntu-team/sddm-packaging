@@ -5,6 +5,7 @@ sddm (0.11.0-4~) UNRELEASED; urgency=medium
   * Add Provides: x-display-manager for sddm (Closes: 795006)
 
   [ Maximiliano Curia ]
+  * Add the Xsession script. (Closes: #794419)
 
  -- Maximiliano Curia <maxy@debian.org>  Thu, 03 Sep 2015 14:39:13 +0200
 
