@@ -1,0 +1,26 @@
+Index: sddm/src/common/Configuration.h
+===================================================================
+--- sddm.orig/src/common/Configuration.h	2015-09-03 16:34:21.000000000 +0200
++++ sddm/src/common/Configuration.h	2015-09-03 16:38:47.953126482 +0200
+@@ -64,7 +64,7 @@
+                                                                                                    "The lowest virtual terminal number that will be used."));
+         );
+         Section(Users,
+-            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin:/usr/local/bin"),         _S("Default $PATH"));
++            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin"),         _S("Default $PATH"));
+             Entry(MinimumUid,          int,         1000,                                       _S("Minimum user id for displayed users"));
+             Entry(MaximumUid,          int,         65000,                                      _S("Maximum user id for displayed users"));
+             Entry(HideUsers,           QStringList, QStringList(),                              _S("Hidden users"));
+Index: sddm/data/man/sddm.conf.rst.in
+===================================================================
+--- sddm.orig/data/man/sddm.conf.rst.in	2015-03-27 18:31:11.227839938 +0100
++++ sddm/data/man/sddm.conf.rst.in	2015-09-03 17:21:35.859661060 +0200
+@@ -91,7 +91,7 @@
+ 
+ `DefaultPath=`
+ 	Default path to set after successfully logging in.
+-	Default value is "/bin:/usr/bin:/usr/local/bin".
++	Default value is "/bin:/usr/bin".
+ 
+ `MinimumUid=`
+ 	Minimum user id of the users to be listed in the

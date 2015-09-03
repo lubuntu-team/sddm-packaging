@@ -6,6 +6,7 @@ sddm (0.11.0-4~) UNRELEASED; urgency=medium
 
   [ Maximiliano Curia ]
   * Add the Xsession script. (Closes: #794419)
+  * New patch: default_path
 
  -- Maximiliano Curia <maxy@debian.org>  Thu, 03 Sep 2015 14:39:13 +0200
 
