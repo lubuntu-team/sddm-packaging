@@ -1,4 +1,4 @@
-sddm (0.11.0-4~) UNRELEASED; urgency=medium
+sddm (0.11.0-4) unstable; urgency=medium
 
   [ Scott Kitterman ]
   * Team upload.
@@ -8,7 +8,7 @@ sddm (0.11.0-4~) UNRELEASED; urgency=medium
   * Add the Xsession script. (Closes: #794419)
   * New patch: default_path
 
- -- Maximiliano Curia <maxy@debian.org>  Thu, 03 Sep 2015 14:39:13 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 03 Sep 2015 17:23:08 +0200
 
 sddm (0.11.0-3) unstable; urgency=medium
 
