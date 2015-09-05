@@ -31,7 +31,14 @@ override_dh_installinit:
 	dh_installinit --noscripts
 
 override_dh_install:
+	# not installed, as the Debian version is used instead
+	rm -f $(CURDIR)/debian/tmp/lib/systemd/system/sddm.service
 	dh_install --list-missing
+
+override_dh_fixperms:
+	# ensure script is marked as executable
+	chmod +x $(CURDIR)/debian/sddm/etc/sddm/Xsession
+	dh_fixperms
 
 override_dh_installpam:
 	dh_installpam
