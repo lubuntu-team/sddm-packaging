@@ -131,7 +131,7 @@ Files: debian/sddm.prerm
 Copyright: 2001, Branden Robinson
 License: GPL-2
  Licensed under the GNU General Public License, version 2.  See the file
- /usr/share/common-licenses/GPL or <http://www.gnu.org/copyleft/gpl.txt>.
+ /usr/share/common-licenses/GPL-2 or <http://www.gnu.org/copyleft/gpl.txt>.
  Acknowlegements to Stephen Early, Mark Eichin, and Manoj Srivastava.
  based on gdm pre-removal script
 
