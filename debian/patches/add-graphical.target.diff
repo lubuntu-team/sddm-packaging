@@ -1,6 +1,6 @@
 Description: Install 'sddm.service' in 'graphical.target'.
 Author: Elias Probst
-Origin: upstream, https://github.com/eliasp/sddm/commit/39d1f816873995dbf46d80c20709827e8ea9806a https://github.com/sddm/sddm/pull/340
+Origin: https://github.com/eliasp/sddm/commit/39d1f816873995dbf46d80c20709827e8ea9806a https://github.com/sddm/sddm/pull/340
 Reviewed-by: Jonathan Riddell
 Last-Update: 2015-03-18
 ---
