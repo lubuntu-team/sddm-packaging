@@ -1,0 +1,16 @@
+Description: Always minimum vt to 7
+ maybe this will fix switching vt when installing packages and integration with ubiquity-dm?
+Author: Jonathan Riddell
+Last-Update: 2015-03-11
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -131,7 +131,7 @@
+         string(REGEX REPLACE "[ \t\n]+" "" SYSTEMD_SYSTEM_UNIT_DIR ${SYSTEMD_SYSTEM_UNIT_DIR})
+     endif()
+ 
+-    set(MINIMUM_VT 1)
++    set(MINIMUM_VT 7)
+     set(HALT_COMMAND "/bin/systemctl poweroff")
+     set(REBOOT_COMMAND "/bin/systemctl reboot")
+ else()
