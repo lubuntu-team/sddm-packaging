@@ -1,0 +1,22 @@
+--- a/src/common/Configuration.h
++++ b/src/common/Configuration.h
+@@ -73,7 +73,7 @@
+                                                                                                           "A script to execute when starting the desktop session"));
+         );
+         Section(Users,
+-            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin:/usr/local/bin"),         _S("Default $PATH"));
++            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin"),                        _S("Default $PATH"));
+             Entry(MinimumUid,          int,         UID_MIN,                                    _S("Minimum user id for displayed users"));
+             Entry(MaximumUid,          int,         UID_MAX,                                    _S("Maximum user id for displayed users"));
+             Entry(HideUsers,           QStringList, QStringList(),                              _S("Hidden users"));
+--- a/data/man/sddm.conf.rst.in
++++ b/data/man/sddm.conf.rst.in
+@@ -114,7 +114,7 @@
+ 
+ `DefaultPath=`
+ 	Default path to set after successfully logging in.
+-	Default value is "/bin:/usr/bin:/usr/local/bin".
++	Default value is "/bin:/usr/bin".
+ 
+ `MinimumUid=`
+ 	Minimum user id of the users to be listed in the

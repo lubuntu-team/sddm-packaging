@@ -1,7 +1,4 @@
 kubuntu_use_breeze.diff
-kubuntu_dbus-config-rename.diff
-kubuntu_minimum_vt.diff
-upstream_add-graphical.target.diff
-libsystemd.diff
+add-graphical.target.diff
 sddm_systemctl.diff
-default_path
+default_path.diff
