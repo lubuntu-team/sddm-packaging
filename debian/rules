@@ -37,14 +37,10 @@ override_dh_install:
 
 override_dh_fixperms:
 	# ensure script is marked as executable
-	chmod +x $(CURDIR)/debian/sddm/etc/sddm/Xsession
+	chmod +x 755 $(CURDIR)/debian/sddm/etc/sddm/Xsession
 	dh_fixperms
 
 override_dh_installpam:
 	dh_installpam
 	dh_installpam --name=sddm-autologin
 	dh_installpam --name=sddm-greeter
-
-override_dh_fixperms:
-	dh_fixperms
-	chmod +x 755 debian/sddm/etc/sddm/Xsession
