@@ -1,8 +1,8 @@
-etc/dbus-1/system.d/sddm_org.freedesktop.DisplayManager.conf
-etc/pam.d
-debian/Xsession etc/sddm/
 # not installed, as the Debian version is used instead
 #lib/systemd/system/sddm.service
+debian/Xsession etc/sddm/
+etc/dbus-1/system.d/sddm_org.freedesktop.DisplayManager.conf
+etc/pam.d
 usr/bin/sddm*
 usr/lib/*/qt5/qml/SddmComponents/
 usr/lib/*/sddm/

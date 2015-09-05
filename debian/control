@@ -13,7 +13,7 @@ Build-Depends: cmake (>= 2.8.8),
                libxcb-xkb-dev,
                libxcb1-dev,
                pkg-config,
-               qtbase5-dev,
+               qtbase5-dev (>= 5.4),
                qtdeclarative5-dev,
                qttools5-dev,
                qttools5-dev-tools,
@@ -70,7 +70,9 @@ Description: 'Maldives' theme for SDDM X11 display manager
  Maldives theme for SDDM
 
 Package: sddm-dbg
-Depends: sddm (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: sddm (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Architecture: any
 Section: debug
 Priority: extra
