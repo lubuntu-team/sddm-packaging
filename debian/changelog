@@ -1,12 +1,8 @@
-sddm (0.12.0-1) UNRELEASED; urgency=medium
+sddm (0.12.0-1) unstable; urgency=medium
 
-  [ Matthias Klumpp ]
   * Team upload
   * New upstream release: 0.12.0
   * Drop patches which are applied upstream
-  * Move SDDM back to VT-1, which is the expected behavior of upstream
-    - In case this causes troubles, we need to change SDDM back to VT-7.
-      This setting can be changed via SDDMs configuration file.
   * Refresh and reorganize remaining patches
   * debian/rules: Compile with DBUS_CONFIG_FILENAME set to non-conflicting name
   * Ensure Xsession script is marked as executable
