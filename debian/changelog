@@ -10,6 +10,7 @@ sddm (0.12.0-1) UNRELEASED; urgency=medium
   * Refresh and reorganize remaining patches
   * debian/rules: Compile with DBUS_CONFIG_FILENAME set to non-conflicting name
   * Ensure Xsession script is marked as executable
+  * Don't fail when purging sddm
 
  -- Matthias Klumpp <mak@debian.org>  Sat, 05 Sep 2015 22:02:54 +0200
 

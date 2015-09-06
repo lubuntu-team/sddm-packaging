@@ -8,7 +8,7 @@ case "$1" in
         if [ -d /var/cache/sddm ]; then rm -r /var/cache/sddm; fi
         if [ -d /var/lib/sddm ]; then rm -r /var/lib/sddm; fi
         if [ -d /var/log/sddm ]; then rm -r /var/log/sddm; fi
-        if [ -d /var/run/sddm ]; then rm -r /var/run/sddm/authority; fi
+        if [ -d /run/sddm ]; then rm -r /run/sddm; fi
 
         if getent passwd sddm >/dev/null; then
             if [ -x /usr/sbin/deluser ]; then
