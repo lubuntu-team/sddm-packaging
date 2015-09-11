@@ -41,6 +41,8 @@ do_start_override()
 		log_action_msg "Not starting Simple Desktop Display Manager ($NAME); it is not the default display manager."
 	else
 		[ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC" "$NAME"
+		# Wait for plymouth if running
+		[ -x /bin/plymouth ] && /bin/plymouth quit
 		call do_start_cmd
 		case "$?" in
 		  0|1) [ "$VERBOSE" != no ] && log_end_msg 0 ;;
