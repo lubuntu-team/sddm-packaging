@@ -1,12 +1,12 @@
 sddm (0.12.0-2) unstable; urgency=medium
 
   * Team upload
-  * Ensure SDDM waits for Plymouth and getty to quite before starting
+  * Ensure SDDM waits for Plymouth and getty to quit before starting
     (Closes: #793637)
   * Drop some unnecessary patches
   * Suggest libpam-kwallet5 instead of pam-kwallet5
 
- -- Matthias Klumpp <matthias@tenstral.net>  Sat, 12 Sep 2015 16:32:50 +0200
+ -- Matthias Klumpp <mak@debian.org>  Sat, 12 Sep 2015 16:32:50 +0200
 
 sddm (0.12.0-1) unstable; urgency=medium
 
