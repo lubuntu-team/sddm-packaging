@@ -30,7 +30,7 @@ Depends: adduser,
          sddm-theme-breeze | sddm-theme,
          ${misc:Depends},
          ${shlibs:Depends}
-Suggests: pam-kwallet5
+Suggests: libpam-kwallet5
 Provides: x-display-manager
 Description: modern display manager for X11
  SDDM is a modern display manager for X11 aiming to be fast, simple
