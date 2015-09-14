@@ -1,3 +1,4 @@
 01_sddm_systemctl.diff
 02_kubuntu_use_breeze.diff
 03_vt7-minimum-vt.diff
+04_set_default_path.diff
