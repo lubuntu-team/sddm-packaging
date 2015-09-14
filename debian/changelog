@@ -1,8 +1,8 @@
-sddm (0.12.0-3~) UNRELEASED; urgency=medium
+sddm (0.12.0-3~1) UNRELEASED; urgency=medium
 
   * Update service file, run after plymouth-quit-wait.
 
- -- Maximiliano Curia <maxy@debian.org>  Mon, 14 Sep 2015 17:48:02 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 14 Sep 2015 18:39:37 +0200
 
 sddm (0.12.0-2) unstable; urgency=medium
 
