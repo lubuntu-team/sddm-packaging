@@ -1,9 +1,9 @@
-sddm (0.12.0-3~2) UNRELEASED; urgency=medium
+sddm (0.12.0-3) unstable; urgency=medium
 
   * Update service file, run after plymouth-quit-wait.
   * Re add patch: 04_set_default_path.diff
 
- -- Maximiliano Curia <maxy@debian.org>  Mon, 14 Sep 2015 19:21:40 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 14 Sep 2015 21:22:30 +0200
 
 sddm (0.12.0-2) unstable; urgency=medium
 
