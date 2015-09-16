@@ -35,7 +35,7 @@ override_dh_install:
 	rm -f $(CURDIR)/debian/tmp/lib/systemd/system/sddm.service
 	dh_install --list-missing
 
-override_dh_fixperms:
+override_dh_fixperms-arch:
 	# ensure script is marked as executable
 	chmod +x $(CURDIR)/debian/sddm/etc/sddm/Xsession
 	dh_fixperms
