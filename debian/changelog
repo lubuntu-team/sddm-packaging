@@ -1,8 +1,8 @@
-sddm (0.12.0-4~) UNRELEASED; urgency=medium
+sddm (0.12.0-4) unstable; urgency=medium
 
   * Fix indep build. (Closes: #799142) Thanks to Boris Pek
 
- -- Maximiliano Curia <maxy@debian.org>  Wed, 16 Sep 2015 13:19:09 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 16 Sep 2015 15:06:00 +0200
 
 sddm (0.12.0-3) unstable; urgency=medium
 
