@@ -40,6 +40,7 @@ Description: modern display manager for X11
 Package: sddm-theme-maui
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: sddm (<< ${source:Version})
 Recommends: sddm
 Provides: sddm-theme
 Description: 'Maui' theme for SDDM X11 display manager
@@ -48,6 +49,7 @@ Description: 'Maui' theme for SDDM X11 display manager
 Package: sddm-theme-circles
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: sddm (<< ${source:Version})
 Recommends: sddm
 Provides: sddm-theme
 Description: 'Circles' theme for SDDM X11 display manager
@@ -58,12 +60,14 @@ Architecture: all
 Depends: ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
 Description: 'Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM
 
 Package: sddm-theme-maldives
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: sddm (<< ${source:Version})
 Recommends: sddm
 Provides: sddm-theme
 Description: 'Maldives' theme for SDDM X11 display manager
