@@ -4,7 +4,11 @@ Documentation=man:sddm(1) man:sddm.conf(5)
 # Change this if you want to start sddm in a different tty
 Conflicts=getty@tty7.service
 After=getty@tty7.service
+
+# Ordering
+Conflicts=plymouth-quit-wait.service
 After=systemd-user-sessions.service plymouth-start.service plymouth-quit-wait.service
+OnFailure=plymouth-quit.service
 
 [Service]
 # temporary safety check until all DMs are converted to correct
