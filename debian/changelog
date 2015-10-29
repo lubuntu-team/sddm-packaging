@@ -1,11 +1,18 @@
-sddm (0.12.0-5~) UNRELEASED; urgency=medium
+sddm (0.12.0-5) unstable; urgency=medium
 
+  * Team upload.
+
+  [ Maximiliano Curia ]
   * Delete the sddm.log file on purge. (Closes: #793679)
   * The themes shipped with sddm need the latest version, using breaks
     instead of depends to avoid circular deps. (Closes: #800462) Thanks
     to Max Görner
 
- -- Maximiliano Curia <maxy@debian.org>  Thu, 01 Oct 2015 20:45:46 +0200
+  [ Scott Kitterman ]
+  * Add debian/patches/CVE-2015-0856.patch to fix potential issue if an SDDM
+    theme crashes while running the KDE debug handler (Closes: #803338)
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 29 Oct 2015 00:01:45 -0400
 
 sddm (0.12.0-4) unstable; urgency=medium
 
