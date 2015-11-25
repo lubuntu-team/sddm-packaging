@@ -1,13 +1,20 @@
-Index: sddm-0.9.0/src/common/Configuration.h
-===================================================================
---- sddm-0.9.0.orig/src/common/Configuration.h	2014-08-02 17:09:49.000000000 +0200
-+++ sddm-0.9.0/src/common/Configuration.h	2014-08-19 17:53:52.585934075 +0200
-@@ -46,7 +46,7 @@
-         //      Name   Entries (but it's a regular class again)
+Description: Make SDDM use the breeze theme by default
+ Make sure SDDM uses the plasma theme by default on install since
+ we have no maui theme in the archive.
+Author: Rohan Garg
+Origin: vendor
+Forwarded: not-needed
+Last-Update: 2015-11-25
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/common/Configuration.h
++++ b/src/common/Configuration.h
+@@ -45,7 +45,7 @@
+         //  Name   Entries (but it's a regular class again)
          Section(Theme,
              Entry(ThemeDir,            QString,     _S(DATA_INSTALL_DIR "/themes"),             _S("Theme directory path"));
 -            Entry(Current,             QString,     _S("maui"),                                 _S("Current theme name"));
 +            Entry(Current,             QString,     _S("breeze"),                                 _S("Current theme name"));
-             Entry(FacesDir,            QString,     _S(DATA_INSTALL_DIR "/faces"),              _S("Face icon directory\n"
-                                                                                                    "The files should be in username.face.icon format"));
-             Entry(CursorTheme,         QString,     QString(),                                  _S("Cursor theme"));
+             Entry(FacesDir,            QString,     _S(DATA_INSTALL_DIR "/faces"),              _S("Global directory for user avatars\n"
+                                                                                                    "The files should be named <username>.face.icon"));
+             Entry(CursorTheme,         QString,     QString(),                                  _S("Cursor theme used in the greeter"));
