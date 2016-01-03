@@ -1,6 +1,7 @@
 sddm (0.13.0-1) UNRELEASED; urgency=medium
 
   * New upstream release.
+  * Remove CVE-2015-0856.patch applied upstream.
 
  -- Diane Trout <diane@ghic.org>  Sat, 02 Jan 2016 14:53:15 -0800
 
