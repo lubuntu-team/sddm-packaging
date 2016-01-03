@@ -1,6 +1,6 @@
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
-@@ -46,7 +46,7 @@
+@@ -45,7 +45,7 @@
          //      Name   Entries (but it's a regular class again)
          Section(Theme,
              Entry(ThemeDir,            QString,     _S(DATA_INSTALL_DIR "/themes"),             _S("Theme directory path"));

@@ -5,7 +5,7 @@ Last-Update: 2015-03-11
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -131,7 +131,7 @@
+@@ -136,7 +136,7 @@
          string(REGEX REPLACE "[ \t\n]+" "" SYSTEMD_SYSTEM_UNIT_DIR ${SYSTEMD_SYSTEM_UNIT_DIR})
      endif()
  

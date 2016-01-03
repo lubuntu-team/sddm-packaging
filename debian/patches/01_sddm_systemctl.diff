@@ -1,6 +1,6 @@
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -132,8 +132,8 @@
+@@ -137,8 +137,8 @@
      endif()
  
      set(MINIMUM_VT 1)

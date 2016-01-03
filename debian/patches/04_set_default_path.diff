@@ -10,10 +10,8 @@ Author: Maximiliano Curia <maxy@debian.org>
 Forwarded: not-needed
 Last-Update: 2015-09-14
 ---
-Index: sddm/data/man/sddm.conf.rst.in
-===================================================================
---- sddm.orig/data/man/sddm.conf.rst.in	2015-09-14 18:15:17.000000000 +0200
-+++ sddm/data/man/sddm.conf.rst.in	2015-09-14 19:09:48.946429964 +0200
+--- a/data/man/sddm.conf.rst.in
++++ b/data/man/sddm.conf.rst.in
 @@ -114,7 +114,7 @@
  
  `DefaultPath=`
@@ -23,11 +21,9 @@ Index: sddm/data/man/sddm.conf.rst.in
  
  `MinimumUid=`
  	Minimum user id of the users to be listed in the
-Index: sddm/src/common/Configuration.h
-===================================================================
---- sddm.orig/src/common/Configuration.h	2015-09-14 19:04:20.239415239 +0200
-+++ sddm/src/common/Configuration.h	2015-09-14 19:09:40.058781080 +0200
-@@ -73,7 +73,7 @@
+--- a/src/common/Configuration.h
++++ b/src/common/Configuration.h
+@@ -72,7 +72,7 @@
                                                                                                            "A script to execute when starting the desktop session"));
          );
          Section(Users,
