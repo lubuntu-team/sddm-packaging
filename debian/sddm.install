@@ -8,3 +8,7 @@ usr/share/sddm/faces
 usr/share/sddm/flags/
 usr/share/sddm/scripts/
 usr/share/sddm/translations/
+usr/share/man/man1/sddm.1
+usr/share/man/man1/sddm-greeter.1
+usr/share/man/man5/sddm.conf.5
+usr/share/man/man5/sddm-state.conf.5

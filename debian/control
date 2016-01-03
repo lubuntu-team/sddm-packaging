@@ -6,6 +6,7 @@ Uploaders: Michał Zając <quintasan@kubuntu.org>,
            Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.8),
                debhelper (>= 9),
+               python-docutils,
                dh-systemd [linux-any],
                libpam0g-dev,
                libsystemd-dev [linux-any],
