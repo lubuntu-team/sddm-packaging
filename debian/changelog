@@ -1,5 +1,6 @@
 sddm (0.13.0-1) UNRELEASED; urgency=medium
 
+  [ Diane Trout ]
   * New upstream release.
   * Remove CVE-2015-0856.patch applied upstream.
   * Refresh patches.
@@ -7,7 +8,10 @@ sddm (0.13.0-1) UNRELEASED; urgency=medium
     - Add python-docutils to Build-Depends
     - Add built man pages to sddm.install
 
- -- Diane Trout <diane@ghic.org>  Sat, 02 Jan 2016 14:53:15 -0800
+  [ Scott Kitterman ]
+  * Add missing debian/changelog entry from previous revision
+
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 04 Jan 2016 16:11:49 -0500
 
 sddm (0.12.0-5) unstable; urgency=medium
 
@@ -18,6 +22,9 @@ sddm (0.12.0-5) unstable; urgency=medium
   * The themes shipped with sddm need the latest version, using breaks
     instead of depends to avoid circular deps. (Closes: #800462) Thanks
     to Max Görner
+
+  [ Matthias Klumpp ]
+  * Fix deadlock in sddm.service when waiting for Plymouth to quit
 
   [ Scott Kitterman ]
   * Add debian/patches/CVE-2015-0856.patch to fix potential issue if an SDDM
