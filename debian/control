@@ -31,6 +31,7 @@ Depends: adduser,
          sddm-theme-breeze | sddm-theme,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: libpam-systemd
 Suggests: libpam-kwallet5
 Provides: x-display-manager
 Description: modern display manager for X11

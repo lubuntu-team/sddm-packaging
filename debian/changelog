@@ -10,8 +10,12 @@ sddm (0.13.0-1) UNRELEASED; urgency=medium
 
   [ Scott Kitterman ]
   * Add missing debian/changelog entry from previous revision
+  * Apply sddm.pam.diff (provided by Alf Gaida - Thanks!) and add
+    libpam-systemd to sddm Recommends to fix session problems while using
+    systemd while still allowing non-systemd installations (Closes: #799837,
+    #806758)
 
- -- Scott Kitterman <scott@kitterman.com>  Mon, 04 Jan 2016 16:11:49 -0500
+ -- Scott Kitterman <scott@kitterman.com>  Mon, 04 Jan 2016 16:17:00 -0500
 
 sddm (0.12.0-5) unstable; urgency=medium
 
