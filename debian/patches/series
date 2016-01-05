@@ -4,4 +4,3 @@
 
 kubuntu_minimum_vt.diff
 kubuntu_nvidia-prime.diff
-use-systemd.patch
