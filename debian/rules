@@ -3,7 +3,18 @@
 #export DH_VERBOSE=1
 
 DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
-WITH_SYSTEMD := $(shell dpkg-architecture -qDEB_HOST_ARCH -ilinux-any && echo --with systemd)
+DEB_HOST_ARCH_OS ?= $(shell dpkg-architecture -qDEB_HOST_ARCH_OS)
+
+SDDM_CMAKE_ARGS = -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/${DEB_HOST_MULTIARCH}/sddm \
+	    -DSESSION_COMMAND="/etc/sddm/Xsession" \
+	    -DBUILD_MAN_PAGES=ON \
+	    -DDBUS_CONFIG_FILENAME="sddm_org.freedesktop.DisplayManager.conf"
+
+ifeq ($(DEB_HOST_ARCH_OS),linux)
+  WITH_SYSTEMD := --with systemd
+else
+  SDDM_CMAKE_ARGS += -DNO_SYSTEMD=ON -DENABLE_JOURNALD=OFF
+endif
 
 %:
 	dh $@ ${WITH_SYSTEMD} --parallel
@@ -12,13 +23,23 @@ override_dh_strip:
 	dh_strip --dbg-package=sddm-dbg
 
 override_dh_auto_configure:
-	dh_auto_configure -- -DUSE_QT5=TRUE -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/${DEB_HOST_MULTIARCH}/sddm
+	dh_auto_configure -- ${SDDM_CMAKE_ARGS}
 
 override_dh_systemd_start:
 	dh_systemd_start -psddm --no-start -r sddm.service
 
 override_dh_installinit:
-	dh_installinit --no-start
+	dh_installinit --noscripts
+
+override_dh_install:
+	# not installed, as the Debian version is used instead
+	rm -f $(CURDIR)/debian/tmp/lib/systemd/system/sddm.service
+	dh_install --list-missing
+
+override_dh_fixperms-arch:
+	# ensure script is marked as executable
+	chmod +x $(CURDIR)/debian/sddm/etc/sddm/Xsession
+	dh_fixperms
 
 override_dh_installpam:
 	dh_installpam

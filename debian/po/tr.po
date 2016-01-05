@@ -1,94 +1,112 @@
-# Turkish translation for sddm
-# Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the sddm package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2010.
+# translation of tr.po to Turkish
+# debconf templates for xorg-x11 package
+# Turkish translation
+#
+#
+# Copyrights:
+# Branden Robinson, 2000-2004
+#
+# This file is distributed under the same license as the xorg-x11 package.
+# Please see debian/copyright.
+#
+#    Translators, if you are not familiar with the PO format, gettext
+#    documentation is worth reading, especially sections dedicated to
+#    this format, e.g. by running:
+#         info -n '(gettext)PO Files'
+#         info -n '(gettext)Header Entry'
+#
+#    Some information specific to po-debconf are available at
+#            /usr/share/doc/po-debconf/README-trans
+#         or http://www.debian.org/intl/l10n/po-debconf/README-trans
+#
+#    Developers do not need to manually edit POT or PO files.
+# Osman Yüksel <yuxel@sonsuzdongu.com>, 2004, 2006.
+# Recai Oktaş <roktas@debian.org>, 2004.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: sddm\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2007-05-31 08:04+0200\n"
-"PO-Revision-Date: 2013-11-01 15:33+0000\n"
-"Last-Translator: Volkan Gezer <Unknown>\n"
-"Language-Team: Turkish <tr@li.org>\n"
+"Project-Id-Version: xorg-x11\n"
+"Report-Msgid-Bugs-To: sddm@packages.debian.org\n"
+"POT-Creation-Date: 2015-07-11 06:12+0200\n"
+"PO-Revision-Date: 2006-01-11 04:57+0200\n"
+"Last-Translator: Osman Yüksel <yuxel@sonsuzdongu.com>\n"
+"Language-Team: Debian L10n Turkish <debian-l10n-turkish@lists.debian.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2014-05-20 06:11+0000\n"
-"X-Generator: Launchpad (build 17009)\n"
+"X-Generator: KBabel 1.10.2\n"
 
 #. Type: select
 #. Description
-#: ../sddm.templates:2001
+#: ../sddm.templates:3001
+#, fuzzy
 msgid "Default display manager:"
-msgstr "Öntanımlı görüntü yöneticisi:"
+msgstr "Kullanmak istediğiniz öntanımlı ekran yöneticisini seçin."
 
 #. Type: select
 #. Description
-#: ../sddm.templates:2001
+#: ../sddm.templates:3001
 msgid ""
 "A display manager is a program that provides graphical login capabilities "
 "for the X Window System."
 msgstr ""
-"X Pencere Sistemi için grafiksel oturum açma yetenekleri sağlayan bir "
-"görüntü yönetici programı."
+"Ekran yöneticisi, X Window Sistemi'ne grafik arayüz ile giriş yapmayı sağlar."
 
 #. Type: select
 #. Description
-#: ../sddm.templates:2001
+#: ../sddm.templates:3001
+#, fuzzy
 msgid ""
 "Only one display manager can manage a given X server, but multiple display "
 "manager packages are installed. Please select which display manager should "
 "run by default."
 msgstr ""
-"Belirtilen X sunucusunu sadece bir görüntü yöneticisi çalıştırabilir ancak "
-"birden fazla görüntü yöneticisi kurulu. Lütfen öntanımlı olarak "
-"çalıştırılacak görüntü yöneticisini seçin."
+"Sadece bir ekran yöneticisi verilen X sunucusunu yönetebilir; ancak birden "
+"fazla ekran yöneticisi kurulu durumda.  Lütfen öntanımlı olarak çalıştırmak "
+"istediğiniz ekran yöneticisini seçin."
 
 #. Type: select
 #. Description
-#: ../sddm.templates:2001
+#: ../sddm.templates:3001
+#, fuzzy
 msgid ""
 "Multiple display managers can run simultaneously if they are configured to "
 "manage different servers; to achieve this, configure the display managers "
 "accordingly, edit each of their init scripts in /etc/init.d, and disable the "
 "check for a default display manager."
 msgstr ""
-"Farklı sunucuları yönetmek üzere yapılandırılmışlarsa, birden fazla görüntü "
-"yöneticisi çalışabilir. Bunun için görüntü yöneticilerinin ilgili "
-"/etc/init.d dosyalarını düzenleyerek yapılandırın ve öntanımlı görüntü "
-"yöneticisi seçimi denetlemesini devre dışı bırakın."
+"(Eğer farklı sunucuları çalıştırmak için ayarlanırsa birden fazla ekran "
+"yöneticisi kullanılabilir.  Bunun için /etc/init.d içindeki ilgili betikleri "
+"değiştirin ve öntanımlı ekran yöneticisini denetleyen işlevleri devre dışı "
+"bırakın.)"
 
+#, fuzzy
+#~ msgid "Stop the xdm daemon?"
+#~ msgstr "xdm servisini durdurmak istiyor musunuz?"
+
+#, fuzzy
 #~ msgid ""
-#~ "Are you sure you want to close all programs and shutdown the computer?"
+#~ "The X display manager (xdm) daemon is typically stopped on package "
+#~ "upgrade and removal, but it appears to be managing at least one running X "
+#~ "session."
 #~ msgstr ""
-#~ "Tüm programları sonlandırıp bilgisayarı kapatmak istediğinize emin misiniz?"
+#~ "X ekran yöneticisi (xdm) servisi, paket güncelleme ve kaldırma sırasında "
+#~ "genellikle durdurulur.  Fakat öyle görünüyor ki xdm, çalışan (en az) bir "
+#~ "X oturumunu yönetiyor.  Eğer xdm şimdi durdurulursa yönetilen X "
+#~ "oturumları da sonlandırılacaktır.  Böyle yapmak yerine xdm'i çalışır "
+#~ "vaziyette bırakabilirsiniz.  Yeni sürüm, xdm servisinin bir sonraki "
+#~ "çalıştırılışında etkin olacaktır."
 
-#~ msgid "Large Font"
-#~ msgstr "Büyük Yazı Tipi"
-
-#~ msgid "Cancel"
-#~ msgstr "Vazgeç"
-
-#~ msgid "Are you sure you want to close all programs and restart the computer?"
+#, fuzzy
+#~ msgid ""
+#~ "If xdm is stopped now, any X sessions it manages will be terminated. "
+#~ "Otherwise, the new version will take effect the next time the daemon is "
+#~ "restarted."
 #~ msgstr ""
-#~ "Tüm programları sonlandırıp bilgisayarı yeniden başlatmak istediğinize emin "
-#~ "misiniz?"
-
-#~ msgid "Shutdown"
-#~ msgstr "Bilgisayarı Kapat"
-
-#~ msgid "Restart"
-#~ msgstr "Yeniden Başlat"
-
-#~ msgid "Hibernate"
-#~ msgstr "Hazırda Beklet"
-
-#~ msgid "Restart..."
-#~ msgstr "Yeniden Başlat..."
-
-#~ msgid "Suspend"
-#~ msgstr "Askıya Al"
-
-#~ msgid "Shutdown..."
-#~ msgstr "Kapat..."
+#~ "X ekran yöneticisi (xdm) servisi, paket güncelleme ve kaldırma sırasında "
+#~ "genellikle durdurulur.  Fakat öyle görünüyor ki xdm, çalışan (en az) bir "
+#~ "X oturumunu yönetiyor.  Eğer xdm şimdi durdurulursa yönetilen X "
+#~ "oturumları da sonlandırılacaktır.  Böyle yapmak yerine xdm'i çalışır "
+#~ "vaziyette bırakabilirsiniz.  Yeni sürüm, xdm servisinin bir sonraki "
+#~ "çalıştırılışında etkin olacaktır."
