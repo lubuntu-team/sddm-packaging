@@ -1,13 +1,14 @@
 Source: sddm
 Section: kde
 Priority: optional
-Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+XSBC-Original-Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Michał Zając <quintasan@kubuntu.org>
 Build-Depends: cmake (>= 2.8.8),
                debhelper (>= 9),
                dh-systemd [linux-any],
                libpam0g-dev,
-               libsystemd-login-dev,
+               libsystemd-dev,
                libupower-glib-dev,
                libxcb-xkb-dev,
                libxcb1-dev,

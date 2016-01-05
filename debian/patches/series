@@ -5,3 +5,4 @@ upstream_add-graphical.target.diff
 upstream_fix-zsh-Xsession.patch
 kubuntu_nvidia-prime-logout.diff
 kubuntu_nvidia-prime.diff
+use-systemd.patch

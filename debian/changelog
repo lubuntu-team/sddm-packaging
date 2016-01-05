@@ -1,3 +1,9 @@
+sddm (0.11.0-0ubuntu12) xenial; urgency=high
+
+  * Replace libsystemd-login-dev with libsystemd-dev.
+
+ -- Dimitri John Ledkov <xnox@ubuntu.com>  Mon, 04 Jan 2016 14:25:10 +0000
+
 sddm (0.11.0-0ubuntu11) wily; urgency=medium
 
   * Fix postrm to remove what was if'd for as to avoid failure.
