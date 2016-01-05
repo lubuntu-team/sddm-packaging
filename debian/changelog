@@ -3,7 +3,6 @@ sddm (0.13.0-1ubuntu1) UNRELEASED; urgency=medium
   * Merge with debian unstable, remaining changes: 
     - keep the default-display-manager file logic in sddm.postinst
     - keep kubuntu specific patches:
-      + kubuntu_nvidia-prime-logout.diff
       + kubuntu_nvidia-prime.diff
       + use-systemd.patch
       + kubuntu_minimum_vt.diff instead of 03_vt7-minimum-vt.diff
