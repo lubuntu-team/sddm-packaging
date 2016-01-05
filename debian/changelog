@@ -1,5 +1,6 @@
-sddm (0.13.0-1) UNRELEASED; urgency=medium
+sddm (0.13.0-1) unstable; urgency=medium
 
+  * Team Upload
   [ Diane Trout ]
   * New upstream release.
   * Remove CVE-2015-0856.patch applied upstream.
@@ -15,7 +16,7 @@ sddm (0.13.0-1) UNRELEASED; urgency=medium
     systemd while still allowing non-systemd installations (Closes: #799837,
     #806758)
 
- -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 04 Jan 2016 16:17:00 -0500
+ -- Diane Trout <diane@ghic.org>  Mon, 04 Jan 2016 22:23:34 -0800
 
 sddm (0.12.0-5) unstable; urgency=medium
 
