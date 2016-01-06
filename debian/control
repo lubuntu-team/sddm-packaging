@@ -1,19 +1,20 @@
 Source: sddm
 Section: kde
 Priority: optional
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-XSBC-Original-Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Michał Zając <quintasan@kubuntu.org>
+Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Michał Zając <quintasan@kubuntu.org>,
+           Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.8),
                debhelper (>= 9),
+               python-docutils,
                dh-systemd [linux-any],
                libpam0g-dev,
-               libsystemd-dev,
+               libsystemd-dev [linux-any],
                libupower-glib-dev,
                libxcb-xkb-dev,
                libxcb1-dev,
                pkg-config,
-               qtbase5-dev,
+               qtbase5-dev (>= 5.4),
                qtdeclarative5-dev,
                qttools5-dev,
                qttools5-dev-tools,
@@ -30,6 +31,9 @@ Depends: adduser,
          sddm-theme-breeze | sddm-theme,
          ${misc:Depends},
          ${shlibs:Depends}
+Recommends: libpam-systemd
+Suggests: libpam-kwallet5
+Provides: x-display-manager
 Description: modern display manager for X11
  SDDM is a modern display manager for X11 aiming to be fast, simple
  and beautiful. It uses modern technologies like QtQuick to create
@@ -38,6 +42,7 @@ Description: modern display manager for X11
 Package: sddm-theme-maui
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: sddm (<< ${source:Version})
 Recommends: sddm
 Provides: sddm-theme
 Description: 'Maui' theme for SDDM X11 display manager
@@ -46,6 +51,7 @@ Description: 'Maui' theme for SDDM X11 display manager
 Package: sddm-theme-circles
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: sddm (<< ${source:Version})
 Recommends: sddm
 Provides: sddm-theme
 Description: 'Circles' theme for SDDM X11 display manager
@@ -56,19 +62,23 @@ Architecture: all
 Depends: ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
 Description: 'Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM
 
 Package: sddm-theme-maldives
 Architecture: all
 Depends: ${misc:Depends}
+Breaks: sddm (<< ${source:Version})
 Recommends: sddm
 Provides: sddm-theme
 Description: 'Maldives' theme for SDDM X11 display manager
  Maldives theme for SDDM
 
 Package: sddm-dbg
-Depends: sddm (= ${binary:Version}), ${misc:Depends}, ${shlibs:Depends}
+Depends: sddm (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends}
 Architecture: any
 Section: debug
 Priority: extra

@@ -1,0 +1,34 @@
+Description: Change the default PATH
+ The configured default PATH is used in the parts that run as root, the
+ greeter and for the user  sessions, so its better to have an spartan default.
+ .
+ At the same time, for the zsh users this spartan version gets expanded thanks
+ to the default global zshenv, while exporting a different value in the
+ Xsession script would be overriding the users configurations in their local
+ zshenv.
+Author: Maximiliano Curia <maxy@debian.org>
+Forwarded: not-needed
+Last-Update: 2015-09-14
+---
+--- a/data/man/sddm.conf.rst.in
++++ b/data/man/sddm.conf.rst.in
+@@ -114,7 +114,7 @@
+ 
+ `DefaultPath=`
+ 	Default path to set after successfully logging in.
+-	Default value is "/bin:/usr/bin:/usr/local/bin".
++	Default value is "/bin:/usr/bin".
+ 
+ `MinimumUid=`
+ 	Minimum user id of the users to be listed in the
+--- a/src/common/Configuration.h
++++ b/src/common/Configuration.h
+@@ -72,7 +72,7 @@
+                                                                                                           "A script to execute when starting the desktop session"));
+         );
+         Section(Users,
+-            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin:/usr/local/bin"),         _S("Default $PATH"));
++            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin"),                        _S("Default $PATH"));
+             Entry(MinimumUid,          int,         UID_MIN,                                    _S("Minimum user id for displayed users"));
+             Entry(MaximumUid,          int,         UID_MAX,                                    _S("Maximum user id for displayed users"));
+             Entry(HideUsers,           QStringList, QStringList(),                              _S("Hidden users"));

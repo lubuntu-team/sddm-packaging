@@ -1,0 +1,13 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -137,8 +137,8 @@
+     endif()
+ 
+     set(MINIMUM_VT 1)
+-    set(HALT_COMMAND "/usr/bin/systemctl poweroff")
+-    set(REBOOT_COMMAND "/usr/bin/systemctl reboot")
++    set(HALT_COMMAND "/bin/systemctl poweroff")
++    set(REBOOT_COMMAND "/bin/systemctl reboot")
+ else()
+     set(SYSTEMD_FOUND 0)
+     set(MINIMUM_VT 7)

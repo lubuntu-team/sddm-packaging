@@ -5,23 +5,23 @@ Origin: kubuntu
 Last-Update: 2015-03-11
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: sddm-0.11.0/CMakeLists.txt
+Index: b/CMakeLists.txt
 ===================================================================
---- sddm-0.11.0.orig/CMakeLists.txt
-+++ sddm-0.11.0/CMakeLists.txt
-@@ -121,7 +121,7 @@ if(SYSTEMD_FOUND)
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -136,7 +136,7 @@ if(SYSTEMD_FOUND)
          string(REGEX REPLACE "[ \t\n]+" "" SYSTEMD_SYSTEM_UNIT_DIR ${SYSTEMD_SYSTEM_UNIT_DIR})
      endif()
  
 -    set(MINIMUM_VT 1)
 +    set(MINIMUM_VT 7)
-     set(HALT_COMMAND "/usr/bin/systemctl poweroff")
-     set(REBOOT_COMMAND "/usr/bin/systemctl reboot")
+     set(HALT_COMMAND "/bin/systemctl poweroff")
+     set(REBOOT_COMMAND "/bin/systemctl reboot")
  else()
-Index: sddm-0.11.0/services/sddm.service.in
+Index: b/services/sddm.service.in
 ===================================================================
---- sddm-0.11.0.orig/services/sddm.service.in
-+++ sddm-0.11.0/services/sddm.service.in
+--- a/services/sddm.service.in
++++ b/services/sddm.service.in
 @@ -1,7 +1,6 @@
  [Unit]
  Description=Simple Desktop Display Manager

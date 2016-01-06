@@ -1,3 +1,142 @@
+sddm (0.13.0-1ubuntu1) xenial; urgency=medium
+
+  * Merge with debian unstable (LP: #1519564, #1516837, #1511286)
+    remaining changes: 
+    - keep the default-display-manager file logic in sddm.postinst
+    - keep kubuntu specific patches:
+      + kubuntu_nvidia-prime.diff
+      + kubuntu_minimum_vt.diff instead of 03_vt7-minimum-vt.diff
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 05 Jan 2016 16:15:05 +0100
+
+sddm (0.13.0-1) unstable; urgency=medium
+
+  * Team Upload
+  [ Diane Trout ]
+  * New upstream release.
+  * Remove CVE-2015-0856.patch applied upstream.
+  * Refresh patches.
+  * Build man pages
+    - Add python-docutils to Build-Depends
+    - Add built man pages to sddm.install
+
+  [ Scott Kitterman ]
+  * Add missing debian/changelog entry from previous revision
+  * Apply sddm.pam.diff (provided by Alf Gaida - Thanks!) and add
+    libpam-systemd to sddm Recommends to fix session problems while using
+    systemd while still allowing non-systemd installations (Closes: #799837,
+    #806758)
+
+ -- Diane Trout <diane@ghic.org>  Mon, 04 Jan 2016 22:23:34 -0800
+
+sddm (0.12.0-5) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * Delete the sddm.log file on purge. (Closes: #793679)
+  * The themes shipped with sddm need the latest version, using breaks
+    instead of depends to avoid circular deps. (Closes: #800462) Thanks
+    to Max Görner
+
+  [ Matthias Klumpp ]
+  * Fix deadlock in sddm.service when waiting for Plymouth to quit
+
+  [ Scott Kitterman ]
+  * Add debian/patches/CVE-2015-0856.patch to fix potential issue if an SDDM
+    theme crashes while running the KDE debug handler (Closes: #803338)
+
+ -- Scott Kitterman <scott@kitterman.com>  Thu, 29 Oct 2015 00:01:45 -0400
+
+sddm (0.12.0-4) unstable; urgency=medium
+
+  * Fix indep build. (Closes: #799142) Thanks to Boris Pek
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 16 Sep 2015 15:06:00 +0200
+
+sddm (0.12.0-3) unstable; urgency=medium
+
+  * Update service file, run after plymouth-quit-wait.
+  * Re add patch: 04_set_default_path.diff
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 14 Sep 2015 21:22:30 +0200
+
+sddm (0.12.0-2) unstable; urgency=medium
+
+  * Team upload
+  * Ensure SDDM waits for Plymouth and getty to quit before starting
+    (Closes: #793637)
+  * Drop some unnecessary patches
+  * Suggest libpam-kwallet5 instead of pam-kwallet5
+
+ -- Matthias Klumpp <mak@debian.org>  Sat, 12 Sep 2015 16:32:50 +0200
+
+sddm (0.12.0-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release: 0.12.0
+  * Drop patches which are applied upstream
+  * Refresh and reorganize remaining patches
+  * debian/rules: Compile with DBUS_CONFIG_FILENAME set to non-conflicting name
+  * Ensure Xsession script is marked as executable
+  * Don't fail when purging sddm
+
+ -- Matthias Klumpp <mak@debian.org>  Sat, 05 Sep 2015 22:02:54 +0200
+
+sddm (0.11.0-4) unstable; urgency=medium
+
+  [ Scott Kitterman ]
+  * Team upload.
+  * Add Provides: x-display-manager for sddm (Closes: 795006)
+
+  [ Maximiliano Curia ]
+  * Add the Xsession script. (Closes: #794419)
+  * New patch: default_path
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 03 Sep 2015 17:23:08 +0200
+
+sddm (0.11.0-3) unstable; urgency=medium
+
+  * Transition to libsystemd-dev. (Closes: #792400) Thanks to Michael
+    Biebl
+  * New patch: libsystemd.diff
+  * Fix systemctl path. (Closes: #792401) Thanks to Michael Biebl
+  * New patch: sddm_systemctl.diff
+  * Update debian/po files. (Closes: #792085) Thanks to Christian
+    Perrier
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 18 Jul 2015 21:34:44 +0200
+
+sddm (0.11.0-2) unstable; urgency=medium
+
+  [ Maximiliano Curia ]
+  * Re-enable patches kubuntu_use_breeze.diff, kubuntu_minimum_vt.diff,
+    upstream_add-graphical.target.diff.
+  * Re-enable libpam-gnome-keyring.
+
+  [ Pino Toscano ]
+  * Make sddm build on non-Linux architectures:
+    - limit the libsystemd-login-dev build dependency as linux-any
+    - properly use DEB_HOST_ARCH_OS for detecting the current target OS
+    - explicitly disable systemd and journald on non-Linux archs
+    - disable installation of the upstream lib/systemd/system/sddm.service
+      (installed only with systemd support enabled), as there is a local
+      debian/sddm.service which will be used anyway instead
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 09 Jul 2015 15:20:08 +0200
+
+sddm (0.11.0-1) experimental; urgency=medium
+
+  [ Michał Zając ]
+  * Initial release (LP: #1157742)
+
+  [ Maximiliano Curia ]
+  * New upstream release (0.10.0).
+  * New upstream release (0.11.0).
+  * Update copyright information.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 27 Mar 2015 21:27:38 +0100
+
 sddm (0.11.0-0ubuntu12) xenial; urgency=high
 
   * Replace libsystemd-login-dev with libsystemd-dev.
@@ -86,3 +225,4 @@ sddm (0.10.0+dfsg1-0ubuntu1) vivid; urgency=medium
     image, https://github.com/sddm/sddm/issues/315
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 17 Oct 2014 15:39:42 +0200
+

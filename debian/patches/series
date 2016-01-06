@@ -1,5 +1,6 @@
-kubuntu_use_breeze.diff
+01_sddm_systemctl.diff
+02_kubuntu_use_breeze.diff
+04_set_default_path.diff
+
 kubuntu_minimum_vt.diff
-upstream_add-graphical.target.diff
 kubuntu_nvidia-prime.diff
-use-systemd.patch
