@@ -1,4 +1,4 @@
-sddm (0.13.0-1ubuntu1) UNRELEASED; urgency=medium
+sddm (0.13.0-1ubuntu1) xenial; urgency=medium
 
   * Merge with debian unstable (LP: #1519564, #1516837, #1511286)
     remaining changes: 
