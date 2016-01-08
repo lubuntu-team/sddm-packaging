@@ -1,3 +1,10 @@
+sddm (0.13.0-1ubuntu3) xenial; urgency=medium
+
+  * Mark wayland-session as a conffile as well
+  * Switch the watch file from gz to xz
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Fri, 08 Jan 2016 11:15:01 +0100
+
 sddm (0.13.0-1ubuntu2) xenial; urgency=medium
 
   * Mark Xstart, Xsession and Xstop as conffiles as they are supposed to be
