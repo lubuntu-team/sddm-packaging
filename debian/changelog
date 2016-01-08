@@ -1,3 +1,10 @@
+sddm (0.13.0-1ubuntu2) xenial; urgency=medium
+
+  * Mark Xstart, Xsession and Xstop as conffiles as they are supposed to be
+    editable by users (LP: #1531465)
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Fri, 08 Jan 2016 10:44:21 +0100
+
 sddm (0.13.0-1ubuntu1) xenial; urgency=medium
 
   * Merge with debian unstable (LP: #1519564, #1516837, #1511286)
