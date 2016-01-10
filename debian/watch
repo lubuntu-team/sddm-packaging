@@ -1,3 +1,3 @@
 version=3
-opts="filenamemangle=s/(?:.*\/)?v?(\d[\d.]*)\.tar\.xz/sddm-$1.tar.xz/" \
-         https://github.com/sddm/sddm/tags (?:.*/)?v?(\d[\d.]*)\.tar\.xz
+opts="filenamemangle=s/(?:.*\/)?v?(\d[\d.]*)\.tar\.gz/sddm-$1.tar.gz/" \
+         https://github.com/sddm/sddm/tags (?:.*/)?v?(\d[\d.]*)\.tar\.gz
