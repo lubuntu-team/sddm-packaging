@@ -2,6 +2,7 @@ sddm (0.13.0-1ubuntu4) UNRELEASED; urgency=medium
 
   * Switch the watch file back to gz as xz lookup on GitHub isn't really
     possible 
+  * Restore kwallet4 auto-start that was dropped in the debian merge
 
  -- Philip Muškovac <yofel@kubuntu.org>  Sun, 10 Jan 2016 15:40:55 +0100
 
