@@ -1,4 +1,4 @@
-sddm (0.13.0-1ubuntu4) UNRELEASED; urgency=medium
+sddm (0.13.0-1ubuntu4) xenial; urgency=medium
 
   * Switch the watch file back to gz as xz lookup on GitHub isn't really
     possible 
