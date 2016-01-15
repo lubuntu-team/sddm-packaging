@@ -1,3 +1,10 @@
+sddm (0.13.0-1ubuntu5) xenial; urgency=medium
+
+  * Cherry-pick cb768895c8e0d21c689d63f69d7ac668fe4e8fa6 so there is a working
+    way to login if autologin fails on an invalid session config
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Fri, 15 Jan 2016 01:25:13 +0100
+
 sddm (0.13.0-1ubuntu4) xenial; urgency=medium
 
   * Switch the watch file back to gz as xz lookup on GitHub isn't really

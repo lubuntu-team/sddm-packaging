@@ -1,3 +1,4 @@
+upstream_autologin_fallback.diff
 01_sddm_systemctl.diff
 02_kubuntu_use_breeze.diff
 04_set_default_path.diff
