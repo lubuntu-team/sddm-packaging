@@ -29,6 +29,7 @@ Architecture: any
 Depends: adduser,
          qml-module-qtquick2,
          sddm-theme-breeze | sddm-theme,
+         libqt5xcbqpa5,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: libpam-systemd
