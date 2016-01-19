@@ -29,10 +29,11 @@ Architecture: any
 Depends: adduser,
          qml-module-qtquick2,
          sddm-theme-breeze | sddm-theme,
+         libqt5xcbqpa5,
          ${misc:Depends},
          ${shlibs:Depends}
 Recommends: libpam-systemd
-Suggests: libpam-kwallet5
+Suggests: libpam-kwallet5, libpam-kwallet4
 Provides: x-display-manager
 Description: modern display manager for X11
  SDDM is a modern display manager for X11 aiming to be fast, simple
