@@ -1,8 +1,9 @@
-sddm (0.13.0-2~) UNRELEASED; urgency=medium
+sddm (0.14.0-1~) UNRELEASED; urgency=medium
 
   * Add missing xserver dependencies. (Closes: 833080)
+  * New upstream release (0.14.0).
 
- -- Maximiliano Curia <maxy@debian.org>  Mon, 01 Aug 2016 11:38:34 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 02 Sep 2016 22:43:03 +0200
 
 sddm (0.13.0-1) unstable; urgency=medium
 
