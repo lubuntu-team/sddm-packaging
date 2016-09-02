@@ -2,6 +2,7 @@ sddm (0.14.0-1~) UNRELEASED; urgency=medium
 
   * Add missing xserver dependencies. (Closes: 833080)
   * New upstream release (0.14.0).
+  * Refresh patches
 
  -- Maximiliano Curia <maxy@debian.org>  Fri, 02 Sep 2016 22:43:03 +0200
 
