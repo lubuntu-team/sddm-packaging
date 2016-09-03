@@ -1,10 +1,18 @@
-sddm (0.14.0-1~) UNRELEASED; urgency=medium
+sddm (0.14.0-1~1.gbp56e9a4) UNRELEASED; urgency=medium
+
+  ** SNAPSHOT build @56e9a47fd27e287940c7a37c7478990711f7aa5e **
 
   * Add missing xserver dependencies. (Closes: 833080)
   * New upstream release (0.14.0).
   * Refresh patches
+  * Update build-deps and deps with the info from cmake
+  * Drop maui and circles themes
+  * Bump Standards-Version to 3.9.8
+  * Add a .gitattributes file to use dpkg-mergechangelogs
+  * Migrate dbg package to automatic dbgsym
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
 
- -- Maximiliano Curia <maxy@debian.org>  Fri, 02 Sep 2016 22:43:03 +0200
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sat, 03 Sep 2016 11:17:56 +0200
 
 sddm (0.13.0-1) unstable; urgency=medium
 
