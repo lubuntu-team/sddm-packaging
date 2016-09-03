@@ -1,0 +1,32 @@
+SDDM configuration
+==================
+
+The Debian package relies on the default configuration values and as such the
+configuration file is not part of the sddm package.
+
+In order to override a configuration value you'll need to create a
+/etc/sddm.conf file and set the values accordingly (see sddm.conf(5) manpage
+for more details).
+
+Themes
+------
+
+The theme used by default in sddm is 'breeze', provided by the
+sddm-theme-breeze package, if it's not installed you'll be greeted with the
+maui theme and an error message in the lower part of the screen saying that
+'breeze' couldn't be loaded.
+
+Sddm embeds the maui theme since the 0.14 release, and is used as the
+fall-back when the configured theme is not present or failing. Also, because
+of this change, the theme is now named as the empty string in the
+configuration file.
+
+All in all, if you prefer the maui theme, or you want to get rid of the error
+message, you can set maui as your current theme in your /etc/sddm.conf ::
+
+ [Theme]
+ Current=
+
+Also, the 0.14 version of sddm drops the 'circles' theme and it will
+eventually be removed from the archive. Please use a different sddm theme.
+
