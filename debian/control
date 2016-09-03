@@ -21,7 +21,7 @@ Build-Depends: cmake (>= 2.8.8),
                qttools5-dev,
                qttools5-dev-tools (>= 5.6.0~),
                systemd [linux-any]
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: https://github.com/sddm/sddm
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-std/sddm.git
 Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-std/sddm.git
