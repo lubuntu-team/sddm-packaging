@@ -30,12 +30,11 @@ Package: sddm
 Architecture: any
 Depends: adduser,
          qml-module-qtquick2,
-         sddm-theme-breeze | sddm-theme,
          x11-common,
          xserver-xorg | xserver,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: libpam-systemd
+Recommends: libpam-systemd, sddm-theme-breeze | sddm-theme
 Suggests: libpam-kwallet5
 Provides: x-display-manager
 Description: modern display manager for X11
