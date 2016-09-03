@@ -43,24 +43,6 @@ Description: modern display manager for X11
  and beautiful. It uses modern technologies like QtQuick to create
  smooth, animated user interfaces.
 
-Package: sddm-theme-maui
-Architecture: all
-Depends: ${misc:Depends}
-Breaks: sddm (<< ${source:Version})
-Recommends: sddm
-Provides: sddm-theme
-Description: 'Maui' theme for SDDM X11 display manager
- Maui theme for SDDM
-
-Package: sddm-theme-circles
-Architecture: all
-Depends: ${misc:Depends}
-Breaks: sddm (<< ${source:Version})
-Recommends: sddm
-Provides: sddm-theme
-Description: 'Circles' theme for SDDM X11 display manager
- Circles theme for SDDM
-
 Package: sddm-theme-elarun
 Architecture: all
 Depends: ${misc:Depends}
