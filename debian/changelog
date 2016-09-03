@@ -1,6 +1,6 @@
-sddm (0.14.0-1~1.gbp56e9a4) UNRELEASED; urgency=medium
+sddm (0.14.0-1~2.gbpf70012) UNRELEASED; urgency=medium
 
-  ** SNAPSHOT build @56e9a47fd27e287940c7a37c7478990711f7aa5e **
+  ** SNAPSHOT build @f70012c6ca0893d4ddfa483e3fd76980db5f7f48 **
 
   * Add missing xserver dependencies. (Closes: 833080)
   * New upstream release (0.14.0).
@@ -11,8 +11,9 @@ sddm (0.14.0-1~1.gbp56e9a4) UNRELEASED; urgency=medium
   * Add a .gitattributes file to use dpkg-mergechangelogs
   * Migrate dbg package to automatic dbgsym
   * debian/control: Update Vcs-Browser and Vcs-Git fields
+  * Demote the breeze theme to a recommends
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sat, 03 Sep 2016 11:17:56 +0200
+ -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sat, 03 Sep 2016 11:38:48 +0200
 
 sddm (0.13.0-1) unstable; urgency=medium
 
