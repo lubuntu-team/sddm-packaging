@@ -2,3 +2,4 @@
 02_kubuntu_use_breeze.diff
 03_vt7-minimum-vt.diff
 04_set_default_path.diff
+handle-reading-from-a-closed-file-handle.patch
