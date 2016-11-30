@@ -42,6 +42,26 @@ Description: modern display manager for X11
  and beautiful. It uses modern technologies like QtQuick to create
  smooth, animated user interfaces.
 
+Package: sddm-theme-maui
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
+Description: 'Maui' theme for SDDM X11 display manager
+ Maui theme for SDDM
+
+Package: sddm-theme-debian-maui
+Architecture: all
+Depends: desktop-base,
+         ${misc:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
+Description: 'Debian Maui' theme for SDDM X11 display manager
+ Maui theme for SDDM, using the active desktop-base theme for the
+ background
+
 Package: sddm-theme-elarun
 Architecture: all
 Depends: ${misc:Depends}
@@ -50,6 +70,17 @@ Provides: sddm-theme
 Breaks: sddm (<< ${source:Version})
 Description: 'Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM
+
+Package: sddm-theme-debian-elarun
+Architecture: all
+Depends: desktop-base,
+         ${misc:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
+Description: 'Debian Elarun' Theme for SDDM X11 display manager
+ Elarun theme for SDDM, using the active desktop-base theme for the
+ background.
 
 Package: sddm-theme-maldives
 Architecture: all
