@@ -1,9 +1,8 @@
-sddm (0.14.0-1~2.gbpf70012) UNRELEASED; urgency=medium
+sddm (0.14.0-1) experimental; urgency=medium
 
-  ** SNAPSHOT build @f70012c6ca0893d4ddfa483e3fd76980db5f7f48 **
-
-  * Add missing xserver dependencies. (Closes: 833080)
+  [ Maximiliano Curia ]
   * New upstream release (0.14.0).
+  * Add missing xserver dependencies. (Closes: 833080)
   * Refresh patches
   * Update build-deps and deps with the info from cmake
   * Drop maui and circles themes
@@ -12,8 +11,13 @@ sddm (0.14.0-1~2.gbpf70012) UNRELEASED; urgency=medium
   * Migrate dbg package to automatic dbgsym
   * debian/control: Update Vcs-Browser and Vcs-Git fields
   * Demote the breeze theme to a recommends
+  * Add a basic README.Debian for the sddm configuration and themes
+  * Add new patch: handle-reading-from-a-closed-file-handle.patch
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Sat, 03 Sep 2016 11:38:48 +0200
+  [ Aurélien COUDERC ]
+  * Add SDDM themes based on Debian arwork, make default theme configurable with alternatives
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 30 Dec 2016 20:41:13 +0100
 
 sddm (0.13.0-1) unstable; urgency=medium
 
