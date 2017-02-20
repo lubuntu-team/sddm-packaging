@@ -53,8 +53,7 @@ Description: 'Maui' theme for SDDM X11 display manager
 
 Package: sddm-theme-debian-maui
 Architecture: all
-Depends: desktop-base,
-         ${misc:Depends}
+Depends: desktop-base, ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
 Breaks: sddm (<< ${source:Version})
@@ -73,8 +72,7 @@ Description: 'Elarun' Theme for SDDM X11 display manager
 
 Package: sddm-theme-debian-elarun
 Architecture: all
-Depends: desktop-base,
-         ${misc:Depends}
+Depends: desktop-base, ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
 Breaks: sddm (<< ${source:Version})
