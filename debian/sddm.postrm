@@ -1,6 +1,9 @@
 #!/bin/sh
 set -e
 
+DEFAULT_DISPLAY_MANAGER_FILE=/etc/X11/default-display-manager
+DEFAULT_SERVICE=/etc/systemd/system/display-manager.service
+
 case "$1" in
     purge)
         update-rc.d sddm remove > /dev/null
@@ -22,6 +25,12 @@ case "$1" in
                 delgroup --system sddm || echo "Could not remove sddm group."
             fi
         fi
+        if [ ! -e "$DEFAULT_DISPLAY_MANAGER_FILE" ] &&
+            [ -h "$DEFAULT_SERVICE" ] && [ ! -e "$DEFAULT_SERVICE" ]; then
+            # Dangling symlink, no other display-manager installed
+            rm "$DEFAULT_SERVICE"
+        fi
+
         ;;
     abort-install|abort-upgrade)
         # roll back displacement of default display manager file
