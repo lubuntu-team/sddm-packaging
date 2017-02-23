@@ -17,12 +17,14 @@ case "$1" in
 
         if getent passwd sddm >/dev/null; then
             if [ -x /usr/sbin/deluser ]; then
-                deluser --system sddm || echo "Could not remove sddm user."
+                deluser --system sddm >&2 ||
+                    echo "Could not remove sddm user." >&2
             fi
         fi
         if getent group sddm >/dev/null; then
             if [ -x /usr/sbin/delgroup ]; then
-                delgroup --system sddm || echo "Could not remove sddm group."
+                delgroup --system sddm >&2 ||
+                    echo "Could not remove sddm group." >&2
             fi
         fi
         if [ ! -e "$DEFAULT_DISPLAY_MANAGER_FILE" ] &&
