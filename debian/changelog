@@ -3,6 +3,9 @@ sddm (0.14.0-2) unstable; urgency=medium
   * Avoid killing plymouth from the sddm system unit (Closes: 854260)
   * Purge dangling symlink.
     Thanks to Andreas Beckmann for following this issue (Closes: 848936)
+  * Install the generated configuration file as an example
+  * Workaround debconf's db_purge stdout parsing (#855912)
+    Thanks to Laurent Bonnaud for reporting (Closes: 853844)
 
  -- Maximiliano Curia <maxy@debian.org>  Mon, 20 Feb 2017 19:09:24 +0100
 
