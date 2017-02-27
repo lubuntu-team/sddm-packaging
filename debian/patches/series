@@ -4,3 +4,4 @@
 04_set_default_path.diff
 05_add_debian_themes.diff
 handle-reading-from-a-closed-file-handle.patch
+Fix-display-of-user-avatars.-684.patch

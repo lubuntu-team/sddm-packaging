@@ -1,7 +1,28 @@
-Index: sddm/data/themes/CMakeLists.txt
+From: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Date: Mon, 27 Feb 2017 14:58:13 +0100
+Subject: _add_debian_themes
+
 ===================================================================
---- sddm.orig/data/themes/CMakeLists.txt	2016-11-30 21:46:27.615830425 +0100
-+++ sddm/data/themes/CMakeLists.txt	2016-11-30 21:52:29.039905637 +0100
+---
+ data/themes/CMakeLists.txt                 | 27 ++++++++++++++--
+ data/themes/debian-elarun/README           |  9 ++++++
+ data/themes/debian-elarun/metadata.desktop | 49 ++++++++++++++++++++++++++++++
+ data/themes/debian-elarun/theme.conf       |  2 ++
+ data/themes/debian-maui/README             |  5 +++
+ data/themes/debian-maui/metadata.desktop   | 16 ++++++++++
+ data/themes/debian-maui/theme.conf         |  2 ++
+ 7 files changed, 108 insertions(+), 2 deletions(-)
+ create mode 100644 data/themes/debian-elarun/README
+ create mode 100644 data/themes/debian-elarun/metadata.desktop
+ create mode 100644 data/themes/debian-elarun/theme.conf
+ create mode 100644 data/themes/debian-maui/README
+ create mode 100644 data/themes/debian-maui/metadata.desktop
+ create mode 100644 data/themes/debian-maui/theme.conf
+
+diff --git a/data/themes/CMakeLists.txt b/data/themes/CMakeLists.txt
+index 99e54ff..1c2f2c0 100644
+--- a/data/themes/CMakeLists.txt
++++ b/data/themes/CMakeLists.txt
 @@ -1,4 +1,27 @@
 -set(THEMES elarun maldives)
 +# Copy Maui to have it available as an external (non-embedded) theme
@@ -31,7 +52,7 @@ Index: sddm/data/themes/CMakeLists.txt
  
  foreach(THEME ${THEMES})
      # We assume that theme-specific translations are stored
-@@ -13,7 +36,7 @@
+@@ -13,7 +36,7 @@ foreach(THEME ${THEMES})
  
      qt5_add_translation(QM_FILES "${TRANSLATION_SOURCES}")
  
@@ -40,10 +61,11 @@ Index: sddm/data/themes/CMakeLists.txt
      install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/${THEME}" DESTINATION "${DATA_INSTALL_DIR}/themes")
  
      list(APPEND THEMES_QM_FILES ${QM_FILES})
-Index: sddm/data/themes/debian-elarun/README
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ sddm/data/themes/debian-elarun/README	2016-11-30 21:46:27.611830391 +0100
+diff --git a/data/themes/debian-elarun/README b/data/themes/debian-elarun/README
+new file mode 100644
+index 0000000..45dcb7b
+--- /dev/null
++++ b/data/themes/debian-elarun/README
 @@ -0,0 +1,9 @@
 +This theme is based on the KDM Elarun theme, ported to SDDM theme.
 +It was adapted to use the active Debian theme pack.
@@ -54,10 +76,11 @@ Index: sddm/data/themes/debian-elarun/README
 +Author=Roman Shtylman & Nuno Pinheiro
 +Copyright=GPL 2010 Roman Shtylman | nuno@oxygen-icons.org, 2012 Nuno Pineheiro
 +License=GPL
-Index: sddm/data/themes/debian-elarun/metadata.desktop
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ sddm/data/themes/debian-elarun/metadata.desktop	2016-11-30 21:46:27.611830391 +0100
+diff --git a/data/themes/debian-elarun/metadata.desktop b/data/themes/debian-elarun/metadata.desktop
+new file mode 100644
+index 0000000..83d3353
+--- /dev/null
++++ b/data/themes/debian-elarun/metadata.desktop
 @@ -0,0 +1,49 @@
 +[SddmGreeterTheme]
 +Name=Debian Elarun
@@ -108,27 +131,30 @@ Index: sddm/data/themes/debian-elarun/metadata.desktop
 +Theme-API=${COMPONENTS_VERSION}
 +Website=https://github.com/sddm/sddm
 +
-Index: sddm/data/themes/debian-elarun/theme.conf
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ sddm/data/themes/debian-elarun/theme.conf	2016-11-30 21:46:27.611830391 +0100
+diff --git a/data/themes/debian-elarun/theme.conf b/data/themes/debian-elarun/theme.conf
+new file mode 100644
+index 0000000..c4bf093
+--- /dev/null
++++ b/data/themes/debian-elarun/theme.conf
 @@ -0,0 +1,2 @@
 +[General]
 +background=/usr/share/desktop-base/active-theme/login/background.svg
-Index: sddm/data/themes/debian-maui/README
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ sddm/data/themes/debian-maui/README	2016-11-30 21:46:27.611830391 +0100
+diff --git a/data/themes/debian-maui/README b/data/themes/debian-maui/README
+new file mode 100644
+index 0000000..0d181c8
+--- /dev/null
++++ b/data/themes/debian-maui/README
 @@ -0,0 +1,5 @@
 +This theme is an adaptation of the original Maui theme from upstream SDDM for
 +Debian to use the active desktop-base theme.
 +
 +Check the src/greeter/theme folder from the SDDM source for more information.
 +
-Index: sddm/data/themes/debian-maui/metadata.desktop
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ sddm/data/themes/debian-maui/metadata.desktop	2016-11-30 21:46:27.611830391 +0100
+diff --git a/data/themes/debian-maui/metadata.desktop b/data/themes/debian-maui/metadata.desktop
+new file mode 100644
+index 0000000..e94ee0f
+--- /dev/null
++++ b/data/themes/debian-maui/metadata.desktop
 @@ -0,0 +1,16 @@
 +[SddmGreeterTheme]
 +Name=Debian Maui
@@ -146,10 +172,11 @@ Index: sddm/data/themes/debian-maui/metadata.desktop
 +Email=abdurrahmanavci@gmail.com
 +Theme-Id=maui
 +Theme-API=${COMPONENTS_VERSION}
-Index: sddm/data/themes/debian-maui/theme.conf
-===================================================================
---- /dev/null	1970-01-01 00:00:00.000000000 +0000
-+++ sddm/data/themes/debian-maui/theme.conf	2016-11-30 21:46:27.611830391 +0100
+diff --git a/data/themes/debian-maui/theme.conf b/data/themes/debian-maui/theme.conf
+new file mode 100644
+index 0000000..d832f41
+--- /dev/null
++++ b/data/themes/debian-maui/theme.conf
 @@ -0,0 +1,2 @@
 +[General]
 +background=/usr/share/desktop-base/active-theme/login/background-nologo.svg

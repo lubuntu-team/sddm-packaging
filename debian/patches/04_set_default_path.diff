@@ -30,7 +30,7 @@ index 3238af5..f8bca5f 100644
  `MinimumUid=`
  	Minimum user id of the users to be listed in the
 diff --git a/src/common/Configuration.h b/src/common/Configuration.h
-index 933931d..4d0a281 100644
+index 6c79e01..1b36d3f 100644
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
 @@ -78,7 +78,7 @@ namespace SDDM {

@@ -7,7 +7,7 @@ Subject: _kubuntu_use_breeze
  1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/src/common/Configuration.h b/src/common/Configuration.h
-index f790343..933931d 100644
+index f790343..6c79e01 100644
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
 @@ -46,7 +46,7 @@ namespace SDDM {
