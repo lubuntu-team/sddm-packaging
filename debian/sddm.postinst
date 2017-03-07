@@ -21,6 +21,12 @@ if ! getent passwd sddm >/dev/null; then
     usermod -s "/bin/false"                     sddm
 fi
 
+if [ ! -e /var/lib/sddm ]; then
+    # If sddm was purged while running, the home dir gets removed but the user
+    # remains (as deluser refuses to delete a user that's in use).
+    mkdir -p /var/lib/sddm
+fi
+
 if [ -d /var/lib/sddm ]; then
     chown -R sddm:sddm /var/lib/sddm
     chmod 0750 /var/lib/sddm
