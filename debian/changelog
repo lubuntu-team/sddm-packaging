@@ -4,6 +4,11 @@ sddm (0.14.0-3~) UNRELEASED; urgency=medium
     Thanks to Russell Coker for reporting (Closes: 850006)
   * Add new upstream patch: Fix-display-of-user-avatars.-684.patch.
     Thanks to Salvo Tomaselli for reporting (Closes: 856195)
+  * Create sddm's home dir if not present
+  * Add HiDPI patches:
+    Add-a-config-option-to-enable-high-DPI-scaling-701.patch (upstream) and
+    Regression-fix-disable-HiDPI-by-default.patch.
+    Thanks to Laurent Bonnaud for reporting and testing (Closes: 853843)
 
  -- Maximiliano Curia <maxy@gnuservers.com.ar>  Mon, 27 Feb 2017 11:41:48 +0100
 
