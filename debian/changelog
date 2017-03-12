@@ -1,4 +1,4 @@
-sddm (0.14.0-3~) UNRELEASED; urgency=medium
+sddm (0.14.0-3) unstable; urgency=medium
 
   * Drop pam_systemd.so from our pam rules.
     Thanks to Russell Coker for reporting (Closes: 850006)
@@ -10,7 +10,7 @@ sddm (0.14.0-3~) UNRELEASED; urgency=medium
     Regression-fix-disable-HiDPI-by-default.patch.
     Thanks to Laurent Bonnaud for reporting and testing (Closes: 853843)
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Mon, 27 Feb 2017 11:41:48 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 12 Mar 2017 17:33:04 +0100
 
 sddm (0.14.0-2) unstable; urgency=medium
 
