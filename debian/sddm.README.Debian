@@ -39,3 +39,16 @@ for the Debian stretch release.
 Also, the 0.14 version of sddm drops the 'circles' theme and it will
 eventually be removed from the archive. Please use a different sddm theme.
 
+HiDPI
+-----
+
+There are some bugs in QT5 (#857648) that cause the QScreen object to become
+invalid when enabling the HiDPI support in some video cards, this caused some
+regressions in 0.14. To avoid this issue we are disabling the HiDPI support by
+default.
+
+If you want to enable it you'll need to set EnableHiDPI configuration option
+under the [General] section of your /etc/sddm.conf:
+ [General]
+  EnableHiDPI=true
+
