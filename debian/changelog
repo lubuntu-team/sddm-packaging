@@ -1,8 +1,8 @@
-sddm (0.14.0-4) UNRELEASED; urgency=medium
+sddm (0.14.0-4) unstable; urgency=medium
 
   * Update documentation, add information about HiDPI
 
- -- Maximiliano Curia <maxy@gnuservers.com.ar>  Tue, 14 Mar 2017 09:49:49 +0100
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 14 Mar 2017 09:50:33 +0100
 
 sddm (0.14.0-3) unstable; urgency=medium
 
