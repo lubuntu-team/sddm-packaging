@@ -1,5 +1,6 @@
 sddm (0.14.0-4ubuntu1) UNRELEASED; urgency=medium
 
+  [ Simon Quigley ]
   * New upstream release (LP: #1627340).
   * Merge from Debian. Remaining changes:
     - Keep the default-display-manager file logic in sddm.postinst.
@@ -10,6 +11,9 @@ sddm (0.14.0-4ubuntu1) UNRELEASED; urgency=medium
     - Remove debian/patches/upstream_autologin_fallback.diff as it's
       reverse-applicable.
   * Refresh patches.
+
+  [ Clive Johnston ]
+  * Re-apply 02_kubuntu_use_breeze.diff
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 22 Apr 2017 18:48:07 -0500
 

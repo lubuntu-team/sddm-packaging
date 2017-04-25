@@ -1,5 +1,5 @@
 01_sddm_systemctl.diff
-02_use_debian_theme.diff
+02_kubuntu_use_breeze.diff
 04_set_default_path.diff
 05_add_debian_themes.diff
 handle-reading-from-a-closed-file-handle.patch
