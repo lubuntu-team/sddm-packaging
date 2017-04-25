@@ -19,8 +19,6 @@ Subject: _add_debian_themes
  create mode 100644 data/themes/debian-maui/metadata.desktop
  create mode 100644 data/themes/debian-maui/theme.conf
 
-diff --git a/data/themes/CMakeLists.txt b/data/themes/CMakeLists.txt
-index 99e54ff..1c2f2c0 100644
 --- a/data/themes/CMakeLists.txt
 +++ b/data/themes/CMakeLists.txt
 @@ -1,4 +1,27 @@
@@ -61,9 +59,6 @@ index 99e54ff..1c2f2c0 100644
      install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/${THEME}" DESTINATION "${DATA_INSTALL_DIR}/themes")
  
      list(APPEND THEMES_QM_FILES ${QM_FILES})
-diff --git a/data/themes/debian-elarun/README b/data/themes/debian-elarun/README
-new file mode 100644
-index 0000000..45dcb7b
 --- /dev/null
 +++ b/data/themes/debian-elarun/README
 @@ -0,0 +1,9 @@
@@ -76,9 +71,6 @@ index 0000000..45dcb7b
 +Author=Roman Shtylman & Nuno Pinheiro
 +Copyright=GPL 2010 Roman Shtylman | nuno@oxygen-icons.org, 2012 Nuno Pineheiro
 +License=GPL
-diff --git a/data/themes/debian-elarun/metadata.desktop b/data/themes/debian-elarun/metadata.desktop
-new file mode 100644
-index 0000000..83d3353
 --- /dev/null
 +++ b/data/themes/debian-elarun/metadata.desktop
 @@ -0,0 +1,49 @@
@@ -131,17 +123,11 @@ index 0000000..83d3353
 +Theme-API=${COMPONENTS_VERSION}
 +Website=https://github.com/sddm/sddm
 +
-diff --git a/data/themes/debian-elarun/theme.conf b/data/themes/debian-elarun/theme.conf
-new file mode 100644
-index 0000000..c4bf093
 --- /dev/null
 +++ b/data/themes/debian-elarun/theme.conf
 @@ -0,0 +1,2 @@
 +[General]
 +background=/usr/share/desktop-base/active-theme/login/background.svg
-diff --git a/data/themes/debian-maui/README b/data/themes/debian-maui/README
-new file mode 100644
-index 0000000..0d181c8
 --- /dev/null
 +++ b/data/themes/debian-maui/README
 @@ -0,0 +1,5 @@
@@ -150,9 +136,6 @@ index 0000000..0d181c8
 +
 +Check the src/greeter/theme folder from the SDDM source for more information.
 +
-diff --git a/data/themes/debian-maui/metadata.desktop b/data/themes/debian-maui/metadata.desktop
-new file mode 100644
-index 0000000..e94ee0f
 --- /dev/null
 +++ b/data/themes/debian-maui/metadata.desktop
 @@ -0,0 +1,16 @@
@@ -172,9 +155,6 @@ index 0000000..e94ee0f
 +Email=abdurrahmanavci@gmail.com
 +Theme-Id=maui
 +Theme-API=${COMPONENTS_VERSION}
-diff --git a/data/themes/debian-maui/theme.conf b/data/themes/debian-maui/theme.conf
-new file mode 100644
-index 0000000..d832f41
 --- /dev/null
 +++ b/data/themes/debian-maui/theme.conf
 @@ -0,0 +1,2 @@

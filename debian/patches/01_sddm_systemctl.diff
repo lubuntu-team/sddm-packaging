@@ -6,8 +6,6 @@ Subject: _sddm_systemctl
  CMakeLists.txt | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index fe8074b..98551b3 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
 @@ -139,8 +139,8 @@ if(SYSTEMD_FOUND)

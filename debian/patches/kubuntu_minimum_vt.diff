@@ -5,11 +5,9 @@ Origin: kubuntu
 Last-Update: 2015-03-11
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
-Index: b/CMakeLists.txt
-===================================================================
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -136,7 +136,7 @@ if(SYSTEMD_FOUND)
+@@ -138,7 +138,7 @@ if(SYSTEMD_FOUND)
          string(REGEX REPLACE "[ \t\n]+" "" SYSTEMD_SYSTEM_UNIT_DIR ${SYSTEMD_SYSTEM_UNIT_DIR})
      endif()
  
@@ -18,8 +16,6 @@ Index: b/CMakeLists.txt
      set(HALT_COMMAND "/bin/systemctl poweroff")
      set(REBOOT_COMMAND "/bin/systemctl reboot")
  else()
-Index: b/services/sddm.service.in
-===================================================================
 --- a/services/sddm.service.in
 +++ b/services/sddm.service.in
 @@ -1,7 +1,6 @@

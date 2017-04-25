@@ -6,8 +6,6 @@ Subject: Regression fix, disable HiDPI by default
  src/common/Configuration.h | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/src/common/Configuration.h b/src/common/Configuration.h
-index e37ebb9..8d43e7e 100644
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
 @@ -42,7 +42,7 @@ namespace SDDM {

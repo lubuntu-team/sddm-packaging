@@ -16,8 +16,6 @@ Signed-off-by: Stany MARCEL <stanypub@gmail.com>
  src/greeter/GreeterApp.cpp | 7 ++++++-
  2 files changed, 7 insertions(+), 1 deletion(-)
 
-diff --git a/src/common/Configuration.h b/src/common/Configuration.h
-index 1b36d3f..e37ebb9 100644
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
 @@ -42,6 +42,7 @@ namespace SDDM {
@@ -28,8 +26,6 @@ index 1b36d3f..e37ebb9 100644
          Entry(InputMethod,         QString,     QString(),                                      _S("Input method module"));
          //  Name   Entries (but it's a regular class again)
          Section(Theme,
-diff --git a/src/greeter/GreeterApp.cpp b/src/greeter/GreeterApp.cpp
-index 9ec66e1..1926b30 100644
 --- a/src/greeter/GreeterApp.cpp
 +++ b/src/greeter/GreeterApp.cpp
 @@ -242,7 +242,12 @@ int main(int argc, char **argv) {

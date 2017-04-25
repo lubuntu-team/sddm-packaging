@@ -8,8 +8,6 @@ QFile::exists("...") does not understand file:// URLs, at least in Qt
  src/greeter/UserModel.cpp | 8 ++++----
  1 file changed, 4 insertions(+), 4 deletions(-)
 
-diff --git a/src/greeter/UserModel.cpp b/src/greeter/UserModel.cpp
-index 41a9f10..94c492d 100644
 --- a/src/greeter/UserModel.cpp
 +++ b/src/greeter/UserModel.cpp
 @@ -107,13 +107,13 @@ namespace SDDM {

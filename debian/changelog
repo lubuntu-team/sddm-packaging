@@ -1,3 +1,18 @@
+sddm (0.14.0-4ubuntu1) UNRELEASED; urgency=medium
+
+  * New upstream release (LP: #1627340).
+  * Merge from Debian. Remaining changes:
+    - Keep the default-display-manager file logic in sddm.postinst.
+    - Keep kubuntu-specific patches:
+      + kubuntu_nvidia-prime.diff
+      + kubuntu_minimum_vt.diff instead of 03_vt7-minimum-vt.diff
+  * Dropped changes:
+    - Remove debian/patches/upstream_autologin_fallback.diff as it's
+      reverse-applicable.
+  * Refresh patches.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 22 Apr 2017 18:48:07 -0500
+
 sddm (0.14.0-4) unstable; urgency=medium
 
   * Update documentation, add information about HiDPI

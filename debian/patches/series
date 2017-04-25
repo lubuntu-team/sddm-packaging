@@ -1,9 +1,11 @@
 01_sddm_systemctl.diff
 02_use_debian_theme.diff
-03_vt7-minimum-vt.diff
 04_set_default_path.diff
 05_add_debian_themes.diff
 handle-reading-from-a-closed-file-handle.patch
 Fix-display-of-user-avatars.-684.patch
 Add-a-config-option-to-enable-high-DPI-scaling-701.patch
 Regression-fix-disable-HiDPI-by-default.patch
+
+kubuntu_minimum_vt.diff
+kubuntu_nvidia-prime.diff
