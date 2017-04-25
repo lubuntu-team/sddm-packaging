@@ -1,18 +1,26 @@
-Description: Change the default PATH
- The configured default PATH is used in the parts that run as root, the
- greeter and for the user  sessions, so its better to have an spartan default.
- .
- At the same time, for the zsh users this spartan version gets expanded thanks
- to the default global zshenv, while exporting a different value in the
- Xsession script would be overriding the users configurations in their local
- zshenv.
-Author: Maximiliano Curia <maxy@debian.org>
+From: Maximiliano Curia <maxy@debian.org>
+Date: Fri, 11 Nov 2016 09:45:34 +0100
+Subject: Change the default PATH
+
+The configured default PATH is used in the parts that run as root, the
+greeter and for the user  sessions, so its better to have an spartan default.
+
+At the same time, for the zsh users this spartan version gets expanded thanks
+to the default global zshenv, while exporting a different value in the
+Xsession script would be overriding the users configurations in their local
+zshenv.
 Forwarded: not-needed
 Last-Update: 2015-09-14
 ---
+ data/man/sddm.conf.rst.in  | 2 +-
+ src/common/Configuration.h | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/data/man/sddm.conf.rst.in b/data/man/sddm.conf.rst.in
+index 3238af5..f8bca5f 100644
 --- a/data/man/sddm.conf.rst.in
 +++ b/data/man/sddm.conf.rst.in
-@@ -133,7 +133,7 @@
+@@ -145,7 +145,7 @@ OPTIONS
  
  `DefaultPath=`
  	Default path to set after successfully logging in.
@@ -21,9 +29,11 @@ Last-Update: 2015-09-14
  
  `MinimumUid=`
  	Minimum user id of the users to be listed in the
+diff --git a/src/common/Configuration.h b/src/common/Configuration.h
+index 6c79e01..1b36d3f 100644
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
-@@ -77,7 +77,7 @@
+@@ -78,7 +78,7 @@ namespace SDDM {
          );
  
          Section(Users,

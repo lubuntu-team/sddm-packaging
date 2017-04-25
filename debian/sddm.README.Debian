@@ -1,0 +1,54 @@
+SDDM configuration
+==================
+
+The program as shipped already includes default settings and does not require
+a configuration file to exist. For this reason there is no /etc/sddm.conf
+shipped in this package.
+
+There is an example configuration file in:
+ /usr/share/doc/sddm/sddm.conf
+
+In order to override a configuration value you'll need to create a
+/etc/sddm.conf file and set the values accordingly (see sddm.conf(5) manpage
+for more details). If you use KDE, the recommended way of doing this is
+through KDE's System Settings (Workspace -> Startup and Shutdown).
+
+Themes
+------
+
+The theme used by default in sddm is 'debian-theme', which is configurable
+using the alternative 'sddm-debian-theme', this allows a better integration
+of sddm with different desktop environments, such as LXQt or Plasma.
+
+Currently the following packages provide a sddm-theme:
+ * sddm-theme-maui
+ * sddm-theme-debian-maui
+ * sddm-theme-elarun
+ * sddm-theme-debian-elarun
+ * sddm-theme-maldives
+ * sddm-theme-breeze
+ * sddm-theme-debian-breeze
+
+You can easily change the one you want to use with:
+
+ sudo update-alternatives --config sddm-debian-theme
+
+The themes named sddm-theme-debian-* were adapted to have the look and feel
+for the Debian stretch release.
+
+Also, the 0.14 version of sddm drops the 'circles' theme and it will
+eventually be removed from the archive. Please use a different sddm theme.
+
+HiDPI
+-----
+
+There are some bugs in QT5 (#857648) that cause the QScreen object to become
+invalid when enabling the HiDPI support in some video cards, this caused some
+regressions in 0.14. To avoid this issue we are disabling the HiDPI support by
+default.
+
+If you want to enable it you'll need to set EnableHiDPI configuration option
+under the [General] section of your /etc/sddm.conf:
+ [General]
+  EnableHiDPI=true
+

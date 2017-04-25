@@ -20,7 +20,7 @@ endif
 	dh $@ ${WITH_SYSTEMD} --parallel
 
 override_dh_strip:
-	dh_strip --dbg-package=sddm-dbg
+	dh_strip --dbgsym-migration='sddm-dbg (<= 0.14.0-1~~)'
 
 override_dh_auto_configure:
 	dh_auto_configure -- ${SDDM_CMAKE_ARGS}

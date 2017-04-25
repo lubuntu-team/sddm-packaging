@@ -6,34 +6,36 @@ Uploaders: Michał Zając <quintasan@kubuntu.org>,
            Maximiliano Curia <maxy@debian.org>
 Build-Depends: cmake (>= 2.8.8),
                debhelper (>= 9),
-               python-docutils,
                dh-systemd [linux-any],
+               extra-cmake-modules (>= 1.4.0~),
                libpam0g-dev,
                libsystemd-dev [linux-any],
                libupower-glib-dev,
                libxcb-xkb-dev,
                libxcb1-dev,
+               libxkbcommon-dev,
                pkg-config,
-               qtbase5-dev (>= 5.4),
-               qtdeclarative5-dev,
+               python-docutils,
+               qtbase5-dev (>= 5.6.0~),
+               qtdeclarative5-dev (>= 5.6.0~),
                qttools5-dev,
-               qttools5-dev-tools,
+               qttools5-dev-tools (>= 5.6.0~),
                systemd [linux-any]
-Standards-Version: 3.9.6
+Standards-Version: 3.9.8
 Homepage: https://github.com/sddm/sddm
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/kde-std/sddm.git
-Vcs-Git: git://anonscm.debian.org/pkg-kde/kde-std/sddm.git
+Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/kde-std/sddm.git
+Vcs-Git: https://anonscm.debian.org/git/pkg-kde/kde-std/sddm.git
 
 Package: sddm
 Architecture: any
 Depends: adduser,
          qml-module-qtquick2,
-         sddm-theme-breeze | sddm-theme,
-         libqt5xcbqpa5,
+         x11-common,
+         xserver-xorg | xserver,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: libpam-systemd
-Suggests: libpam-kwallet5, libpam-kwallet4
+Recommends: libpam-systemd, sddm-theme-debian-maui | sddm-theme
+Suggests: libpam-kwallet5
 Provides: x-display-manager
 Description: modern display manager for X11
  SDDM is a modern display manager for X11 aiming to be fast, simple
@@ -43,20 +45,21 @@ Description: modern display manager for X11
 Package: sddm-theme-maui
 Architecture: all
 Depends: ${misc:Depends}
-Breaks: sddm (<< ${source:Version})
 Recommends: sddm
 Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
 Description: 'Maui' theme for SDDM X11 display manager
  Maui theme for SDDM
 
-Package: sddm-theme-circles
+Package: sddm-theme-debian-maui
 Architecture: all
-Depends: ${misc:Depends}
-Breaks: sddm (<< ${source:Version})
+Depends: desktop-base, ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
-Description: 'Circles' theme for SDDM X11 display manager
- Circles theme for SDDM
+Breaks: sddm (<< ${source:Version})
+Description: 'Debian Maui' theme for SDDM X11 display manager
+ Maui theme for SDDM, using the active desktop-base theme for the
+ background
 
 Package: sddm-theme-elarun
 Architecture: all
@@ -67,6 +70,16 @@ Breaks: sddm (<< ${source:Version})
 Description: 'Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM
 
+Package: sddm-theme-debian-elarun
+Architecture: all
+Depends: desktop-base, ${misc:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
+Description: 'Debian Elarun' Theme for SDDM X11 display manager
+ Elarun theme for SDDM, using the active desktop-base theme for the
+ background.
+
 Package: sddm-theme-maldives
 Architecture: all
 Depends: ${misc:Depends}
@@ -75,17 +88,3 @@ Recommends: sddm
 Provides: sddm-theme
 Description: 'Maldives' theme for SDDM X11 display manager
  Maldives theme for SDDM
-
-Package: sddm-dbg
-Depends: sddm (= ${binary:Version}),
-         ${misc:Depends},
-         ${shlibs:Depends}
-Architecture: any
-Section: debug
-Priority: extra
-Description: modern display manager for X11 -- debugging symbols
- SDDM is a modern display manager for X11 aiming to be fast, simple
- and beautiful. It uses modern technologies like QtQuick to create
- smooth, animated user interfaces.
- .
- Debugging symbols for SDDM

@@ -1,3 +1,55 @@
+sddm (0.14.0-4) unstable; urgency=medium
+
+  * Update documentation, add information about HiDPI
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 14 Mar 2017 09:50:33 +0100
+
+sddm (0.14.0-3) unstable; urgency=medium
+
+  * Drop pam_systemd.so from our pam rules.
+    Thanks to Russell Coker for reporting (Closes: 850006)
+  * Add new upstream patch: Fix-display-of-user-avatars.-684.patch.
+    Thanks to Salvo Tomaselli for reporting (Closes: 856195)
+  * Create sddm's home dir if not present
+  * Add HiDPI patches:
+    Add-a-config-option-to-enable-high-DPI-scaling-701.patch (upstream) and
+    Regression-fix-disable-HiDPI-by-default.patch.
+    Thanks to Laurent Bonnaud for reporting and testing (Closes: 853843)
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 12 Mar 2017 17:33:04 +0100
+
+sddm (0.14.0-2) unstable; urgency=medium
+
+  * Avoid killing plymouth from the sddm system unit (Closes: 854260)
+  * Purge dangling symlink.
+    Thanks to Andreas Beckmann for following this issue (Closes: 848936)
+  * Install the generated configuration file as an example
+  * Workaround debconf's db_purge stdout parsing (#855912)
+    Thanks to Laurent Bonnaud for reporting (Closes: 853844)
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 20 Feb 2017 19:09:24 +0100
+
+sddm (0.14.0-1) experimental; urgency=medium
+
+  [ Maximiliano Curia ]
+  * New upstream release (0.14.0).
+  * Add missing xserver dependencies. (Closes: 833080)
+  * Refresh patches
+  * Update build-deps and deps with the info from cmake
+  * Drop maui and circles themes
+  * Bump Standards-Version to 3.9.8
+  * Add a .gitattributes file to use dpkg-mergechangelogs
+  * Migrate dbg package to automatic dbgsym
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+  * Demote the breeze theme to a recommends
+  * Add a basic README.Debian for the sddm configuration and themes
+  * Add new patch: handle-reading-from-a-closed-file-handle.patch
+
+  [ Aurélien COUDERC ]
+  * Add SDDM themes based on Debian arwork, make default theme configurable with alternatives
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 30 Dec 2016 20:41:13 +0100
+
 sddm (0.13.0-1ubuntu6) UNRELEASED; urgency=medium
 
   * Suggest libpam-kwallet4 as well as we attempt to auto-start it 

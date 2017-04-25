@@ -1,0 +1,182 @@
+From: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Date: Mon, 27 Feb 2017 14:58:13 +0100
+Subject: _add_debian_themes
+
+===================================================================
+---
+ data/themes/CMakeLists.txt                 | 27 ++++++++++++++--
+ data/themes/debian-elarun/README           |  9 ++++++
+ data/themes/debian-elarun/metadata.desktop | 49 ++++++++++++++++++++++++++++++
+ data/themes/debian-elarun/theme.conf       |  2 ++
+ data/themes/debian-maui/README             |  5 +++
+ data/themes/debian-maui/metadata.desktop   | 16 ++++++++++
+ data/themes/debian-maui/theme.conf         |  2 ++
+ 7 files changed, 108 insertions(+), 2 deletions(-)
+ create mode 100644 data/themes/debian-elarun/README
+ create mode 100644 data/themes/debian-elarun/metadata.desktop
+ create mode 100644 data/themes/debian-elarun/theme.conf
+ create mode 100644 data/themes/debian-maui/README
+ create mode 100644 data/themes/debian-maui/metadata.desktop
+ create mode 100644 data/themes/debian-maui/theme.conf
+
+diff --git a/data/themes/CMakeLists.txt b/data/themes/CMakeLists.txt
+index 99e54ff..1c2f2c0 100644
+--- a/data/themes/CMakeLists.txt
++++ b/data/themes/CMakeLists.txt
+@@ -1,4 +1,27 @@
+-set(THEMES elarun maldives)
++# Copy Maui to have it available as an external (non-embedded) theme
++file(COPY "../../src/greeter/theme/" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/maui")
++
++# Copy Main.qml and image resources from upstream Maui to debian-maui
++file(COPY "../../src/greeter/theme/Main.qml" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/debian-maui")
++file(GLOB MAUI_PNGS "../../src/greeter/theme/*.png")
++foreach(MAUI_PNG ${MAUI_PNGS})
++    file(COPY "${MAUI_PNG}" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/debian-maui")
++endforeach(MAUI_PNG)
++# Replace default background source by config key config.background
++set(SED_EXPR "s=^\\([[:space:]]*source[[:space:]]*:[[:space:]]\\)\\\"qrc:/theme/background.png\\\"[[:space:]]*$=\\1config.background=")
++execute_process(COMMAND sed -i -e "${SED_EXPR}" "${CMAKE_CURRENT_SOURCE_DIR}/debian-maui/Main.qml" RESULT_VARIABLE RES OUTPUT_VARIABLE OUT)
++message("Result of sed replacement for Maui's background source: (Res: ${RES}, Out: ${OUT})")
++
++# Copy selected files from upstream Elarun to debian-elarun
++file(COPY "elarun/Main.qml" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/debian-elarun")
++file(COPY "elarun/angle-down.png" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/debian-elarun")
++file(COPY "elarun/elarun.jpg" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/debian-elarun")
++file(GLOB ELARUN_IMGS "elarun/images/*")
++foreach(ELARUN_IMG ${ELARUN_IMGS})
++    file(COPY "${ELARUN_IMG}" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/debian-elarun/images/")
++endforeach(ELARUN_IMG)
++
++set(THEMES elarun maldives maui debian-maui debian-elarun)
+ 
+ foreach(THEME ${THEMES})
+     # We assume that theme-specific translations are stored
+@@ -13,7 +36,7 @@ foreach(THEME ${THEMES})
+ 
+     qt5_add_translation(QM_FILES "${TRANSLATION_SOURCES}")
+ 
+-    install(DIRECTORY "${THEME}" DESTINATION "${DATA_INSTALL_DIR}/themes" PATTERN "*.ts" EXCLUDE)
++    install(DIRECTORY "${THEME}" DESTINATION "${DATA_INSTALL_DIR}/themes" PATTERN "${THEME}/*.ts" EXCLUDE PATTERN "${THEME}/Main.qml" EXCLUDE)
+     install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/${THEME}" DESTINATION "${DATA_INSTALL_DIR}/themes")
+ 
+     list(APPEND THEMES_QM_FILES ${QM_FILES})
+diff --git a/data/themes/debian-elarun/README b/data/themes/debian-elarun/README
+new file mode 100644
+index 0000000..45dcb7b
+--- /dev/null
++++ b/data/themes/debian-elarun/README
+@@ -0,0 +1,9 @@
++This theme is based on the KDM Elarun theme, ported to SDDM theme.
++It was adapted to use the active Debian theme pack.
++Thanks to these people for their great works.
++Not all functionality from original theme are ported.
++
++Original KDM theme:
++Author=Roman Shtylman & Nuno Pinheiro
++Copyright=GPL 2010 Roman Shtylman | nuno@oxygen-icons.org, 2012 Nuno Pineheiro
++License=GPL
+diff --git a/data/themes/debian-elarun/metadata.desktop b/data/themes/debian-elarun/metadata.desktop
+new file mode 100644
+index 0000000..83d3353
+--- /dev/null
++++ b/data/themes/debian-elarun/metadata.desktop
+@@ -0,0 +1,49 @@
++[SddmGreeterTheme]
++Name=Debian Elarun
++Name[ca]=Debian Elarun
++Name[da]=Debian Elarun
++Name[de]=Debian Elarun
++Name[el]=Debian Elarun
++Name[es]=Debian Elarun
++Name[et]=Debian Elarun
++Name[fi]=Debian Elarun
++Name[ga]=Debian Elarun
++Name[gl]=Debian Elarun
++Name[hu]=Debian Elarun
++Name[ia]=Debian Elarun
++Name[kk]=Debian Еларун
++Name[ko]=Debian Elarun
++Name[mr]=Debian एलारन
++Name[nb]=Debian Elarun
++Name[nl]=Debian Elarun
++Name[pl]=Debian Elarun
++Name[pt]=Debian Elarun
++Name[pt_BR]=Debian Elarun
++Name[ro]=Debian Elarun
++Name[ru]=Debian Эларан
++Name[sk]=Debian Elarun
++Name[sl]=Debian Elarun
++Name[sr]=Debian Еларун
++Name[sr@ijekavian]=Еларун
++Name[sr@ijekavianlatin]=Debian Elarun
++Name[sr@latin]=Debian Elarun
++Name[sv]=Debian Elarun
++Name[uk]=Debian Еларан
++Name[x-test]=xxDebian Elarunxx
++Name[zh_CN]=Debian Elarun
++Name[zh_TW]=Debian Elarun
++
++Description=Elarun KDM theme ported to SDDM and adapted to use the active Debian theme. \nThe original theme is based on work of Roman Shtylman & Nuno Pinheiro
++Type=sddm-theme
++Author=Reza Fatahilah Shah
++Copyright=(c) 2013, Reza Fatahilah Shah
++Screenshot=elarun.jpg
++License=GPL
++Version=0.1
++MainScript=Main.qml
++ConfigFile=theme.conf
++TranslationsDirectory=translations
++Theme-Id=debian-elarun
++Theme-API=${COMPONENTS_VERSION}
++Website=https://github.com/sddm/sddm
++
+diff --git a/data/themes/debian-elarun/theme.conf b/data/themes/debian-elarun/theme.conf
+new file mode 100644
+index 0000000..c4bf093
+--- /dev/null
++++ b/data/themes/debian-elarun/theme.conf
+@@ -0,0 +1,2 @@
++[General]
++background=/usr/share/desktop-base/active-theme/login/background.svg
+diff --git a/data/themes/debian-maui/README b/data/themes/debian-maui/README
+new file mode 100644
+index 0000000..0d181c8
+--- /dev/null
++++ b/data/themes/debian-maui/README
+@@ -0,0 +1,5 @@
++This theme is an adaptation of the original Maui theme from upstream SDDM for
++Debian to use the active desktop-base theme.
++
++Check the src/greeter/theme folder from the SDDM source for more information.
++
+diff --git a/data/themes/debian-maui/metadata.desktop b/data/themes/debian-maui/metadata.desktop
+new file mode 100644
+index 0000000..e94ee0f
+--- /dev/null
++++ b/data/themes/debian-maui/metadata.desktop
+@@ -0,0 +1,16 @@
++[SddmGreeterTheme]
++Name=Debian Maui
++Description=Maui Theme for Debian
++Author=Abdurrahman AVCI
++Copyright=(c) 2013, Abdurrahman AVCI
++License=CC-BY-SA
++Type=sddm-theme
++Version=0.1
++Website=https://github.com/sddm/sddm
++Screenshot=maui.jpg
++MainScript=Main.qml
++ConfigFile=theme.conf
++TranslationsDirectory=translations
++Email=abdurrahmanavci@gmail.com
++Theme-Id=maui
++Theme-API=${COMPONENTS_VERSION}
+diff --git a/data/themes/debian-maui/theme.conf b/data/themes/debian-maui/theme.conf
+new file mode 100644
+index 0000000..d832f41
+--- /dev/null
++++ b/data/themes/debian-maui/theme.conf
+@@ -0,0 +1,2 @@
++[General]
++background=/usr/share/desktop-base/active-theme/login/background-nologo.svg
