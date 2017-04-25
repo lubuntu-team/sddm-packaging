@@ -23,8 +23,8 @@ Build-Depends: cmake (>= 2.8.8),
                systemd [linux-any]
 Standards-Version: 3.9.8
 Homepage: https://github.com/sddm/sddm
-Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/kde-std/sddm.git
-Vcs-Git: https://anonscm.debian.org/git/pkg-kde/kde-std/sddm.git
+Vcs-Browser: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/sddm
+Vcs-Git: https://git.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/sddm
 
 Package: sddm
 Architecture: any
@@ -34,7 +34,7 @@ Depends: adduser,
          xserver-xorg | xserver,
          ${misc:Depends},
          ${shlibs:Depends}
-Recommends: libpam-systemd, sddm-theme-debian-maui | sddm-theme
+Recommends: libpam-systemd, sddm-theme-breeze | sddm-theme
 Suggests: libpam-kwallet5
 Provides: x-display-manager
 Description: modern display manager for X11
