@@ -1,4 +1,4 @@
-sddm (0.14.0-4ubuntu1) UNRELEASED; urgency=medium
+sddm (0.14.0-4ubuntu1) artful; urgency=medium
 
   [ Simon Quigley ]
   * New upstream release (LP: #1627340).
@@ -16,7 +16,7 @@ sddm (0.14.0-4ubuntu1) UNRELEASED; urgency=medium
   * Re-apply 02_kubuntu_use_breeze.diff
   * Update VCS to LP and replace maui theme for breeze in recommends.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 22 Apr 2017 18:48:07 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Tue, 02 May 2017 18:55:40 +0100
 
 sddm (0.14.0-4) unstable; urgency=medium
 
