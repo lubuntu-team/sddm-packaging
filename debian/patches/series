@@ -3,7 +3,6 @@
 04_set_default_path.diff
 05_add_debian_themes.diff
 handle-reading-from-a-closed-file-handle.patch
-#Add-a-config-option-to-enable-high-DPI-scaling-701.patch
 Regression-fix-disable-HiDPI-by-default.patch
 
 kubuntu_minimum_vt.diff
