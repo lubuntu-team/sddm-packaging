@@ -1,3 +1,9 @@
+sddm (0.15.0-4ubuntu2) UNRELEASED; urgency=medium
+
+  * New upstream release
+
+ -- Clive Johnston <clivejo@kubuntu.org>  Thu, 31 Aug 2017 16:10:47 +0100
+
 sddm (0.14.0-4ubuntu1) artful; urgency=medium
 
   [ Simon Quigley ]
