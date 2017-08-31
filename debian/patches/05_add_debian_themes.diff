@@ -22,7 +22,7 @@ Subject: _add_debian_themes
 --- a/data/themes/CMakeLists.txt
 +++ b/data/themes/CMakeLists.txt
 @@ -1,4 +1,27 @@
--set(THEMES elarun maldives)
+-set(THEMES elarun maldives maya)
 +# Copy Maui to have it available as an external (non-embedded) theme
 +file(COPY "../../src/greeter/theme/" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/maui")
 +
@@ -46,19 +46,10 @@ Subject: _add_debian_themes
 +    file(COPY "${ELARUN_IMG}" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/debian-elarun/images/")
 +endforeach(ELARUN_IMG)
 +
-+set(THEMES elarun maldives maui debian-maui debian-elarun)
++set(THEMES elarun maldives maya maui debian-maui debian-elarun)
  
  foreach(THEME ${THEMES})
      # We assume that theme-specific translations are stored
-@@ -13,7 +36,7 @@ foreach(THEME ${THEMES})
- 
-     qt5_add_translation(QM_FILES "${TRANSLATION_SOURCES}")
- 
--    install(DIRECTORY "${THEME}" DESTINATION "${DATA_INSTALL_DIR}/themes" PATTERN "*.ts" EXCLUDE)
-+    install(DIRECTORY "${THEME}" DESTINATION "${DATA_INSTALL_DIR}/themes" PATTERN "${THEME}/*.ts" EXCLUDE PATTERN "${THEME}/Main.qml" EXCLUDE)
-     install(DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/${THEME}" DESTINATION "${DATA_INSTALL_DIR}/themes")
- 
-     list(APPEND THEMES_QM_FILES ${QM_FILES})
 --- /dev/null
 +++ b/data/themes/debian-elarun/README
 @@ -0,0 +1,9 @@
