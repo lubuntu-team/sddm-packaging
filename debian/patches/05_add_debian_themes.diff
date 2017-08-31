@@ -46,8 +46,8 @@ Subject: _add_debian_themes
 +    file(COPY "${ELARUN_IMG}" DESTINATION "${CMAKE_CURRENT_SOURCE_DIR}/debian-elarun/images/")
 +endforeach(ELARUN_IMG)
 +
-+set(THEMES elarun maldives maui maya debian-maui debian-elarun)
- 
++set(THEMES elarun maldives maya maui debian-maui debian-elarun)
+
  foreach(THEME ${THEMES})
      # We assume that theme-specific translations are stored
 --- /dev/null
