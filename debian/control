@@ -51,6 +51,15 @@ Breaks: sddm (<< ${source:Version})
 Description: 'Maui' theme for SDDM X11 display manager
  Maui theme for SDDM
 
+Package: sddm-theme-maya
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
+Description: 'Maya' theme for SDDM X11 display manager
+ Maya theme for SDDM
+
 Package: sddm-theme-debian-maui
 Architecture: all
 Depends: desktop-base, ${misc:Depends}
