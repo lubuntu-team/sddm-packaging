@@ -18,7 +18,7 @@ Last-Update: 2015-09-14
 
 --- a/data/man/sddm.conf.rst.in
 +++ b/data/man/sddm.conf.rst.in
-@@ -145,7 +145,7 @@ OPTIONS
+@@ -156,7 +156,7 @@
  
  `DefaultPath=`
  	Default path to set after successfully logging in.
@@ -29,7 +29,7 @@ Last-Update: 2015-09-14
  	Minimum user id of the users to be listed in the
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
-@@ -78,7 +78,7 @@ namespace SDDM {
+@@ -80,7 +80,7 @@
          );
  
          Section(Users,
