@@ -52,6 +52,15 @@ Description: 'Debian Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM, using the active desktop-base theme for the
  background.
 
+Package: sddm-theme-maya
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
+Description: 'Maya' theme for SDDM X11 display manager
+ Maya theme for SDDM
+
 Package: sddm-theme-debian-maui
 Architecture: all
 Depends: desktop-base, ${misc:Depends}
