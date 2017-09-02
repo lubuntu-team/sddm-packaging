@@ -1,8 +1,16 @@
-sddm (0.15.0-1~) UNRELEASED; urgency=medium
+sddm (0.15.0-1) sid; urgency=medium
 
   * New upstream release (0.15.0).
+  * Drop upstream patches
+  * Migrate to dh using compat 10
+  * Bump Standards-Version to 4.1.0.
+  * Add new theme sddm-theme-maya
+  * Use pam_deny in the sddm-greeter password
+  * Add fish specific Xsession snipped (from upstream's f486cf4)
+  * Update copyright file
+  * Release to sid
 
- -- Maximiliano Curia <maxy@debian.org>  Sat, 02 Sep 2017 21:43:27 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 02 Sep 2017 23:57:41 +0200
 
 sddm (0.14.0-4) unstable; urgency=medium
 
