@@ -3,7 +3,7 @@ Section: kde
 Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Michał Zając <quintasan@kubuntu.org>,
-           Maximiliano Curia <maxy@debian.org>
+           Maximiliano Curia <maxy@debian.org>,
 Build-Depends: cmake (>= 2.8.8),
                debhelper (>= 10),
                dh-systemd [linux-any],
@@ -20,7 +20,7 @@ Build-Depends: cmake (>= 2.8.8),
                qtdeclarative5-dev (>= 5.6.0~),
                qttools5-dev,
                qttools5-dev-tools (>= 5.6.0~),
-               systemd [linux-any]
+               systemd [linux-any],
 Standards-Version: 4.1.0
 Homepage: https://github.com/sddm/sddm
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/kde-std/sddm.git
@@ -33,7 +33,7 @@ Depends: adduser,
          x11-common,
          xserver-xorg | xserver,
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Recommends: libpam-systemd, sddm-theme-debian-maui | sddm-theme
 Suggests: libpam-kwallet5
 Provides: x-display-manager
@@ -42,14 +42,15 @@ Description: modern display manager for X11
  and beautiful. It uses modern technologies like QtQuick to create
  smooth, animated user interfaces.
 
-Package: sddm-theme-maui
+Package: sddm-theme-debian-elarun
 Architecture: all
-Depends: ${misc:Depends}
+Depends: desktop-base, ${misc:Depends}
 Recommends: sddm
 Provides: sddm-theme
 Breaks: sddm (<< ${source:Version})
-Description: 'Maui' theme for SDDM X11 display manager
- Maui theme for SDDM
+Description: 'Debian Elarun' Theme for SDDM X11 display manager
+ Elarun theme for SDDM, using the active desktop-base theme for the
+ background.
 
 Package: sddm-theme-debian-maui
 Architecture: all
@@ -70,16 +71,6 @@ Breaks: sddm (<< ${source:Version})
 Description: 'Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM
 
-Package: sddm-theme-debian-elarun
-Architecture: all
-Depends: desktop-base, ${misc:Depends}
-Recommends: sddm
-Provides: sddm-theme
-Breaks: sddm (<< ${source:Version})
-Description: 'Debian Elarun' Theme for SDDM X11 display manager
- Elarun theme for SDDM, using the active desktop-base theme for the
- background.
-
 Package: sddm-theme-maldives
 Architecture: all
 Depends: ${misc:Depends}
@@ -88,3 +79,12 @@ Recommends: sddm
 Provides: sddm-theme
 Description: 'Maldives' theme for SDDM X11 display manager
  Maldives theme for SDDM
+
+Package: sddm-theme-maui
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
+Description: 'Maui' theme for SDDM X11 display manager
+ Maui theme for SDDM
