@@ -10,30 +10,29 @@ to the default global zshenv, while exporting a different value in the
 Xsession script would be overriding the users configurations in their local
 zshenv.
 Forwarded: not-needed
-Last-Update: 2015-09-14
----
- data/man/sddm.conf.rst.in  | 2 +-
- src/common/Configuration.h | 2 +-
- 2 files changed, 2 insertions(+), 2 deletions(-)
-
+Last-Update: 2017-10-31
+diff --git a/data/man/sddm.conf.rst.in b/data/man/sddm.conf.rst.in
+index 93835f9..0225055 100644
 --- a/data/man/sddm.conf.rst.in
 +++ b/data/man/sddm.conf.rst.in
-@@ -156,7 +156,7 @@
- 
+@@ -165,7 +165,7 @@ OPTIONS
+
  `DefaultPath=`
- 	Default path to set after successfully logging in.
--	Default value is "/bin:/usr/bin:/usr/local/bin".
-+	Default value is "/bin:/usr/bin".
- 
+        Default path to set after successfully logging in.
+-       Default value is "/usr/local/bin:/usr/bin:/bin".
++       Default value is "/bin:/usr/bin".
+
  `MinimumUid=`
- 	Minimum user id of the users to be listed in the
+        Minimum user id of the users to be listed in the
+diff --git a/src/common/Configuration.h b/src/common/Configuration.h
+index cfca12b..b200d27 100644
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
-@@ -80,7 +80,7 @@
+@@ -80,7 +80,7 @@ namespace SDDM {
          );
- 
+
          Section(Users,
--            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin:/usr/local/bin"),         _S("Default $PATH for logged in users"));
+-            Entry(DefaultPath,         QString,     _S("/usr/local/bin:/usr/bin:/bin"),         _S("Default $PATH for logged in users"));
 +            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin"),                        _S("Default $PATH for logged in users"));
              Entry(MinimumUid,          int,         UID_MIN,                                    _S("Minimum user id for displayed users"));
              Entry(MaximumUid,          int,         UID_MAX,                                    _S("Maximum user id for displayed users"));
