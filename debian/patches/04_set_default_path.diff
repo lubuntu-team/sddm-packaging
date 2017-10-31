@@ -15,7 +15,7 @@ diff --git a/data/man/sddm.conf.rst.in b/data/man/sddm.conf.rst.in
 index 93835f9..0225055 100644
 --- a/data/man/sddm.conf.rst.in
 +++ b/data/man/sddm.conf.rst.in
-@@ -165,7 +165,7 @@ OPTIONS
+@@ -165,7 +165,7 @@
 
  `DefaultPath=`
         Default path to set after successfully logging in.
