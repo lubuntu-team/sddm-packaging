@@ -21,7 +21,7 @@ Build-Depends: cmake (>= 2.8.8),
                qttools5-dev,
                qttools5-dev-tools (>= 5.6.0~),
                systemd [linux-any],
-Standards-Version: 4.1.0
+Standards-Version: 4.1.1
 Homepage: https://github.com/sddm/sddm
 Vcs-Browser: https://anonscm.debian.org/git/pkg-kde/kde-std/sddm.git
 Vcs-Git: https://anonscm.debian.org/git/pkg-kde/kde-std/sddm.git
@@ -97,12 +97,3 @@ Provides: sddm-theme
 Breaks: sddm (<< ${source:Version})
 Description: 'Maui' theme for SDDM X11 display manager
  Maui theme for SDDM
-
-Package: sddm-theme-maya
-Architecture: all
-Depends: ${misc:Depends}
-Recommends: sddm
-Provides: sddm-theme
-Breaks: sddm (<< ${source:Version})
-Description: 'maya' theme for SDDM X11 display manager
- maya theme for SDDM

@@ -2,6 +2,10 @@ sddm (0.16.0-1) UNRELEASED; urgency=medium
 
   [ Clive Johnston ]
   * New upstream release (0.16.0).
+  * Drop upstream patches.
+
+  [ Simon Quigley ]
+  * Bump Standards-version to 4.1.1, no changes needed.
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 26 Nov 2017 12:16:08 -0600
 
