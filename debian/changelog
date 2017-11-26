@@ -1,3 +1,10 @@
+sddm (0.16.0-1) UNRELEASED; urgency=medium
+
+  [ Clive Johnston ]
+  * New upstream release (0.16.0).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 26 Nov 2017 12:16:08 -0600
+
 sddm (0.15.0-1) sid; urgency=medium
 
   * New upstream release (0.15.0).
