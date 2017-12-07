@@ -1,6 +1,11 @@
-sddm (0.16.0-0ubuntu1) UNRELEASED; urgency=medium
+sddm (0.17.0-0ubuntu1) UNRELEASED; urgency=medium
 
+  [ Clive Johnston ]
   * New upstream release (0.16.0)
+
+  [ Rik Mills ]
+  * New upstream release (0.17.0)
+  * Update and refresh patches
 
  -- Clive Johnston <clivejo@kubuntu.org>  Sun, 08 Oct 2017 23:07:47 +0100
 

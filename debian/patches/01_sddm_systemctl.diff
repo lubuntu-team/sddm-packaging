@@ -6,9 +6,11 @@ Subject: _sddm_systemctl
  CMakeLists.txt | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
+Index: b/CMakeLists.txt
+===================================================================
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -139,8 +139,8 @@
+@@ -143,8 +143,8 @@
      endif()
  
      set(MINIMUM_VT 1)
