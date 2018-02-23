@@ -8,11 +8,9 @@ Last-Update: 2015-03-11
  CMakeLists.txt | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 98551b3..e4c05f6 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -138,7 +138,7 @@ if(SYSTEMD_FOUND)
+@@ -142,7 +142,7 @@ if(SYSTEMD_FOUND)
          string(REGEX REPLACE "[ \t\n]+" "" SYSTEMD_SYSTEM_UNIT_DIR ${SYSTEMD_SYSTEM_UNIT_DIR})
      endif()
  

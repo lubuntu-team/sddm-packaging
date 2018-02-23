@@ -47,7 +47,7 @@ Subject: _add_debian_themes
 +endforeach(ELARUN_IMG)
 +
 +set(THEMES elarun maldives maya maui debian-maui debian-elarun)
-
+ 
  foreach(THEME ${THEMES})
      # We assume that theme-specific translations are stored
 --- /dev/null
