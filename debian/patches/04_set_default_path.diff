@@ -1,0 +1,40 @@
+From: Maximiliano Curia <maxy@debian.org>
+Date: Fri, 11 Nov 2016 09:45:34 +0100
+Subject: Change the default PATH
+
+The configured default PATH is used in the parts that run as root, the
+greeter and for the user  sessions, so its better to have an spartan default.
+
+At the same time, for the zsh users this spartan version gets expanded thanks
+to the default global zshenv, while exporting a different value in the
+Xsession script would be overriding the users configurations in their local
+zshenv.
+Forwarded: not-needed
+Last-Update: 2015-09-14
+---
+ data/man/sddm.conf.rst.in  | 2 +-
+ src/common/Configuration.h | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+--- a/data/man/sddm.conf.rst.in
++++ b/data/man/sddm.conf.rst.in
+@@ -165,7 +165,7 @@ OPTIONS
+ 
+ `DefaultPath=`
+ 	Default path to set after successfully logging in.
+-	Default value is "/usr/local/bin:/usr/bin:/bin".
++	Default value is "/bin:/usr/bin".
+ 
+ `MinimumUid=`
+ 	Minimum user id of the users to be listed in the
+--- a/src/common/Configuration.h
++++ b/src/common/Configuration.h
+@@ -80,7 +80,7 @@ namespace SDDM {
+         );
+ 
+         Section(Users,
+-            Entry(DefaultPath,         QString,     _S("/usr/local/bin:/usr/bin:/bin"),         _S("Default $PATH for logged in users"));
++            Entry(DefaultPath,         QString,     _S("/bin:/usr/bin"),         _S("Default $PATH for logged in users"));
+             Entry(MinimumUid,          int,         UID_MIN,                                    _S("Minimum user id for displayed users"));
+             Entry(MaximumUid,          int,         UID_MAX,                                    _S("Maximum user id for displayed users"));
+             Entry(HideUsers,           QStringList, QStringList(),                              _S("Comma-separated list of users that should not be listed"));
