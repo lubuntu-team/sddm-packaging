@@ -34,7 +34,7 @@ Depends: adduser,
          ${misc:Depends},
          ${shlibs:Depends},
 Recommends: libpam-systemd, sddm-theme-debian-maui | sddm-theme
-Suggests: libpam-kwallet5
+Suggests: libpam-kwallet5, qtvirtualkeyboard-plugin
 Provides: x-display-manager
 Description: modern display manager for X11
  SDDM is a modern display manager for X11 aiming to be fast, simple
