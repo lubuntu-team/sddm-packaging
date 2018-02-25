@@ -1,15 +1,23 @@
-sddm (0.17.0-1) UNRELEASED; urgency=medium
+sddm (0.17.0-1) sid; urgency=medium
 
   [ Clive Johnston ]
-  * New upstream release (0.16.0).
   * Drop upstream patches.
 
   [ Simon Quigley ]
+  * New upstream release (0.17.0).
   * Bump Standards-version to 4.1.1, no changes needed.
   * Upstream patch from Kubuntu which allows for NVIDIA Prime to be setup on
     login.
+  * Update patches.
+  * Add 04_set_default_path.diff back.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 26 Nov 2017 12:16:08 -0600
+  [ Maximiliano Curia ]
+  * Suggest qtvirtualkeyboard
+  * Bump to Standards-Version 4.1.3
+  * Update Vcs fields
+  * Release to sid
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 25 Feb 2018 09:26:35 +0100
 
 sddm (0.15.0-1) sid; urgency=medium
 
