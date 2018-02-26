@@ -1,0 +1,21 @@
+From: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Date: Fri, 11 Nov 2016 09:45:34 +0100
+Subject: Always minimum vt to 7
+
+maybe this will fix switching vt when installing packages and integration with ubiquity-dm?
+Last-Update: 2015-03-11
+---
+ CMakeLists.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -142,7 +142,7 @@ if(SYSTEMD_FOUND)
+         string(REGEX REPLACE "[ \t\n]+" "" SYSTEMD_SYSTEM_UNIT_DIR ${SYSTEMD_SYSTEM_UNIT_DIR})
+     endif()
+ 
+-    set(MINIMUM_VT 1)
++    set(MINIMUM_VT 7)
+     set(HALT_COMMAND "/bin/systemctl poweroff")
+     set(REBOOT_COMMAND "/bin/systemctl reboot")
+ else()

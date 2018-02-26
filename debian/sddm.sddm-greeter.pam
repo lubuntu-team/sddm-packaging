@@ -18,7 +18,8 @@ session required        pam_loginuid.so
 # to run in the user's context should be run after this.
 session [success=ok ignore=ignore module_unknown=ignore default=bad] pam_selinux.so open
 
-@include common-password
+# Can't change password
+password        required pam_deny.so
 
 # From the pam_env man page
 # Since setting of PAM environment variables can have side effects to other modules, this module should be the last one on the stack.
