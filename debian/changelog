@@ -1,13 +1,49 @@
-sddm (0.17.0-0ubuntu1) UNRELEASED; urgency=medium
+sddm (0.17.0-1ubuntu1) bionic; urgency=medium
+
+  * Merge from Debian Sid. Remaining changes:
+    - Use the Breeze SDDM theme instead of the Maui one.
+    - Add kubuntu_nvidia-prime.diff to make sure NVIDIA Prime works.
+    - Keep the default-display-manager file logic in sddm.postinst.
+    - Add pam_kwallet.so to debian/sddm.pam.
+    - Update Vcs-* to point to Launchpad instead of Salsa.
+    - Add debian/conffiles.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 25 Feb 2018 22:16:55 -0600
+
+sddm (0.17.0-1) sid; urgency=medium
 
   [ Clive Johnston ]
-  * New upstream release (0.16.0)
+  * Drop upstream patches.
 
-  [ Rik Mills ]
-  * New upstream release (0.17.0)
-  * Update and refresh patches
+  [ Simon Quigley ]
+  * New upstream release (0.17.0).
+  * Bump Standards-version to 4.1.1, no changes needed.
+  * Upstream patch from Kubuntu which allows for NVIDIA Prime to be setup on
+    login.
+  * Update patches.
+  * Add 04_set_default_path.diff back.
 
- -- Clive Johnston <clivejo@kubuntu.org>  Sun, 08 Oct 2017 23:07:47 +0100
+  [ Maximiliano Curia ]
+  * Suggest qtvirtualkeyboard
+  * Bump to Standards-Version 4.1.3
+  * Update Vcs fields
+  * Release to sid
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 25 Feb 2018 09:26:35 +0100
+
+sddm (0.15.0-1) sid; urgency=medium
+
+  * New upstream release (0.15.0).
+  * Drop upstream patches
+  * Migrate to dh using compat 10
+  * Bump Standards-Version to 4.1.0.
+  * Add new theme sddm-theme-maya
+  * Use pam_deny in the sddm-greeter password
+  * Add fish specific Xsession snipped (from upstream's f486cf4)
+  * Update copyright file
+  * Release to sid
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 02 Sep 2017 23:57:41 +0200
 
 sddm (0.14.0-4ubuntu1) artful; urgency=medium
 

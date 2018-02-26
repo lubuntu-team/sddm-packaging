@@ -6,11 +6,9 @@ Subject: handle reading from a closed file handle
  src/daemon/XorgDisplayServer.cpp | 6 ++++++
  1 file changed, 6 insertions(+)
 
-Index: b/src/daemon/XorgDisplayServer.cpp
-===================================================================
 --- a/src/daemon/XorgDisplayServer.cpp
 +++ b/src/daemon/XorgDisplayServer.cpp
-@@ -193,6 +193,12 @@
+@@ -193,6 +193,12 @@ namespace SDDM {
                  return false;
              }
              QByteArray displayNumber = readPipe.readLine();
