@@ -1,9 +1,9 @@
-sddm (0.17.0-1ubuntu2) UNRELEASED; urgency=medium
+sddm (0.17.0-1ubuntu2) bionic; urgency=high
 
   * Merge back in contents of 0.14.0-4ubuntu2 which were dropped during the
     last Debian merge.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 31 Mar 2018 17:55:49 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 31 Mar 2018 17:56:57 -0500
 
 sddm (0.17.0-1ubuntu1) bionic; urgency=medium
 
