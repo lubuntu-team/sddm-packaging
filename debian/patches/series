@@ -5,3 +5,4 @@
 05_add_debian_themes.diff
 handle-reading-from-a-closed-file-handle.patch
 kubuntu_nvidia-prime.diff
+fix-desktop-session-env-var.patch

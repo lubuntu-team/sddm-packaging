@@ -1,3 +1,10 @@
+sddm (0.17.0-1ubuntu2) UNRELEASED; urgency=medium
+
+  * Merge back in contents of 0.14.0-4ubuntu2 which were dropped during the
+    last Debian merge.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 31 Mar 2018 17:55:49 -0500
+
 sddm (0.17.0-1ubuntu1) bionic; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
@@ -44,6 +51,12 @@ sddm (0.15.0-1) sid; urgency=medium
   * Release to sid
 
  -- Maximiliano Curia <maxy@debian.org>  Sat, 02 Sep 2017 23:57:41 +0200
+
+sddm (0.14.0-4ubuntu2) bionic; urgency=high
+
+  * Don't use an absolute path when setting $DESKTOP_SESSION (LP: #1668722).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sat, 10 Feb 2018 18:25:09 -0600
 
 sddm (0.14.0-4ubuntu1) artful; urgency=medium
 

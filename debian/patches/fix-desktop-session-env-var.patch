@@ -1,0 +1,30 @@
+Description: DESKTOP_SESSION should only be the base name
+ When xorg takes DESKTOP_SESSION from SDDM and uses it to set XDG_DATA_DIRS,
+ the absolute path causes XDG_DATA_DIRS to contain paths which don't exist.
+ This makes packages (like Lubuntu's default settings) break when they need to
+ pull from /etc/xdg/xdg-$DESKTOP_SESSION.
+Author: Simon Quigley <tsimonq2@ubuntu.com>
+Bug: https://github.com/sddm/sddm/issues/852
+Bug-Ubuntu: https://bugs.launchpad.net/bugs/1668722
+Forwarded: yes
+Last-Update: 2018-02-09
+--- a/src/common/Session.cpp
++++ b/src/common/Session.cpp
+@@ -106,7 +106,7 @@ namespace SDDM {
+ 
+     void Session::setTo(Type type, const QString &_fileName)
+     {
+-        QString fileName(_fileName);
++        QString fileName = _fileName;
+         if (!fileName.endsWith(s_entryExtention))
+             fileName += s_entryExtention;
+ 
+@@ -160,6 +160,8 @@ namespace SDDM {
+ 
+         file.close();
+ 
++        m_fileName = fileName;
++
+         m_type = type;
+         m_valid = true;
+     }
