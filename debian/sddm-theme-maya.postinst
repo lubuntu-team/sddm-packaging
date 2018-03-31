@@ -5,7 +5,7 @@ if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-remov
     update-alternatives --install \
         /usr/share/sddm/themes/debian-theme \
         sddm-debian-theme \
-        /usr/share/sddm/themes/maui 20
+        /usr/share/sddm/themes/maya 20
 fi
 
 # Tag to allow some debhelper commands to inject relevant code

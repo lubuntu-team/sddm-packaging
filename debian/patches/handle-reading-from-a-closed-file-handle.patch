@@ -8,7 +8,7 @@ Subject: handle reading from a closed file handle
 
 --- a/src/daemon/XorgDisplayServer.cpp
 +++ b/src/daemon/XorgDisplayServer.cpp
-@@ -188,6 +188,12 @@ namespace SDDM {
+@@ -193,6 +193,12 @@ namespace SDDM {
                  return false;
              }
              QByteArray displayNumber = readPipe.readLine();
