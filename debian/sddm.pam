@@ -36,5 +36,5 @@ session [success=ok ignore=ignore module_unknown=ignore default=bad] pam_selinux
 # Load environment from /etc/environment
 session required        pam_env.so
 
-# Load environment from /etc/default/locale
-session required        pam_env.so envfile=/etc/default/locale
+# Load environment from /etc/default/locale and ~/.pam_environment
+session required        pam_env.so envfile=/etc/default/locale user_readenv=1
