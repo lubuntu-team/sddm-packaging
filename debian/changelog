@@ -1,3 +1,15 @@
+sddm (0.17.0-1ubuntu3) bionic; urgency=medium
+
+  * Use VT1 by default now ubuntu has switched to this. Remaining on VT7
+    has already caused one issue with ubiquity-dm where it expects the
+    dm to conflict getty@getty1.service, but we do not. While this may
+    be fixed in ubiquity itself, sddm no longer has any reason in ubuntu
+    to force minumim VT7.
+    - debian/patches: drop 03_vt7-minimum-vt.diff
+    - debian/sddm.service: conflict getty@tty1.service rather than tty7
+
+ -- Rik Mills <rikmills@kubuntu.org>  Wed, 11 Apr 2018 07:50:07 +0100
+
 sddm (0.17.0-1ubuntu2) bionic; urgency=high
 
   * Merge back in contents of 0.14.0-4ubuntu2 which were dropped during the

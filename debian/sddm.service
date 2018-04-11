@@ -2,8 +2,8 @@
 Description=Simple Desktop Display Manager
 Documentation=man:sddm(1) man:sddm.conf(5)
 # Change this if you want to start sddm in a different tty
-Conflicts=getty@tty7.service
-After=getty@tty7.service
+Conflicts=getty@tty1.service
+After=getty@tty1.service
 
 After=systemd-user-sessions.service
 
