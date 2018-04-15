@@ -1,3 +1,9 @@
+sddm (0.17.0-1ubuntu4) bionic; urgency=high
+
+  * Fix race between sddm and logind (LP: #1763977).
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 15 Apr 2018 14:36:43 -0500
+
 sddm (0.17.0-1ubuntu3) bionic; urgency=medium
 
   * Use VT1 by default now ubuntu has switched to this. Remaining on VT7
