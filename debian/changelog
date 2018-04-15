@@ -1,4 +1,4 @@
-sddm (0.17.0-1ubuntu4) UNRELEASED; urgency=medium
+sddm (0.17.0-1ubuntu4) UNRELEASED; urgency=high
 
   * Fix race between sddm and logind (LP: #1763977).
 
