@@ -1,5 +1,7 @@
 sddm (0.17.0-1ubuntu4) UNRELEASED; urgency=medium
 
+  * Fix race between sddm and logind (LP: #1763977).
+
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 15 Apr 2018 14:30:06 -0500
 
 sddm (0.17.0-1ubuntu3) bionic; urgency=medium
