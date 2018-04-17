@@ -5,8 +5,6 @@ Documentation=man:sddm(1) man:sddm.conf(5)
 Conflicts=getty@tty1.service
 After=getty@tty1.service
 
-After=systemd-user-sessions.service
-
 # If using tty1 and plymouth, sddm will fail till plymouth stops
 # consider using:
 ## After=plymouth-quit.service
@@ -14,6 +12,11 @@ After=systemd-user-sessions.service
 ## Conflicts=plymouth-quit-wait.service
 ## After=plymouth-start.service plymouth-quit-wait.service
 ## OnFailure=plymouth-quit.service
+
+# Ordering
+Conflicts=plymouth-quit-wait.service
+After=systemd-user-sessions.service plymouth-start.service plymouth-quit-wait.service
+OnFailure=plymouth-quit.service
 
 [Service]
 # temporary safety check until all DMs are converted to correct
