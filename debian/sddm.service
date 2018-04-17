@@ -15,7 +15,7 @@ After=getty@tty1.service
 
 # Ordering
 Conflicts=plymouth-quit-wait.service
-After=systemd-user-sessions.service plymouth-start.service plymouth-quit-wait.service
+After=systemd-user-sessions.service plymouth-start.service plymouth-quit-wait.service systemd-logind.service
 OnFailure=plymouth-quit.service
 
 [Service]
