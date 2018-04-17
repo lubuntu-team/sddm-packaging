@@ -1,3 +1,11 @@
+sddm (0.17.0-1ubuntu5) bionic; urgency=medium
+
+  * debian/sddm.service: Now we start on VT1 we need to avoid collision
+    with plymouth. So take the startup ordering recommended in the
+    sddm.service comments, and currently in use by KDE Neon.
+
+ -- Rik Mills <rikmills@kubuntu.org>  Tue, 17 Apr 2018 13:39:09 +0100
+
 sddm (0.17.0-1ubuntu4) bionic; urgency=high
 
   * Fix race between sddm and logind (LP: #1763977).
