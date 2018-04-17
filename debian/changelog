@@ -1,10 +1,10 @@
-sddm (0.17.0-1ubuntu6) UNRELEASED; urgency=medium
+sddm (0.17.0-1ubuntu6) bionic; urgency=medium
 
   * debian/sddm.service Apply the fix for the race between sddm and
     logind to our service template as this is what we install.
   * debian/patches: Drop previous fix-logind-race.patch
 
- -- Rik Mills <rikmills@kubuntu.org>  Tue, 17 Apr 2018 15:32:17 +0100
+ -- Rik Mills <rikmills@kubuntu.org>  Tue, 17 Apr 2018 22:21:36 +0100
 
 sddm (0.17.0-1ubuntu5) bionic; urgency=medium
 
