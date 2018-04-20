@@ -1,3 +1,10 @@
+sddm (0.17.0-1ubuntu7) bionic; urgency=medium
+
+  * debian/sddm.service: Always wait for plymouth quit to run before
+    trying to start.
+
+ -- Rik Mills <rikmills@kubuntu.org>  Fri, 20 Apr 2018 14:12:06 +0100
+
 sddm (0.17.0-1ubuntu6) bionic; urgency=medium
 
   * debian/sddm.service Apply the fix for the race between sddm and
