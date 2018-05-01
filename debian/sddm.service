@@ -5,7 +5,7 @@ Documentation=man:sddm(1) man:sddm.conf(5)
 Conflicts=getty@tty7.service
 After=getty@tty7.service
 
-After=systemd-user-sessions.service
+After=systemd-user-sessions.service systemd-logind.service
 
 # If using tty1 and plymouth, sddm will fail till plymouth stops
 # consider using:
