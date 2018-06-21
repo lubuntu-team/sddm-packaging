@@ -18,7 +18,7 @@ After=systemd-user-sessions.service systemd-logind.service
 [Service]
 # temporary safety check until all DMs are converted to correct
 # display-manager.service symlink handling
-ExecStartPre=/bin/sh -c '[ "$(cat /etc/X11/default-display-manager 2>/dev/null)" = "/usr/bin/sddm" ]'
+ExecStartPre=/bin/sh -c '[ "$(basename $(cat /etc/X11/default-display-manager 2>/dev/null))" = "sddm" ]'
 ExecStart=/usr/bin/sddm
 Restart=always
 RestartSec=1s
