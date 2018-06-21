@@ -1,12 +1,13 @@
-sddm (0.17.0-2~1) UNRELEASED; urgency=medium
+sddm (0.17.0-2) experimental; urgency=medium
 
   * New revision
   * Also read the environment from ~/.pam_environment
   * Start after systemd-logind
   * Check for the daemon name, not the full path.
     Thanks to Alf Gaida for the report (Closes: 901966)
+  * Release to experimental
 
- -- Maximiliano Curia <maxy@debian.org>  Thu, 21 Jun 2018 12:19:45 +0200
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 21 Jun 2018 13:08:36 +0200
 
 sddm (0.17.0-1) sid; urgency=medium
 
