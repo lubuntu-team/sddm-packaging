@@ -1,3 +1,8 @@
+sddm (0.18.0-1) UNRELEASED; urgency=medium
+
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 18 Jul 2018 07:04:44 -0500
+
 sddm (0.17.0-2) experimental; urgency=medium
 
   * New revision
