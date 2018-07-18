@@ -3,7 +3,7 @@ Section: kde
 Priority: optional
 Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Michał Zając <quintasan@kubuntu.org>,
-           Maximiliano Curia <maxy@debian.org>
+           Maximiliano Curia <maxy@debian.org>,
 Build-Depends: cmake (>= 2.8.8),
                debhelper (>= 11),
                extra-cmake-modules (>= 1.4.0~),
@@ -19,7 +19,7 @@ Build-Depends: cmake (>= 2.8.8),
                qtdeclarative5-dev (>= 5.6.0~),
                qttools5-dev,
                qttools5-dev-tools (>= 5.6.0~),
-               systemd [linux-any]
+               systemd [linux-any],
 Standards-Version: 4.1.5
 Homepage: https://github.com/sddm/sddm
 Vcs-Browser: https://salsa.debian.org/qt-kde-team/3rdparty/sddm
@@ -32,7 +32,7 @@ Depends: adduser,
          x11-common,
          xserver-xorg | xserver,
          ${misc:Depends},
-         ${shlibs:Depends}
+         ${shlibs:Depends},
 Recommends: libpam-systemd, sddm-theme-debian-maui | sddm-theme
 Suggests: libpam-kwallet5, qtvirtualkeyboard-plugin
 Provides: x-display-manager
@@ -50,15 +50,6 @@ Breaks: sddm (<< ${source:Version})
 Description: 'Debian Elarun' Theme for SDDM X11 display manager
  Elarun theme for SDDM, using the active desktop-base theme for the
  background.
-
-Package: sddm-theme-maya
-Architecture: all
-Depends: ${misc:Depends}
-Recommends: sddm
-Provides: sddm-theme
-Breaks: sddm (<< ${source:Version})
-Description: 'Maya' theme for SDDM X11 display manager
- Maya theme for SDDM
 
 Package: sddm-theme-debian-maui
 Architecture: all
@@ -96,3 +87,12 @@ Provides: sddm-theme
 Breaks: sddm (<< ${source:Version})
 Description: 'Maui' theme for SDDM X11 display manager
  Maui theme for SDDM
+
+Package: sddm-theme-maya
+Architecture: all
+Depends: ${misc:Depends}
+Recommends: sddm
+Provides: sddm-theme
+Breaks: sddm (<< ${source:Version})
+Description: 'Maya' theme for SDDM X11 display manager
+ Maya theme for SDDM
