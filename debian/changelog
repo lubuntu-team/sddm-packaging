@@ -1,5 +1,7 @@
 sddm (0.18.0-1) UNRELEASED; urgency=medium
 
+  [ Simon Quigley ]
+  * New upstream release.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 18 Jul 2018 07:04:44 -0500
 
