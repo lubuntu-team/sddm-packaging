@@ -8,7 +8,7 @@ Subject: _kubuntu_use_breeze
 
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
-@@ -46,7 +46,7 @@ namespace SDDM {
+@@ -47,7 +47,7 @@ namespace SDDM {
          //  Name   Entries (but it's a regular class again)
          Section(Theme,
              Entry(ThemeDir,            QString,     _S(DATA_INSTALL_DIR "/themes"),             _S("Theme directory path"));

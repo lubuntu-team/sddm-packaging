@@ -10,7 +10,7 @@ Last-Update: 2015-03-11
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -142,7 +142,7 @@ if(SYSTEMD_FOUND)
+@@ -141,7 +141,7 @@ if(SYSTEMD_FOUND)
          string(REGEX REPLACE "[ \t\n]+" "" SYSTEMD_SYSTEM_UNIT_DIR ${SYSTEMD_SYSTEM_UNIT_DIR})
      endif()
  
