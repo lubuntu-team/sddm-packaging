@@ -3,6 +3,7 @@ sddm (0.18.0-1) UNRELEASED; urgency=medium
   [ Simon Quigley ]
   * New upstream release.
   * Bump Standards-version to 4.1.5, no changes needed.
+  * Bump debhelper compat to 11, no changes needed.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 18 Jul 2018 07:04:44 -0500
 
