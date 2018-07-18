@@ -7,6 +7,8 @@ sddm (0.18.0-1) UNRELEASED; urgency=medium
   * Remove unneeded dbgsym stanza of debian/rules.
   * Refresh patches for the new upstream release, and remove the
     reverse-applicable handle-reading-from-a-closed-file-handle.patch.
+  * /etc/sddm.conf is no longer shipped by default; remove it from
+    sddm.install and not-installed.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 18 Jul 2018 07:04:44 -0500
 
