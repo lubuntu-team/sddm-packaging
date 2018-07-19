@@ -10,9 +10,7 @@ SDDM_CMAKE_ARGS = -DCMAKE_INSTALL_LIBEXECDIR=/usr/lib/${DEB_HOST_MULTIARCH}/sddm
 	    -DBUILD_MAN_PAGES=ON \
 	    -DDBUS_CONFIG_FILENAME="sddm_org.freedesktop.DisplayManager.conf"
 
-ifeq ($(DEB_HOST_ARCH_OS),linux)
-  WITH_SYSTEMD := --with systemd
-else
+ifneq ($(DEB_HOST_ARCH_OS),linux)
   SDDM_CMAKE_ARGS += -DNO_SYSTEMD=ON -DENABLE_JOURNALD=OFF
 endif
 
