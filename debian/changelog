@@ -1,4 +1,4 @@
-sddm (0.18.0-1~) UNRELEASED; urgency=medium
+sddm (0.18.0-1) unstable; urgency=medium
 
   [ Simon Quigley ]
   * New upstream release.
@@ -10,7 +10,11 @@ sddm (0.18.0-1~) UNRELEASED; urgency=medium
   * /etc/sddm.conf is no longer shipped by default; remove it from
     sddm.install and not-installed.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Wed, 18 Jul 2018 07:04:44 -0500
+  [ Maximiliano Curia ]
+  * Workaround entropy starvation by recommending haveged
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 22 Jul 2018 13:26:44 +0200
 
 sddm (0.17.0-2) experimental; urgency=medium
 
