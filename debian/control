@@ -33,7 +33,7 @@ Depends: adduser,
          xserver-xorg | xserver,
          ${misc:Depends},
          ${shlibs:Depends},
-Recommends: libpam-systemd, sddm-theme-debian-maui | sddm-theme
+Recommends: libpam-systemd, sddm-theme-debian-maui | sddm-theme, haveged
 Suggests: libpam-kwallet5, qtvirtualkeyboard-plugin
 Provides: x-display-manager
 Description: modern display manager for X11

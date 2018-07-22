@@ -6,6 +6,8 @@ Conflicts=getty@tty7.service
 After=getty@tty7.service
 
 After=systemd-user-sessions.service systemd-logind.service
+# Workaround entropy starvation
+After=haveged.service
 
 # If using tty1 and plymouth, sddm will fail till plymouth stops
 # consider using:
