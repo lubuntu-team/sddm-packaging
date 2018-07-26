@@ -20,7 +20,7 @@ Build-Depends: cmake (>= 2.8.8),
                qttools5-dev,
                qttools5-dev-tools (>= 5.6.0~),
                systemd [linux-any],
-Standards-Version: 4.1.4
+Standards-Version: 4.1.5
 Homepage: https://github.com/sddm/sddm
 Vcs-Browser: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/sddm
 Vcs-Git: https://git.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/sddm
