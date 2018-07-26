@@ -8,7 +8,6 @@ auth    required        pam_succeed_if.so user != root quiet_success
 @include common-auth
 # gnome_keyring breaks QProcess
 -auth   optional        pam_gnome_keyring.so
--auth   optional        pam_kwallet.so
 -auth   optional        pam_kwallet5.so
 
 @include common-account
@@ -27,7 +26,6 @@ session required        pam_loginuid.so
 # to run in the user's context should be run after this.
 session [success=ok ignore=ignore module_unknown=ignore default=bad] pam_selinux.so open
 -session optional       pam_gnome_keyring.so auto_start
--session optional       pam_kwallet.so auto_start
 -session optional       pam_kwallet5.so auto_start
 
 @include common-password
@@ -38,5 +36,5 @@ session [success=ok ignore=ignore module_unknown=ignore default=bad] pam_selinux
 # Load environment from /etc/environment
 session required        pam_env.so
 
-# Load environment from /etc/default/locale
-session required        pam_env.so envfile=/etc/default/locale
+# Load environment from /etc/default/locale and ~/.pam_environment
+session required        pam_env.so envfile=/etc/default/locale user_readenv=1

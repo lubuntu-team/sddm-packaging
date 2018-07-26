@@ -8,7 +8,7 @@ Subject: _sddm_systemctl
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -143,8 +143,8 @@ if(SYSTEMD_FOUND)
+@@ -142,8 +142,8 @@ if(SYSTEMD_FOUND)
      endif()
  
      set(MINIMUM_VT 1)
