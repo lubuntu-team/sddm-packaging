@@ -35,9 +35,10 @@ do_start_override()
 {
 	if grep -wqs text /proc/cmdline; then
 		log_warning_msg "Not starting Simple Desktop Display Manager ($NAME); found 'text' in kernel commandline."
-	elif [ "$HEED_DEFAULT_DISPLAY_MANAGER" = "true" ] &&
-	     [ -e $DEFAULT_DISPLAY_MANAGER_FILE ] &&
-	     [ "$(cat $DEFAULT_DISPLAY_MANAGER_FILE)" != "$DAEMON" ]; then
+	elif [ "$HEED_DEFAULT_DISPLAY_MANAGER" = "true" ] \
+	    && [ -e $DEFAULT_DISPLAY_MANAGER_FILE ] \
+	    && [ "$(basename $(cat $DEFAULT_DISPLAY_MANAGER_FILE))" != \
+	         "$(basename $DAEMON)" ]; then
 		log_action_msg "Not starting Simple Desktop Display Manager ($NAME); it is not the default display manager."
 	else
 		[ "$VERBOSE" != no ] && log_daemon_msg "Starting $DESC" "$NAME"

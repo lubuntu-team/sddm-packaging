@@ -1,3 +1,48 @@
+sddm (0.18.0-1ubuntu1) cosmic; urgency=medium
+
+  * Merge from Debian Sid. Remaining changes:
+    - Recommend the Breeze SDDM theme instead of the Maui one.
+    - Add kubuntu_nvidia-prime.diff to make sure NVIDIA Prime works.
+    - Keep the default-display-manager file logic in sddm.postinst.
+    - Update Vcs-* to point to Launchpad instead of Salsa.
+    - Add debian/conffiles.
+    - Make sure sddm.service starts at the correct time.
+    - Start on tty1 by default.
+  * Bump Standards-version to 4.1.5, no changes needed.
+  * Instead of hardcoding the Breeze theme in, allow ubuntu-theme to be used
+    in the same fashion Debian's is.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 27 Jul 2018 07:51:00 -0500
+
+sddm (0.18.0-1) unstable; urgency=medium
+
+  [ Simon Quigley ]
+  * New upstream release.
+  * Bump Standards-version to 4.1.4, no changes needed.
+  * Bump debhelper compat to 11, no changes needed.
+  * Remove unneeded dbgsym stanza of debian/rules.
+  * Refresh patches for the new upstream release, and remove the
+    reverse-applicable handle-reading-from-a-closed-file-handle.patch.
+  * /etc/sddm.conf is no longer shipped by default; remove it from
+    sddm.install and not-installed.
+
+  [ Maximiliano Curia ]
+  * Workaround entropy starvation by recommending haveged
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Sun, 22 Jul 2018 13:26:44 +0200
+
+sddm (0.17.0-2) experimental; urgency=medium
+
+  * New revision
+  * Also read the environment from ~/.pam_environment
+  * Start after systemd-logind
+  * Check for the daemon name, not the full path.
+    Thanks to Alf Gaida for the report (Closes: 901966)
+  * Release to experimental
+
+ -- Maximiliano Curia <maxy@debian.org>  Thu, 21 Jun 2018 13:08:36 +0200
+
 sddm (0.17.0-1ubuntu7) bionic; urgency=medium
 
   * debian/sddm.service: Always wait for plymouth quit to run before
@@ -181,7 +226,7 @@ sddm (0.13.0-1ubuntu5) xenial; urgency=medium
 sddm (0.13.0-1ubuntu4) xenial; urgency=medium
 
   * Switch the watch file back to gz as xz lookup on GitHub isn't really
-    possible 
+    possible
   * Restore kwallet4 auto-start that was dropped in the debian merge
 
  -- Philip Muškovac <yofel@kubuntu.org>  Sun, 10 Jan 2016 15:40:55 +0100
@@ -203,7 +248,7 @@ sddm (0.13.0-1ubuntu2) xenial; urgency=medium
 sddm (0.13.0-1ubuntu1) xenial; urgency=medium
 
   * Merge with debian unstable (LP: #1519564, #1516837, #1511286)
-    remaining changes: 
+    remaining changes:
     - keep the default-display-manager file logic in sddm.postinst
     - keep kubuntu specific patches:
       + kubuntu_nvidia-prime.diff
@@ -347,7 +392,7 @@ sddm (0.11.0-0ubuntu12) xenial; urgency=high
 
 sddm (0.11.0-0ubuntu11) wily; urgency=medium
 
-  * Fix postrm to remove what was if'd for as to avoid failure.
+ * Fix postrm to remove what was if'd for as to avoid failure.
   * Add pam_kwallet5 to the pam profile rules. It is the same version as
     pam_kwallet but for kwallet5 (kwallet4 and kwallet5 are distinct entities
     requiring separate unlocking)
@@ -427,4 +472,3 @@ sddm (0.10.0+dfsg1-0ubuntu1) vivid; urgency=medium
     image, https://github.com/sddm/sddm/issues/315
 
  -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 17 Oct 2014 15:39:42 +0200
-

@@ -3,7 +3,7 @@ set -e
 
 if [ "$1" = "configure" ] || [ "$1" = "abort-upgrade" ] || [ "$1" = "abort-remove" ]; then
     update-alternatives --install \
-        /usr/share/sddm/themes/debian-theme \
+        /usr/share/sddm/themes/ubuntu-theme \
         sddm-debian-theme \
         /usr/share/sddm/themes/debian-maui 40
 fi
