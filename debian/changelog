@@ -1,3 +1,9 @@
+sddm (0.18.0-1ubuntu2) cosmic; urgency=medium
+
+  * sddm-ubuntu-theme, not sddm-debian-theme.
+
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 27 Jul 2018 08:15:15 -0500
+
 sddm (0.18.0-1ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
