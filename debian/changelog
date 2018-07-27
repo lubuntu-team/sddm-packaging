@@ -1,4 +1,4 @@
-sddm (0.18.0-1ubuntu1) UNRELEASED; urgency=medium
+sddm (0.18.0-1ubuntu1) cosmic; urgency=medium
 
   * Merge from Debian Sid. Remaining changes:
     - Recommend the Breeze SDDM theme instead of the Maui one.
@@ -12,7 +12,7 @@ sddm (0.18.0-1ubuntu1) UNRELEASED; urgency=medium
   * Instead of hardcoding the Breeze theme in, allow ubuntu-theme to be used
     in the same fashion Debian's is.
 
- -- Simon Quigley <tsimonq2@ubuntu.com>  Thu, 26 Jul 2018 16:12:37 -0500
+ -- Simon Quigley <tsimonq2@ubuntu.com>  Fri, 27 Jul 2018 07:51:00 -0500
 
 sddm (0.18.0-1) unstable; urgency=medium
 
