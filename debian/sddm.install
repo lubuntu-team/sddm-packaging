@@ -1,7 +1,6 @@
 debian/Xsession etc/sddm/
 etc/dbus-1/system.d/sddm_org.freedesktop.DisplayManager.conf
 etc/pam.d
-etc/sddm.conf usr/share/doc/sddm/
 usr/bin/sddm*
 usr/lib/*/qt5/qml/SddmComponents/
 usr/lib/*/sddm/
