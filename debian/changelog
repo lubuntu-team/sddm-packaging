@@ -1,3 +1,13 @@
+sddm (0.18.0-2~) UNRELEASED; urgency=medium
+
+  * New revision
+  * Add missing license paragraph
+  * Add wayland-session as a conffile
+  * Avoid sourcing /etc/profile with fish.
+    Thanks to Alf Gaida for the report (Closes: 904698)
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 27 Jul 2018 09:49:27 +0200
+
 sddm (0.18.0-1) unstable; urgency=medium
 
   [ Simon Quigley ]
