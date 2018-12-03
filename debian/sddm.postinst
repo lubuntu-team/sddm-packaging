@@ -75,12 +75,9 @@ if [ "$1" = configure ] && [ -d /etc/systemd/system/ ]; then
     fi
 fi
 
-# update-rc.d levels
-S=30
-K=01
 
 if [ -x /etc/init.d/sddm ]; then
-    update-rc.d sddm defaults $S $K >/dev/null 2>&1
+    update-rc.d sddm defaults >/dev/null 2>&1
 fi
 
 touch /var/log/sddm.log

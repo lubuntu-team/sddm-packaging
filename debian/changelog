@@ -23,6 +23,13 @@ sddm (0.18.1-0r1) UNRELEASED; urgency=medium
     - alias it as display-manager.service
     - add getty@tty1.service to Conflicts/After to avoid races
 
+  [ Lorenzo Puliti ]
+  * Improve sysv init script: (Closes: #915534)
+    - add dbus under 'Should Start'
+    - remove  'S' and 'K' update-rc.d levels from postinst script,
+      as setting the boot sequence that way is deprecated and no longer
+      effective
+
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 09:49:27 +0200
 
 sddm (0.18.0-1) unstable; urgency=medium
