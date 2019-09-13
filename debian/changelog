@@ -398,7 +398,7 @@ sddm (0.11.0-0ubuntu12) xenial; urgency=high
 
 sddm (0.11.0-0ubuntu11) wily; urgency=medium
 
- * Fix postrm to remove what was if'd for as to avoid failure.
+  * Fix postrm to remove what was if'd for as to avoid failure.
   * Add pam_kwallet5 to the pam profile rules. It is the same version as
     pam_kwallet but for kwallet5 (kwallet4 and kwallet5 are distinct entities
     requiring separate unlocking)
