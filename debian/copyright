@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: sddm
 Source: https://github.com/sddm/sddm.git
 
@@ -568,7 +568,7 @@ License: SIL-OFL-1.1
 
 License: same_as_xorg-x11
  This file is distributed under the same license as the xorg-x11 package.
-Commment: The xorg-x11 package is no longer in the archive, the license of the
+Comment: The xorg-x11 package is no longer in the archive, the license of the
  debian directory was:
  .
  Unless otherwise noted, all modifications and additions to X.Org X11 found in
