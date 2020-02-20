@@ -14,6 +14,8 @@ sddm (0.18.1-0r1) UNRELEASED; urgency=medium
   * Switch from python-docutils to python3-docutils to get Python 3-based
     rst2man. (Closes: #943206)
   * Small changes to copyright.
+  * Drop the upstart confirmation, as it is long gone
+    - unregister it as conffile
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 09:49:27 +0200
 
