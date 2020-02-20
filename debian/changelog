@@ -9,6 +9,7 @@ sddm (0.18.1-0r1) UNRELEASED; urgency=medium
   [ Pino Toscano ]
   * New upstream release.
   * Add the configuration for the CI on salsa.
+  * Remove the unused debian/meta/ stuff.
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 09:49:27 +0200
 
