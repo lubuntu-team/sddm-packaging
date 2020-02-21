@@ -29,6 +29,7 @@ Package: sddm
 Architecture: any
 Depends: adduser,
          qml-module-qtquick2,
+         xauth,
          x11-common,
          xserver-xorg | xserver,
          ${misc:Depends},

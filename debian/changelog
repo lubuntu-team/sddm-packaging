@@ -16,6 +16,7 @@ sddm (0.18.1-0r1) UNRELEASED; urgency=medium
   * Small changes to copyright.
   * Drop the upstart confirmation, as it is long gone
     - unregister it as conffile
+  * Depend on xauth, as it is used for X sessions. (Closes: #929463)
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 09:49:27 +0200
 
