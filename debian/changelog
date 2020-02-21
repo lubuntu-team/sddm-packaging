@@ -17,6 +17,7 @@ sddm (0.18.1-0r1) UNRELEASED; urgency=medium
   * Drop the upstart confirmation, as it is long gone
     - unregister it as conffile
   * Depend on xauth, as it is used for X sessions. (Closes: #929463)
+  * Change sid to unstable in old changelog entries. (Closes: #901969)
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 09:49:27 +0200
 
@@ -49,7 +50,7 @@ sddm (0.17.0-2) experimental; urgency=medium
 
  -- Maximiliano Curia <maxy@debian.org>  Thu, 21 Jun 2018 13:08:36 +0200
 
-sddm (0.17.0-1) sid; urgency=medium
+sddm (0.17.0-1) unstable; urgency=medium
 
   [ Clive Johnston ]
   * Drop upstream patches.
@@ -70,7 +71,7 @@ sddm (0.17.0-1) sid; urgency=medium
 
  -- Maximiliano Curia <maxy@debian.org>  Sun, 25 Feb 2018 09:26:35 +0100
 
-sddm (0.15.0-1) sid; urgency=medium
+sddm (0.15.0-1) unstable; urgency=medium
 
   * New upstream release (0.15.0).
   * Drop upstream patches
