@@ -18,6 +18,10 @@ sddm (0.18.1-0r1) UNRELEASED; urgency=medium
     - unregister it as conffile
   * Depend on xauth, as it is used for X sessions. (Closes: #929463)
   * Change sid to unstable in old changelog entries. (Closes: #901969)
+  * Improve the Debian-provided sddm.service: (Closes: #916398, #950391)
+    - remove old check of /etc/X11/default-display-manager
+    - alias it as display-manager.service
+    - add getty@tty1.service to Conflicts/After to avoid races
 
  -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 09:49:27 +0200
 

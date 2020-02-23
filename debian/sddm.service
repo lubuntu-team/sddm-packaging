@@ -2,8 +2,8 @@
 Description=Simple Desktop Display Manager
 Documentation=man:sddm(1) man:sddm.conf(5)
 # Change this if you want to start sddm in a different tty
-Conflicts=getty@tty7.service
-After=getty@tty7.service
+Conflicts=getty@tty1.service getty@tty7.service
+After=getty@tty1.service getty@tty7.service
 
 After=systemd-user-sessions.service systemd-logind.service
 # Workaround entropy starvation
@@ -20,8 +20,10 @@ After=haveged.service
 [Service]
 # temporary safety check until all DMs are converted to correct
 # display-manager.service symlink handling
-ExecStartPre=/bin/sh -c '[ "$(basename $(cat /etc/X11/default-display-manager 2>/dev/null))" = "sddm" ]'
 ExecStart=/usr/bin/sddm
 Restart=always
 RestartSec=1s
 EnvironmentFile=-/etc/default/locale
+
+[Install]
+Alias=display-manager.service
