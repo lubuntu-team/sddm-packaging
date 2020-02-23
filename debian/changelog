@@ -1,4 +1,6 @@
-sddm (0.18.1-0r1) UNRELEASED; urgency=medium
+sddm (0.18.1-1) unstable; urgency=medium
+
+  * Team upload.
 
   [ Maximiliano Curia ]
   * Add missing license paragraph
@@ -30,7 +32,7 @@ sddm (0.18.1-0r1) UNRELEASED; urgency=medium
       as setting the boot sequence that way is deprecated and no longer
       effective
 
- -- Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 27 Jul 2018 09:49:27 +0200
+ -- Pino Toscano <pino@debian.org>  Sun, 23 Feb 2020 13:34:38 +0100
 
 sddm (0.18.0-1) unstable; urgency=medium
 
