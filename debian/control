@@ -14,7 +14,7 @@ Build-Depends: cmake (>= 2.8.8),
                libxcb1-dev,
                libxkbcommon-dev,
                pkg-config,
-               python-docutils,
+               python3-docutils,
                qtbase5-dev (>= 5.6.0~),
                qtdeclarative5-dev (>= 5.6.0~),
                qttools5-dev,
@@ -29,11 +29,12 @@ Package: sddm
 Architecture: any
 Depends: adduser,
          qml-module-qtquick2,
+         xauth,
          x11-common,
          xserver-xorg | xserver,
          ${misc:Depends},
          ${shlibs:Depends},
-Recommends: haveged, libpam-systemd, sddm-theme-breeze | sddm-theme
+Recommends: haveged, libpam-systemd, sddm-theme-debian-maui | sddm-theme
 Suggests: libpam-kwallet5, qtvirtualkeyboard-plugin
 Provides: x-display-manager
 Description: modern display manager for X11

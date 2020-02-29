@@ -4,3 +4,4 @@
 05_add_debian_themes.diff
 kubuntu_nvidia-prime.diff
 fix-desktop-session-env-var.patch
+#upstream_set-re-use-session-option-by-default.diff

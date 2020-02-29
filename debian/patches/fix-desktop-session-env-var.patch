@@ -10,7 +10,7 @@ Forwarded: yes
 Last-Update: 2018-02-09
 --- a/src/common/Session.cpp
 +++ b/src/common/Session.cpp
-@@ -113,7 +113,7 @@ namespace SDDM {
+@@ -119,7 +119,7 @@
  
      void Session::setTo(Type type, const QString &_fileName)
      {
@@ -19,7 +19,7 @@ Last-Update: 2018-02-09
          if (!fileName.endsWith(s_entryExtention))
              fileName += s_entryExtention;
  
-@@ -181,6 +181,8 @@ namespace SDDM {
+@@ -189,6 +189,8 @@
  
          file.close();
  

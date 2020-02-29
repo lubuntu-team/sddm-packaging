@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: sddm
 Source: https://github.com/sddm/sddm.git
 
@@ -102,6 +102,10 @@ License: GPL-2
 Files: debian/po/pothead.in
 Copyright: 2000-2004, Branden Robinson
 License: same_as_xorg-x11
+
+License: Apache-2
+ The complete text of the Apache License version 2 can be found in
+ `/usr/share/common-licenses/Apache-2.0'.
 
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
@@ -564,7 +568,7 @@ License: SIL-OFL-1.1
 
 License: same_as_xorg-x11
  This file is distributed under the same license as the xorg-x11 package.
-Commment: The xorg-x11 package is no longer in the archive, the license of the
+Comment: The xorg-x11 package is no longer in the archive, the license of the
  debian directory was:
  .
  Unless otherwise noted, all modifications and additions to X.Org X11 found in
