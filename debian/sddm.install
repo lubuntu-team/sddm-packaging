@@ -1,4 +1,5 @@
 debian/Xsession etc/sddm/
+debian/wayland-session etc/sddm/
 etc/dbus-1/system.d/sddm_org.freedesktop.DisplayManager.conf
 etc/pam.d
 usr/bin/sddm*

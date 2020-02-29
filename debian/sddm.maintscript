@@ -1,0 +1,1 @@
+rm_conffile /etc/init/sddm.conf 0.18.1~

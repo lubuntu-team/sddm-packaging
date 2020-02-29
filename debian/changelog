@@ -1,3 +1,62 @@
+sddm (0.18.1-1ubuntu2) focal; urgency=medium
+
+  * Revert upstream_set-re-use-session-option-by-default.diff
+
+ -- Rik Mills <rikmills@kde.org>  Tue, 25 Feb 2020 15:44:32 +0000
+
+sddm (0.18.1-1ubuntu1) focal; urgency=medium
+
+  * Merge from Debian unstable. Remaining changes:
+    - Recommend the Breeze SDDM theme instead of the Maui one.
+    - Add kubuntu_nvidia-prime.diff to make sure NVIDIA Prime works.
+    - Keep the default-display-manager file logic in sddm.postinst.
+    - Update Vcs-* to point to Launchpad instead of Salsa.
+    - Add debian/conffiles.
+    - Make sure sddm.service starts at the correct time.
+    - Start on tty1 by default.
+    - Bump Standards-version to 4.1.5, no changes needed.
+    - Instead of hardcoding the Breeze theme in, allow ubuntu-theme to be
+      used in the same fashion Debian's is.
+  * Add upstream_set-re-use-session-option-by-default.diff
+
+ -- Rik Mills <rikmills@kde.org>  Mon, 24 Feb 2020 08:17:37 +0000
+
+sddm (0.18.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Maximiliano Curia ]
+  * Add missing license paragraph
+  * Add wayland-session as a conffile
+  * Avoid sourcing /etc/profile with fish.
+    Thanks to Alf Gaida for the report (Closes: 904698)
+
+  [ Pino Toscano ]
+  * New upstream release.
+  * Add the configuration for the CI on salsa.
+  * Remove the unused debian/meta/ stuff.
+  * Remove debian/not-installed, as we ship everything.
+  * Switch from python-docutils to python3-docutils to get Python 3-based
+    rst2man. (Closes: #943206)
+  * Small changes to copyright.
+  * Drop the upstart confirmation, as it is long gone
+    - unregister it as conffile
+  * Depend on xauth, as it is used for X sessions. (Closes: #929463)
+  * Change sid to unstable in old changelog entries. (Closes: #901969)
+  * Improve the Debian-provided sddm.service: (Closes: #916398, #950391)
+    - remove old check of /etc/X11/default-display-manager
+    - alias it as display-manager.service
+    - add getty@tty1.service to Conflicts/After to avoid races
+
+  [ Lorenzo Puliti ]
+  * Improve sysv init script: (Closes: #915534)
+    - add dbus under 'Should Start'
+    - remove  'S' and 'K' update-rc.d levels from postinst script,
+      as setting the boot sequence that way is deprecated and no longer
+      effective
+
+ -- Pino Toscano <pino@debian.org>  Sun, 23 Feb 2020 13:34:38 +0100
+
 sddm (0.18.0-1ubuntu2) cosmic; urgency=medium
 
   * sddm-ubuntu-theme, not sddm-debian-theme.
@@ -109,7 +168,7 @@ sddm (0.17.0-1ubuntu1) bionic; urgency=medium
 
  -- Simon Quigley <tsimonq2@ubuntu.com>  Sun, 25 Feb 2018 22:16:55 -0600
 
-sddm (0.17.0-1) sid; urgency=medium
+sddm (0.17.0-1) unstable; urgency=medium
 
   [ Clive Johnston ]
   * Drop upstream patches.
@@ -130,7 +189,7 @@ sddm (0.17.0-1) sid; urgency=medium
 
  -- Maximiliano Curia <maxy@debian.org>  Sun, 25 Feb 2018 09:26:35 +0100
 
-sddm (0.15.0-1) sid; urgency=medium
+sddm (0.15.0-1) unstable; urgency=medium
 
   * New upstream release (0.15.0).
   * Drop upstream patches
