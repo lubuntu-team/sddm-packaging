@@ -1,0 +1,20 @@
+Description: Set re-use session option by default (#1216)
+ Added Reuse session option a few years ago as often logging into a
+ graphical session twice is not what the user actually wants.
+ This is particularly important for Plasma which doesn't really support
+ multiple logins. This has got worse recently as systemd's defaults share
+ a DBus session across user sessions which makes two graphical logins
+ even more likely to explode.
+Origin: https://github.com/sddm/sddm/commit/909699342cad094000b24f35bcd3e9287c1b7f74
+
+--- a/src/common/Configuration.h
++++ b/src/common/Configuration.h
+@@ -90,7 +90,7 @@
+             Entry(RememberLastUser,    bool,        true,                                       _S("Remember the last successfully logged in user"));
+             Entry(RememberLastSession, bool,        true,                                       _S("Remember the session of the last successfully logged in user"));
+ 
+-            Entry(ReuseSession,        bool,        false,                                      _S("When logging in as the same user twice, restore the original session, rather than create a new one"));
++            Entry(ReuseSession,        bool,        true,                                       _S("When logging in as the same user twice, restore the original session, rather than create a new one"));
+         );
+ 
+         Section(Autologin,
