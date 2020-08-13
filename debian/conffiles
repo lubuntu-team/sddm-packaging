@@ -1,3 +1,3 @@
-usr/share/sddm/scripts/Xsetup
-usr/share/sddm/scripts/Xsession
-usr/share/sddm/scripts/Xstop
+/usr/share/sddm/scripts/Xsetup
+/usr/share/sddm/scripts/Xsession
+/usr/share/sddm/scripts/Xstop
