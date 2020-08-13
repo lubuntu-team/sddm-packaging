@@ -1,3 +1,10 @@
+sddm (0.18.1-1ubuntu3) groovy; urgency=medium
+
+  * debian/conffiles: Switch to using absolute paths, which are now
+    being enforced by the latest dpkg. (LP: #1891068)
+
+ -- Rik Mills <rikmills@kde.org>  Thu, 13 Aug 2020 07:43:10 +0100
+
 sddm (0.18.1-1ubuntu2) focal; urgency=medium
 
   * Revert upstream_set-re-use-session-option-by-default.diff
