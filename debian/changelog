@@ -2,6 +2,7 @@ sddm (0.19.0-1) UNRELEASED; urgency=medium
 
   * New upstream release (0.19.0):
     - Fix X not having access control on startup (fixes CVE-2020-28049)
+  * Fix lintian warning command-with-path-in-maintainer-script in postrm.
 
  -- Aurélien COUDERC <coucouf@debian.org>  Wed, 04 Nov 2020 17:34:00 +0100
 
