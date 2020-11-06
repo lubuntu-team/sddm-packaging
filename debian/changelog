@@ -15,6 +15,9 @@ sddm (0.19.0-1) UNRELEASED; urgency=medium
     plausible source and license that are redistribuable.
   * Bump Standards-Version to 4.5.0:
     - Add Rules-Requires-Root: no
+  * Switch from the debhelper build dependency to debhelper-compat
+    - remove debian/compat
+    - bump compatibility level to 13
 
  -- Aurélien COUDERC <coucouf@debian.org>  Wed, 04 Nov 2020 17:34:00 +0100
 
