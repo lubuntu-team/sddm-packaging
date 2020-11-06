@@ -1,6 +1,7 @@
 From: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Date: Fri, 11 Nov 2016 09:45:34 +0100
 Subject: _kubuntu_use_breeze
+Forwarded: not-needed
 
 ---
  src/common/Configuration.h | 2 +-
