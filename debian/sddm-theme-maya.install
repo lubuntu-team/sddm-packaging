@@ -1,1 +1,9 @@
-usr/share/sddm/themes/maya/
+usr/share/sddm/themes/maya/components/*
+usr/share/sddm/themes/maya/fonts/OpenSans_CondLight.ttf
+usr/share/sddm/themes/maya/images/*
+usr/share/sddm/themes/maya/Main.qml
+usr/share/sddm/themes/maya/metadata.desktop
+usr/share/sddm/themes/maya/README /usr/share/doc/sddm-theme-maya/
+usr/share/sddm/themes/maya/screenshots
+usr/share/sddm/themes/maya/screenshots/hi_IN.png
+usr/share/sddm/themes/maya/theme.conf

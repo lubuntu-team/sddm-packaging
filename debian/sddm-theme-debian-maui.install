@@ -1,1 +1,10 @@
-usr/share/sddm/themes/debian-maui/
+usr/share/sddm/themes/debian-maui/angle-down.png
+usr/share/sddm/themes/debian-maui/angle-left.png
+usr/share/sddm/themes/debian-maui/angle-right.png
+usr/share/sddm/themes/debian-maui/background.png
+usr/share/sddm/themes/debian-maui/Main.qml
+usr/share/sddm/themes/debian-maui/metadata.desktop
+usr/share/sddm/themes/debian-maui/README usr/share/doc/sddm-theme-debian-maui/
+usr/share/sddm/themes/debian-maui/reboot.png
+usr/share/sddm/themes/debian-maui/shutdown.png
+usr/share/sddm/themes/debian-maui/theme.conf
