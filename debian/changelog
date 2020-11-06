@@ -6,6 +6,7 @@ sddm (0.19.0-1) UNRELEASED; urgency=medium
   * Sync patches with Kubuntu.
   * Switch to UTF-8 encoding for Swedish po translation.
   * Review copyright information.
+  * Build with hardening=+all build hardening flag.
 
  -- Aurélien COUDERC <coucouf@debian.org>  Wed, 04 Nov 2020 17:34:00 +0100
 
