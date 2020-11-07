@@ -23,6 +23,7 @@ sddm (0.19.0-1) UNRELEASED; urgency=medium
   [ Norbert Preining ]
   * Bump build-depends according to CMakeLists.
   * Add Aurélien and myself to uploaders.
+  * Change maintainer to Debian Qt/KDE ...
 
  -- Aurélien COUDERC <coucouf@debian.org>  Wed, 04 Nov 2020 17:34:00 +0100
 

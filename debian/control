@@ -1,7 +1,7 @@
 Source: sddm
 Section: kde
 Priority: optional
-Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Michał Zając <quintasan@kubuntu.org>,
            Maximiliano Curia <maxy@debian.org>,
            Aurélien COUDERC <coucouf@debian.org>,
