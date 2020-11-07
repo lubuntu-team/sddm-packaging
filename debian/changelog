@@ -1,5 +1,6 @@
 sddm (0.19.0-1) UNRELEASED; urgency=medium
 
+  [ Aurélien COUDERC ]
   * New upstream release (0.19.0):
     - Fix X not having access control on startup (fixes CVE-2020-28049)
   * Fix lintian warning command-with-path-in-maintainer-script in postrm.
@@ -18,6 +19,9 @@ sddm (0.19.0-1) UNRELEASED; urgency=medium
   * Switch from the debhelper build dependency to debhelper-compat
     - remove debian/compat
     - bump compatibility level to 13
+
+  [ Norbert Preining ]
+  * Bump build-depends according to CMakeLists.
 
  -- Aurélien COUDERC <coucouf@debian.org>  Wed, 04 Nov 2020 17:34:00 +0100
 
