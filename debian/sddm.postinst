@@ -28,10 +28,6 @@ if [ ! -e /var/lib/sddm ]; then
 fi
 
 if [ -d /var/lib/sddm ]; then
-    if [ -r /var/lib/sddm/state.conf ] ; then
-        sed -i 's!^Session=/usr/share/xsessions/!Session=!' /var/lib/sddm/state.conf
-        chown sddm:sddm /var/lib/sddm/state.conf
-    fi
     # There has been a -R in version prior to 0.19
     # but this opens up symlink attacks. Remove it.
     chown sddm:sddm /var/lib/sddm
