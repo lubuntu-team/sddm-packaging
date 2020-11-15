@@ -28,7 +28,9 @@ if [ ! -e /var/lib/sddm ]; then
 fi
 
 if [ -d /var/lib/sddm ]; then
-    chown -R sddm:sddm /var/lib/sddm
+    # There has been a -R in version prior to 0.19
+    # but this opens up symlink attacks. Remove it.
+    chown sddm:sddm /var/lib/sddm
     chmod 0750 /var/lib/sddm
 fi
 
@@ -83,12 +85,9 @@ if [ "$1" = configure ] && [ -d /etc/systemd/system/ ]; then
     fi
 fi
 
-# update-rc.d levels
-S=30
-K=01
 
 if [ -x /etc/init.d/sddm ]; then
-    update-rc.d sddm defaults $S $K >/dev/null 2>&1
+    update-rc.d sddm defaults >/dev/null 2>&1
 fi
 
 touch /var/log/sddm.log

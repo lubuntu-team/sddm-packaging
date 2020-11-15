@@ -3,5 +3,4 @@
 04_set_default_path.diff
 05_add_debian_themes.diff
 kubuntu_nvidia-prime.diff
-fix-desktop-session-env-var.patch
-#upstream_set-re-use-session-option-by-default.diff
+upstream-2f034906d-use-only-basename-of-session.patch

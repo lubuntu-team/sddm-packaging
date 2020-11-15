@@ -1,1 +1,8 @@
-usr/share/sddm/themes/debian-elarun/
+usr/share/sddm/themes/debian-elarun/images/*
+usr/share/sddm/themes/debian-elarun/angle-down.png
+usr/share/sddm/themes/debian-elarun/elarun.jpg
+usr/share/sddm/themes/debian-elarun/Main.qml
+usr/share/sddm/themes/debian-elarun/metadata.desktop
+usr/share/sddm/themes/debian-elarun/README usr/share/doc/sddm-theme-debian-elarun/
+usr/share/sddm/themes/debian-elarun/theme.conf
+

@@ -1,3 +1,57 @@
+sddm (0.19.0-2ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge from Debian unstable. Remaining changes:
+    - Add kubuntu_nvidia-prime.diff to make sure NVIDIA Prime works.
+    - Keep the default-display-manager file logic in sddm.postinst.
+    - Update Vcs-* to point to Launchpad instead of Salsa.
+    - Add debian/conffiles.
+    - Make sure sddm.service starts at the correct time.
+    - Start on tty1 by default.
+    - Instead of hardcoding the Breeze theme in, allow ubuntu-theme to be
+      used in the same fashion Debian's is.
+
+ -- Rik Mills <rikmills@kde.org>  Sun, 15 Nov 2020 11:53:51 +0000
+
+sddm (0.19.0-2) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * Disable 07_fix-desktop-session-env-var.diff imported from Ubuntu
+    (Closes: #973907)
+  * Add upstream's d/p/upstream-2f034906d-use-only-basename-of-session to
+    use only the basename of the session file as session name.
+
+ -- Norbert Preining <norbert@preining.info>  Tue, 10 Nov 2020 04:38:45 +0900
+
+sddm (0.19.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (0.19.0):
+    - Fix X not having access control on startup (fixes CVE-2020-28049)
+  * Fix lintian warning command-with-path-in-maintainer-script in postrm.
+  * Sync patches with Kubuntu.
+  * Switch to UTF-8 encoding for Swedish po translation.
+  * Review copyright information.
+  * Build with hardening=+all build hardening flag.
+  * Mark watch file as version=4, no change required.
+  * Don’t install LICENSE files from source, their contents is already in
+    d/copyright.
+  * Install upstream README files to /usr/share/doc.
+  * Disable lintian warning for Maya theme’s font license, the source gives a
+    plausible source and license that are redistribuable.
+  * Bump Standards-Version to 4.5.0:
+    - Add Rules-Requires-Root: no
+  * Switch from the debhelper build dependency to debhelper-compat
+    - remove debian/compat
+    - bump compatibility level to 13
+
+  [ Norbert Preining ]
+  * Bump build-depends according to CMakeLists.
+  * Add Aurélien and myself to uploaders.
+  * Change maintainer to Debian Qt/KDE ...
+  * Don't do recursive change of ownership of /var/lib/sddm in d/sddm.postinst
+
+ -- Norbert Preining <norbert@preining.info>  Sat, 07 Nov 2020 09:28:39 +0900
+
 sddm (0.18.1-1ubuntu3) groovy; urgency=medium
 
   * debian/conffiles: Switch to using absolute paths, which are now

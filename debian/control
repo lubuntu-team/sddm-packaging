@@ -1,11 +1,13 @@
 Source: sddm
 Section: kde
 Priority: optional
-Maintainer: Debian/Kubuntu Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Michał Zając <quintasan@kubuntu.org>,
            Maximiliano Curia <maxy@debian.org>,
+           Aurélien COUDERC <coucouf@debian.org>,
+           Norbert Preining <norbert@preining.info>,
 Build-Depends: cmake (>= 2.8.8),
-               debhelper (>= 11),
+               debhelper-compat (= 13),
                extra-cmake-modules (>= 1.4.0~),
                libpam0g-dev,
                libsystemd-dev [linux-any],
@@ -15,15 +17,16 @@ Build-Depends: cmake (>= 2.8.8),
                libxkbcommon-dev,
                pkg-config,
                python3-docutils,
-               qtbase5-dev (>= 5.6.0~),
-               qtdeclarative5-dev (>= 5.6.0~),
+               qtbase5-dev (>= 5.8.0~),
+               qtdeclarative5-dev (>= 5.8.0~),
                qttools5-dev,
-               qttools5-dev-tools (>= 5.6.0~),
+               qttools5-dev-tools (>= 5.8.0~),
                systemd [linux-any],
-Standards-Version: 4.1.5
+Standards-Version: 4.5.0
 Homepage: https://github.com/sddm/sddm
-Vcs-Browser: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/sddm
-Vcs-Git: https://git.launchpad.net/~kubuntu-packagers/kubuntu-packaging/+git/sddm
+Vcs-Browser: https://git.launchpad.net/~ubuntu-qt-code/+git/sddm
+Vcs-Git: https://git.launchpad.net/~ubuntu-qt-code/+git/sddm
+Rules-Requires-Root: no
 
 Package: sddm
 Architecture: any
