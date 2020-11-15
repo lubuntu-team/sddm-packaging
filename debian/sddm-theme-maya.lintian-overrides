@@ -1,0 +1,2 @@
+# Package readme provides plausible license and source so that this would be a false positive
+sddm-theme-maya: truetype-font-prohibits-installable-embedding [edit only] usr/share/sddm/themes/maya/fonts/OpenSans_CondLight.ttf
