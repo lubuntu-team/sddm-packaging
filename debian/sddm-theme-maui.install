@@ -1,1 +1,11 @@
-usr/share/sddm/themes/maui/
+usr/share/sddm/themes/maui/angle-down.png
+usr/share/sddm/themes/maui/angle-left.png
+usr/share/sddm/themes/maui/angle-right.png
+usr/share/sddm/themes/maui/background.png
+usr/share/sddm/themes/maui/Main.qml
+usr/share/sddm/themes/maui/maui.jpg
+usr/share/sddm/themes/maui/metadata.desktop
+usr/share/sddm/themes/maui/README /usr/share/doc/sddm-theme-maui/
+usr/share/sddm/themes/maui/reboot.png
+usr/share/sddm/themes/maui/shutdown.png
+usr/share/sddm/themes/maui/theme.conf
