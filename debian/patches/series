@@ -4,3 +4,4 @@
 05_add_debian_themes.diff
 kubuntu_nvidia-prime.diff
 upstream-2f034906d-use-only-basename-of-session.patch
+revert_prefer-wayland-sessions-over-X11.patch
