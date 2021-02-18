@@ -1,0 +1,78 @@
+commit a9993d891856368eba1ec26d375eb3a62fe73719
+Author: Rik Mills <rikmills@kde.org>
+Date:   Thu Feb 18 17:24:24 2021 +0000
+
+    Revert "Prefer Wayland sessions over X11 ones"
+    
+    This reverts commit 994fa67b01ccfac1aaac08572302bbbea7842dc3.
+
+diff --git a/src/common/Session.cpp b/src/common/Session.cpp
+index 2d7b04f..40f7fb7 100644
+--- a/src/common/Session.cpp
++++ b/src/common/Session.cpp
+@@ -120,14 +120,14 @@ namespace SDDM {
+         m_desktopNames.clear();
+ 
+         switch (type) {
+-        case WaylandSession:
+-            m_dir = QDir(mainConfig.Wayland.SessionDir.get());
+-            m_xdgSessionType = QStringLiteral("wayland");
+-            break;
+         case X11Session:
+             m_dir = QDir(mainConfig.X11.SessionDir.get());
+             m_xdgSessionType = QStringLiteral("x11");
+             break;
++        case WaylandSession:
++            m_dir = QDir(mainConfig.Wayland.SessionDir.get());
++            m_xdgSessionType = QStringLiteral("wayland");
++            break;
+         default:
+             m_xdgSessionType.clear();
+             break;
+diff --git a/src/daemon/Display.cpp b/src/daemon/Display.cpp
+index b95f6e5..515c4b9 100644
+--- a/src/daemon/Display.cpp
++++ b/src/daemon/Display.cpp
+@@ -114,10 +114,10 @@ namespace SDDM {
+         if (autologinSession.isEmpty()) {
+             autologinSession = stateConfig.Last.Session.get();
+         }
+-        if (findSessionEntry(mainConfig.Wayland.SessionDir.get(), autologinSession)) {
+-            sessionType = Session::WaylandSession;
+-        } else if (findSessionEntry(mainConfig.X11.SessionDir.get(), autologinSession)) {
++        if (findSessionEntry(mainConfig.X11.SessionDir.get(), autologinSession)) {
+             sessionType = Session::X11Session;
++        } else if (findSessionEntry(mainConfig.Wayland.SessionDir.get(), autologinSession)) {
++            sessionType = Session::WaylandSession;
+         } else {
+             qCritical() << "Unable to find autologin session entry" << autologinSession;
+             return false;
+diff --git a/src/greeter/SessionModel.cpp b/src/greeter/SessionModel.cpp
+index 1953c76..655f793 100644
+--- a/src/greeter/SessionModel.cpp
++++ b/src/greeter/SessionModel.cpp
+@@ -41,8 +41,8 @@ namespace SDDM {
+     SessionModel::SessionModel(QObject *parent) : QAbstractListModel(parent), d(new SessionModelPrivate()) {
+         // initial population
+         beginResetModel();
+-        populate(Session::WaylandSession, mainConfig.Wayland.SessionDir.get());
+         populate(Session::X11Session, mainConfig.X11.SessionDir.get());
++        populate(Session::WaylandSession, mainConfig.Wayland.SessionDir.get());
+         endResetModel();
+ 
+         // refresh everytime a file is changed, added or removed
+@@ -50,12 +50,12 @@ namespace SDDM {
+         connect(watcher, &QFileSystemWatcher::directoryChanged, [this](const QString &path) {
+             beginResetModel();
+             d->sessions.clear();
+-            populate(Session::WaylandSession, mainConfig.Wayland.SessionDir.get());
+             populate(Session::X11Session, mainConfig.X11.SessionDir.get());
++            populate(Session::WaylandSession, mainConfig.Wayland.SessionDir.get());
+             endResetModel();
+         });
+-        watcher->addPath(mainConfig.Wayland.SessionDir.get());
+         watcher->addPath(mainConfig.X11.SessionDir.get());
++        watcher->addPath(mainConfig.Wayland.SessionDir.get());
+     }
+ 
+     SessionModel::~SessionModel() {

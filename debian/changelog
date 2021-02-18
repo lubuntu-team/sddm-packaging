@@ -1,3 +1,10 @@
+sddm (0.19.0-2ubuntu2) hirsute; urgency=medium
+
+  * Revert upstream change prefering wayland sessions.
+    - debian/patches: revert_prefer-wayland-sessions-over-X11.patch
+
+ -- Rik Mills <rikmills@kde.org>  Thu, 18 Feb 2021 17:33:00 +0000
+
 sddm (0.19.0-2ubuntu1) hirsute; urgency=medium
 
   * Merge from Debian unstable. Remaining changes:
