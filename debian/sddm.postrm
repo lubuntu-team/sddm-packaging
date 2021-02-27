@@ -16,13 +16,13 @@ case "$1" in
         if [ -f /var/log/sddm.log ]; then rm /var/log/sddm.log; fi
 
         if getent passwd sddm >/dev/null; then
-            if [ -x /usr/sbin/deluser ]; then
+            if which deluser >/dev/null; then
                 deluser --system sddm >&2 ||
                     echo "Could not remove sddm user." >&2
             fi
         fi
         if getent group sddm >/dev/null; then
-            if [ -x /usr/sbin/delgroup ]; then
+            if which delgroup >/dev/null; then
                 delgroup --system sddm >&2 ||
                     echo "Could not remove sddm group." >&2
             fi
