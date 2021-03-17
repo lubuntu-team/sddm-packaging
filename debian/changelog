@@ -1,3 +1,10 @@
+sddm (0.19.0-3) UNRELEASED; urgency=medium
+
+  * Cherry-pick upstream commit to re-add sourcing of /etc/profile and
+    $HOME/.profile for users with fish as their default shell.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sun, 14 Mar 2021 14:44:29 +0100
+
 sddm (0.19.0-2) unstable; urgency=medium
 
   [ Norbert Preining ]
