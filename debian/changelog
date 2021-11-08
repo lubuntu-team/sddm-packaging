@@ -1,3 +1,7 @@
+sddm (0.19.0-4) UNRELEASED; urgency=medium
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 08 Nov 2021 21:00:36 +0900
+
 sddm (0.19.0-3) unstable; urgency=medium
 
   * Cherry-pick upstream commit to re-add sourcing of /etc/profile and
