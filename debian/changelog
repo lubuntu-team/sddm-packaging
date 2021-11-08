@@ -1,5 +1,10 @@
 sddm (0.19.0-4) UNRELEASED; urgency=medium
 
+  [ Norbert Preining ]
+  * Recommend sddm-theme-debian-breeze instead of maui (Closes: #949340).
+    The alternatives system gives this theme the highest priority, so install
+    it by default.
+
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 08 Nov 2021 21:00:36 +0900
 
 sddm (0.19.0-3) unstable; urgency=medium
