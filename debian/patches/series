@@ -6,3 +6,4 @@
 06_nvidia_prime_setup.diff
 upstream-2f034906d-use-only-basename-of-session.patch
 upstream-8ad3c5afd-re-add-fish-profile-sourcing.diff
+upstream_Fix-compilation-once-QTBUG-88431-gets-fixed.patch
