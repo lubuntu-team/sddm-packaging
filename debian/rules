@@ -32,12 +32,10 @@ execute_after_dh_auto_install:
 	# not installed, as the Debian version is used instead
 	rm -f $(CURDIR)/debian/tmp/lib/systemd/system/sddm.service
 
-override_dh_fixperms-arch:
+execute_after_dh_fixperms-arch:
 	# ensure script is marked as executable
 	chmod +x $(CURDIR)/debian/sddm/etc/sddm/Xsession
-	dh_fixperms
 
-override_dh_installpam:
-	dh_installpam
+execute_after_dh_installpam:
 	dh_installpam --name=sddm-autologin
 	dh_installpam --name=sddm-greeter

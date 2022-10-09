@@ -20,6 +20,8 @@ sddm (0.19.0-4) UNRELEASED; urgency=medium
   * Remove the upstream sddm.service in execute_after_dh_auto_install, rather
     than execute_before_dh_install; same effect, mostly a better place
     logically.
+  * Use execute_after_dh_fixperms-arch, and execute_after_dh_installpam to avoid
+    invoking dh_fixperms, and dh_installpam manually.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 08 Nov 2021 21:00:36 +0900
 
