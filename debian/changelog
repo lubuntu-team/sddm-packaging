@@ -1,4 +1,6 @@
-sddm (0.19.0-4) UNRELEASED; urgency=medium
+sddm (0.19.0-4) unstable; urgency=medium
+
+  * Team upload.
 
   [ Norbert Preining ]
   * Recommend sddm-theme-debian-breeze instead of maui (Closes: #949340).
@@ -23,7 +25,7 @@ sddm (0.19.0-4) UNRELEASED; urgency=medium
   * Use execute_after_dh_fixperms-arch, and execute_after_dh_installpam to avoid
     invoking dh_fixperms, and dh_installpam manually.
 
- -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 08 Nov 2021 21:00:36 +0900
+ -- Pino Toscano <pino@debian.org>  Sun, 09 Oct 2022 10:30:14 +0200
 
 sddm (0.19.0-3) unstable; urgency=medium
 
