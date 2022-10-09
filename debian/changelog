@@ -17,6 +17,9 @@ sddm (0.19.0-4) UNRELEASED; urgency=medium
   * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
     Repository-Browse.
   * Update standards version to 4.6.1, no changes needed.
+  * Remove the upstream sddm.service in execute_after_dh_auto_install, rather
+    than execute_before_dh_install; same effect, mostly a better place
+    logically.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Mon, 08 Nov 2021 21:00:36 +0900
 
