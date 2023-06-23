@@ -1,6 +1,5 @@
 01_sddm_systemctl.diff
 02_use_debian_theme.diff
-03_vt7-minimum-vt.diff
 04_set_default_path.diff
 05_add_debian_themes.diff
 06_nvidia_prime_setup.diff
