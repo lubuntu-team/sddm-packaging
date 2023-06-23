@@ -1,3 +1,10 @@
+sddm (0.20.0-1) UNRELEASED; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (0.20.0).
+
+ -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 23 Jun 2023 23:03:36 +0200
+
 sddm (0.19.0-5) unstable; urgency=medium
 
   * Drop haveged from recommends, it used to be necessary to gather enough
