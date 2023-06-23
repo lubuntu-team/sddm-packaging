@@ -8,6 +8,7 @@ sddm (0.20.0-1) UNRELEASED; urgency=medium
   * Drop patch 03_vt7-minimum-vt.diff and switch back to upstream default of
     spawning greeter on VT1.
   * Drop patches applied upstream.
+  * Refresh the list of installed files.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 23 Jun 2023 23:03:36 +0200
 
