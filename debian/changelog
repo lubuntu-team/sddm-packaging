@@ -4,6 +4,7 @@ sddm (0.20.0-1) UNRELEASED; urgency=medium
   * New upstream release (0.20.0).
   * Update build-deps and deps with the info from cmake.
   * Bump Standards-Version to 4.6.2, no change required.
+  * Refresh patches.
 
  -- Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>  Fri, 23 Jun 2023 23:03:36 +0200
 
