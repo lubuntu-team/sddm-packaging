@@ -3,21 +3,23 @@ Section: kde
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Aurélien COUDERC <coucouf@debian.org>,
-Build-Depends: cmake (>= 2.8.8),
+Build-Depends: cmake (>= 3.4~),
                debhelper-compat (= 13),
                extra-cmake-modules (>= 1.4.0~),
                libpam0g-dev,
                libsystemd-dev [linux-any],
                libupower-glib-dev,
+               libxau-dev,
                libxcb-xkb-dev,
                libxcb1-dev,
                libxkbcommon-dev,
                pkg-config,
                python3-docutils,
-               qtbase5-dev (>= 5.8.0~),
-               qtdeclarative5-dev (>= 5.8.0~),
+               qml-module-qttest <!nocheck>,
+               qtbase5-dev (>= 5.15.0~),
+               qtdeclarative5-dev (>= 5.15.0~),
                qttools5-dev,
-               qttools5-dev-tools (>= 5.8.0~),
+               qttools5-dev-tools (>= 5.15.0~),
                systemd [linux-any],
 Standards-Version: 4.6.1
 Homepage: https://github.com/sddm/sddm
@@ -29,8 +31,8 @@ Package: sddm
 Architecture: any
 Depends: adduser,
          qml-module-qtquick2,
-         xauth,
          x11-common,
+         xauth,
          xserver-xorg | xserver,
          ${misc:Depends},
          ${shlibs:Depends},
