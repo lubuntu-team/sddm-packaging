@@ -7,3 +7,5 @@ upstream-2f034906d-use-only-basename-of-session.patch
 revert_prefer-wayland-sessions-over-X11.patch
 upstream-8ad3c5afd-re-add-fish-profile-sourcing.diff
 sddm-fix-build.patch
+organize-screens-avoid-inset.patch
+use-bash-for-xsetup.patch

@@ -1,0 +1,23 @@
+From 105c60457a76be651dc2b993e5b416c7f5546635 Mon Sep 17 00:00:00 2001
+Message-Id: <105c60457a76be651dc2b993e5b416c7f5546635.1677784752.git.erich@ericheickmeyer.com>
+From: Erich Eickmeyer <erich@ericheickmeyer.com>
+Date: Thu, 2 Mar 2023 11:18:53 -0800
+Subject: [PATCH] use bash for xsetup
+
+---
+ data/scripts/Xsetup | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/data/scripts/Xsetup b/data/scripts/Xsetup
+index 1b5c76e..99e616b 100755
+--- a/data/scripts/Xsetup
++++ b/data/scripts/Xsetup
+@@ -1,4 +1,4 @@
+-#!/bin/sh
++#!/bin/bash
+ # Xsetup - run as root before the login dialog appears
+ 
+ if [ -e /sbin/prime-offload ]; then
+-- 
+2.38.1
+

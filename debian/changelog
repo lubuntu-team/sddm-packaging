@@ -1,3 +1,17 @@
+sddm (0.19.0-3ubuntu1.2) kinetic; urgency=medium
+
+  * Patch Xsetup script to use bash (LP: #2009074)
+    - Allows previous patch to actually run as it
+      requires arrays
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Thu, 02 Mar 2023 12:24:58 -0800
+
+sddm (0.19.0-3ubuntu1.1) kinetic; urgency=medium
+
+  * Patch to avoid screen overlap or inset (LP: #1998254)
+
+ -- Erich Eickmeyer <eeickmeyer@ubuntu.com>  Tue, 29 Nov 2022 13:34:07 -0800
+
 sddm (0.19.0-3ubuntu1) kinetic; urgency=medium
 
   * Merge from Debian unstable. Remaining changes:
