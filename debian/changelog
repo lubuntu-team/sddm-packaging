@@ -1,4 +1,4 @@
-sddm (0.19.0-5ubuntu1) UNRELEASED; urgency=medium
+sddm (0.19.0-5ubuntu1) mantic; urgency=medium
 
   * Merge from Debian unstable. Remaining changes:
     - Add kubuntu_nvidia-prime.diff to make sure NVIDIA Prime works.
