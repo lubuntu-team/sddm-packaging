@@ -3,10 +3,7 @@ Section: kde
 Priority: optional
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 XSBC-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Uploaders: Michał Zając <quintasan@kubuntu.org>,
-           Maximiliano Curia <maxy@debian.org>,
-           Aurélien COUDERC <coucouf@debian.org>,
-           Norbert Preining <norbert@preining.info>,
+Uploaders: Aurélien COUDERC <coucouf@debian.org>,
 Build-Depends: cmake (>= 2.8.8),
                debhelper-compat (= 13),
                extra-cmake-modules (>= 1.4.0~),
@@ -23,7 +20,7 @@ Build-Depends: cmake (>= 2.8.8),
                qttools5-dev,
                qttools5-dev-tools (>= 5.8.0~),
                systemd [linux-any],
-Standards-Version: 4.5.0
+Standards-Version: 4.6.1
 Homepage: https://github.com/sddm/sddm
 Vcs-Browser: https://git.launchpad.net/~ubuntu-qt-code/+git/sddm
 Vcs-Git: https://git.launchpad.net/~ubuntu-qt-code/+git/sddm
@@ -38,7 +35,7 @@ Depends: adduser,
          xserver-xorg | xserver,
          ${misc:Depends},
          ${shlibs:Depends},
-Recommends: haveged, libpam-systemd, sddm-theme-debian-maui | sddm-theme
+Recommends: libpam-systemd, sddm-theme-debian-breeze | sddm-theme
 Suggests: libpam-kwallet5, qtvirtualkeyboard-plugin
 Provides: x-display-manager
 Description: modern display manager for X11

@@ -1,3 +1,59 @@
+sddm (0.19.0-5ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge from Debian unstable. Remaining changes:
+    - Add kubuntu_nvidia-prime.diff to make sure NVIDIA Prime works.
+    - Keep the default-display-manager file logic in sddm.postinst.
+    - Update Vcs-* to point to Launchpad instead of Salsa.
+    - Add debian/conffiles.
+    - Make sure sddm.service starts at the correct time.
+    - Start on tty1 by default.
+    - Instead of hardcoding the Breeze theme in, allow ubuntu-theme to be
+      used in the same fashion Debian's is.
+    - Revert upstream change prefering wayland sessions.
+      + debian/patches: revert_prefer-wayland-sessions-over-X11.patch
+    - Patch to avoid screen overlap or inset.
+    - Patch Xsetup script to use bash. Allows previous patch to actually
+      run as it requires arrays
+
+ -- Rik Mills <rikmills@kde.org>  Mon, 26 Jun 2023 10:09:31 +0100
+
+sddm (0.19.0-5) unstable; urgency=medium
+
+  * Drop haveged from recommends, it used to be necessary to gather enough
+    entropy to avoid freezes during boot but this hasn’t been the case anymore
+    for many kernel releases.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Mon, 20 Feb 2023 22:51:20 +0100
+
+sddm (0.19.0-4) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Norbert Preining ]
+  * Recommend sddm-theme-debian-breeze instead of maui (Closes: #949340).
+    The alternatives system gives this theme the highest priority, so install
+    it by default.
+
+  [ Pino Toscano ]
+  * Remove inactive Uploaders.
+  * Backport upstream commit e93bf95c54ad8c2a1604f8d7be05339164b19308 to fix
+    build with newer versions of Qt 5.15; patch
+    upstream_Fix-compilation-once-QTBUG-88431-gets-fixed.patch.
+    (Closes: #1013550)
+  * Update lintian overrides.
+  * Use /usr/share/dpkg/architecture.mk instead of querying the $DEB_HOST_*
+    variables manually.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.6.1, no changes needed.
+  * Remove the upstream sddm.service in execute_after_dh_auto_install, rather
+    than execute_before_dh_install; same effect, mostly a better place
+    logically.
+  * Use execute_after_dh_fixperms-arch, and execute_after_dh_installpam to avoid
+    invoking dh_fixperms, and dh_installpam manually.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 09 Oct 2022 10:30:14 +0200
+
 sddm (0.19.0-3ubuntu3) lunar; urgency=medium
 
   * Patch Xsetup script to use bash (LP: #2009074)

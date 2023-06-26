@@ -6,6 +6,6 @@ kubuntu_nvidia-prime.diff
 upstream-2f034906d-use-only-basename-of-session.patch
 revert_prefer-wayland-sessions-over-X11.patch
 upstream-8ad3c5afd-re-add-fish-profile-sourcing.diff
-sddm-fix-build.patch
+upstream_Fix-compilation-once-QTBUG-88431-gets-fixed.patch
 organize-screens-avoid-inset.patch
 use-bash-for-xsetup.patch
