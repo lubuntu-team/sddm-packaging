@@ -1,4 +1,4 @@
-sddm (0.20.0-1ubuntu1) UNRELEASED; urgency=medium
+sddm (0.20.0-1ubuntu1) mantic; urgency=medium
 
   * Merge from Debian unstable. Remaining changes:
     - Keep the default-display-manager file logic in sddm.postinst.
