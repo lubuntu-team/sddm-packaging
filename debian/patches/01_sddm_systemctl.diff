@@ -8,10 +8,10 @@ Subject: _sddm_systemctl
 
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -142,8 +142,8 @@ if(SYSTEMD_FOUND)
+@@ -147,8 +147,8 @@ if(SYSTEMD_FOUND)
+         pkg_get_variable(SYSTEMD_TMPFILES_DIR systemd tmpfilesdir)
      endif()
  
-     set(MINIMUM_VT 1)
 -    set(HALT_COMMAND "/usr/bin/systemctl poweroff")
 -    set(REBOOT_COMMAND "/usr/bin/systemctl reboot")
 +    set(HALT_COMMAND "/bin/systemctl poweroff")

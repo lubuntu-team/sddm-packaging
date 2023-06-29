@@ -9,7 +9,7 @@ Forwarded: not-needed
 
 --- a/src/common/Configuration.h
 +++ b/src/common/Configuration.h
-@@ -47,7 +47,7 @@ namespace SDDM {
+@@ -51,7 +51,7 @@
          //  Name   Entries (but it's a regular class again)
          Section(Theme,
              Entry(ThemeDir,            QString,     _S(DATA_INSTALL_DIR "/themes"),             _S("Theme directory path"));

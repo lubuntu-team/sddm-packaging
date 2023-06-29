@@ -1,3 +1,34 @@
+sddm (0.20.0-1ubuntu1) UNRELEASED; urgency=medium
+
+  * Merge from Debian unstable. Remaining changes:
+    - Keep the default-display-manager file logic in sddm.postinst.
+    - Update Vcs-* to point to Launchpad instead of Salsa.
+    - Make sure sddm.service starts at the correct time.
+    - Instead of hardcoding the Breeze theme in, allow ubuntu-theme to be
+      used in the same fashion Debian's is.
+    - Revert upstream change prefering wayland sessions.
+      + debian/patches: revert_prefer-wayland-sessions-over-X11.patch
+      + Refresh the above patch.
+    - Patch to avoid screen overlap or inset.
+    - Patch Xsetup script to use bash. Allows previous patch to actually
+      run as it requires arrays,
+
+ -- Rik Mills <rikmills@kde.org>  Thu, 29 Jun 2023 14:30:54 +0100
+
+sddm (0.20.0-1) unstable; urgency=medium
+
+  [ Aurélien COUDERC ]
+  * New upstream release (0.20.0).
+  * Update build-deps and deps with the info from cmake.
+  * Bump Standards-Version to 4.6.2, no change required.
+  * Refresh patches.
+  * Drop patch 03_vt7-minimum-vt.diff and switch back to upstream default of
+    spawning greeter on VT1.
+  * Drop patches applied upstream.
+  * Refresh the list of installed files.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Sat, 24 Jun 2023 08:38:52 +0200
+
 sddm (0.19.0-5ubuntu1) mantic; urgency=medium
 
   * Merge from Debian unstable. Remaining changes:

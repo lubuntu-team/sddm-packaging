@@ -5,6 +5,8 @@ etc/pam.d
 usr/bin/sddm*
 usr/lib/*/qt5/qml/SddmComponents/
 usr/lib/*/sddm/
+usr/lib/sysusers.d/sddm.conf
+usr/lib/tmpfiles.d/sddm.conf
 usr/share/man/man1/sddm-greeter.1
 usr/share/man/man1/sddm.1
 usr/share/man/man5/sddm-state.conf.5
